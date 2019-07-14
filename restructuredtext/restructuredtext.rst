@@ -1813,7 +1813,7 @@ preserved:
 
    The text inside enclosed double backquotes (:literal:`\`\`...\`\``) is treated as an inline code sample.
 
-.. warning::
+.. attention::
 
    The previous example is not possible to create via inline literal markup like
    :literal:`\`\`\`\`...\`\`\`\``, because the Docutils parser would have a
@@ -1962,7 +1962,7 @@ The second setup is relatively hard, but it offers technically speaking
 unlimited options in comparison with the first way. It requires knowledge about
 the Docutils library and programming skills in Python to program new roles.
 
-.. tip::
+.. hint::
 
    Look at already existing roles, either in |RST| or in Sphinx, before creating
    new ones (do not reinvent the wheel).
@@ -2014,7 +2014,7 @@ Examples of creating roles via the role directive:
 
       I do :raw-html:`<del>not</del>` like reStructuredText.
 
-.. important::
+.. caution::
 
    Use wisely the overloaded ``raw-*`` roles, just like the ``raw`` directive.
 
