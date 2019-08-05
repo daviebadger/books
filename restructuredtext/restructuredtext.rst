@@ -1889,13 +1889,15 @@ material or even artwork:
 
 .. note::
 
-   The title role is the only role which may be used implicitly without
-   specifying a role like :literal:`\`How to Title My Book\``. It is due to a
-   ``default-role`` directive, which is by default set to the title role:
+   The title role is the only role by default which may be used implicitly
+   without specifying a role like :literal:`\`How to Title My Book\``. It is
+   thanks to a ``default-role`` directive:
 
    .. code:: rst
 
       .. default-role:: title
+
+      `How to Title My Book` == `title:`How to Title My Book`
 
    If the ``default-role`` directive is set differently, then it is not safe to
    use the title role implicitly. That is why it is always better to use roles
