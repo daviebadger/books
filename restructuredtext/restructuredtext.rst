@@ -1783,7 +1783,7 @@ Examples of using roles in practice:
       Thisis\ :strong:`one`\ word, where the word "one" will be formatted as bold text.
 
 
-Built-in Roles
+Built-In Roles
 --------------
 
 |RST| has notably these built-in roles:
