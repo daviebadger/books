@@ -1974,7 +1974,8 @@ Custom Roles via the Role Directive
 
 Examples of creating roles via the role directive:
 
-#. a dummy role only for styling purposes:
+#. a dummy role only for styling purposes (the role is not interpreted however
+   is intended to be styled via CSS):
 
    .. code:: rst
 
