@@ -992,11 +992,14 @@ name option may be referenced (hyperlinked):
    unique across a document, otherwise a |RST| parser may raise an error.
 
 
+Built-In Directives
+-------------------
+
 Image Directives
-----------------
+^^^^^^^^^^^^^^^^
 
 Image Directive
-^^^^^^^^^^^^^^^
+"""""""""""""""
 
 Add an image:
 
@@ -1040,7 +1043,7 @@ The image directive supports these options:
     ``Link_`` syntax or to an external link
 
 Figure Directive
-^^^^^^^^^^^^^^^^
+""""""""""""""""
 
 Add an image with caption (optional):
 
@@ -1076,9 +1079,8 @@ options:
    * set class attributes on the figure (by default the ``:class:`` option adds
      classes only to the image)
 
-
 Table Directives
-----------------
+^^^^^^^^^^^^^^^^
 
 Advanced directives for tables. Each of these directives supports these options:
 
@@ -1093,7 +1095,7 @@ Advanced directives for tables. Each of these directives supports these options:
     (columns from the right may be omitted), e.g. ``15, 10, 30``
 
 Table Directive
-^^^^^^^^^^^^^^^
+"""""""""""""""
 
 Add a title (optional) to simple or grid tables:
 
@@ -1127,7 +1129,7 @@ Align a table and set proportionally size of columns via table options:
       =========  ========  ======  ===
 
 List-table Directive
-^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 Create a table via a list style without headers, column or row span (not
 allowed at all):
@@ -1192,7 +1194,7 @@ option or on the left in the first column, like in `Option Lists`_, using a
            - 3
 
 Csv-table Directive
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 Create a table using CSV format:
 
@@ -1247,14 +1249,13 @@ quotes, then the ``csv-table`` directive must know about it via set options:
    Options such as ``delim``, ``quote`` and ``escape`` may contain Unicode
    codes, for example ``0x09`` for tabs.
 
-
 Substitution Directives
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Directives suited for substitutions and nothing else.
 
 Replace Directive
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 Replace text in substitutions:
 
@@ -1270,7 +1271,7 @@ Replace text in substitutions:
    replacement text).
 
 Unicode Directive
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 Convert unicode numbers to characters:
 
@@ -1310,7 +1311,7 @@ Unicode numbers can be followed by a comment, which will not be rendered:
          :ltrim:
 
 Date Directive
-^^^^^^^^^^^^^^
+""""""""""""""
 
 Format datetime using Python `time.strftime`_ function (default format is
 ``%Y-%m-%d``, which is ISO 8601 date):
@@ -1324,14 +1325,13 @@ Format datetime using Python `time.strftime`_ function (default format is
 
 .. _time.strftime: https://docs.python.org/3/library/time.html#time.strftime
 
-
 Body Element Directives
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Directives to extend existing body elements.
 
 Code Directive
-^^^^^^^^^^^^^^
+""""""""""""""
 
 Add a code sample with syntax highlightning:
 
@@ -1361,7 +1361,7 @@ Optionally, line numbers may be turned on:
 .. _Pygments documentation: http://pygments.org/docs/lexers/
 
 Math Directive
-^^^^^^^^^^^^^^
+""""""""""""""
 
 Add a mathematical formula using LaTeX math syntax including AMS extensions:
 
@@ -1372,7 +1372,7 @@ Add a mathematical formula using LaTeX math syntax including AMS extensions:
       f(x) = x^2
 
 Rubric Directive
-^^^^^^^^^^^^^^^^
+""""""""""""""""
 
 Add an informal heading, which is not part of the table of contents:
 
@@ -1383,7 +1383,7 @@ Add an informal heading, which is not part of the table of contents:
    .. [#] text
 
 Topic Directive
-^^^^^^^^^^^^^^^
+"""""""""""""""
 
 Add a topic container with a title to express a self-contained idea separated
 from the flow of a document without a need to create another sections:
@@ -1400,7 +1400,7 @@ from the flow of a document without a need to create another sections:
       Foo bar baz
 
 Highlights Directive
-^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""
 
 Add a summary at the end of a section:
 
@@ -1414,9 +1414,8 @@ Add a summary at the end of a section:
       * b
       * c
 
-
 Admonition Directives
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Directives for semantic text (additional topic information for readers). |RST|
 has the following admonitions:
@@ -1436,7 +1435,7 @@ Some of these admonitions are almost overlaping (attention, caution, danger), so
 the last four admonitions are usually used (important, note, tip, warning).
 
 Important Directive
-^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""
 
 Create an important admonition:
 
@@ -1447,7 +1446,7 @@ Create an important admonition:
       This is really important.
 
 Note Directive
-^^^^^^^^^^^^^^
+""""""""""""""
 
 Create a note admonition:
 
@@ -1458,7 +1457,7 @@ Create a note admonition:
       This is a note.
 
 Tip Directive
-^^^^^^^^^^^^^
+"""""""""""""
 
 Create a tip admonition:
 
@@ -1469,7 +1468,7 @@ Create a tip admonition:
       This tip saves your life.
 
 Warning Directive
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 Create a warning admonition:
 
@@ -1479,14 +1478,13 @@ Create a warning admonition:
 
       Take this warning seriously.
 
-
 Document Directives
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 Directives about documents, either a document itself or other documents.
 
 Contents Directive
-^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 Generate a table of contents (TOC) from all sections except for a document title
 or a subtitle) using a default title ``Contents`` for the TOC:
@@ -1517,7 +1515,7 @@ To restrict section levels listed in the TOC, a ``depth`` option must be used:
    hyperlinked to each other.
 
 Sectnum Directive
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 Automatically number sections headers in a document:
 
@@ -1562,7 +1560,7 @@ It is also possible to limit section headers, which will be numbered, using a
    * 2. Section Title
 
 Include Directive
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 Include relatively another |RST| documents into a current document:
 
@@ -1599,7 +1597,7 @@ rendered as code samples (either highlighted or not):
    way or passed as an option to document convertors.
 
 Raw Directive
-^^^^^^^^^^^^^
+"""""""""""""
 
 Paste raw text, which will be used in another document type after rendering:
 
@@ -1633,14 +1631,13 @@ local disk or even from remote websites:
    |RST| parsers may ignore the ``raw`` directive, if it is configured that way
    or passed as an option to document convertors.
 
-
 HTML Directives
----------------
+^^^^^^^^^^^^^^^
 
 Directives specially for HTML output.
 
 Title Directive
-^^^^^^^^^^^^^^^
+"""""""""""""""
 
 Set a document meta title, which will be visible in the browser tab, if a
 document title is not enough:
@@ -1658,7 +1655,7 @@ document title is not enough:
       <title>Different Document Title</title>
 
 Meta Directive
-^^^^^^^^^^^^^^
+""""""""""""""
 
 Add HTML metadata, if a document will be converted to HTML and metadata is
 desired:
@@ -1697,7 +1694,7 @@ via ``attr=value`` syntax within field names (values may be inside quotes):
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 Class Directive
-^^^^^^^^^^^^^^^
+"""""""""""""""
 
 Add HTML class attributes to the following non-comment element right after this
 class directive:
@@ -1739,6 +1736,12 @@ all nested elements:
       ..
 
          This is a block quote.
+
+
+Custom Directives
+-----------------
+
+TODO
 
 
 
