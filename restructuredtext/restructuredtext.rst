@@ -32,7 +32,6 @@
 .. contents::
 
 .. sectnum::
-   :depth: 3
    :suffix: .
 
 .. _Blender: https://docs.blender.org/manual/en/latest/
