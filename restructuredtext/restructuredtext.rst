@@ -1003,6 +1003,19 @@ Some examples of using directives in practice:
 Built-In Directives
 -------------------
 
+|RST| has a lot of built-in directives. Most of them are curated in these
+thematic groups:
+
+* images
+* tables
+* sUbstitutions
+* body elements
+* admonitions
+* documents
+* HTML
+
+Other rarely used directives are covered in the reference documentation.
+
 Image Directives
 ^^^^^^^^^^^^^^^^
 
