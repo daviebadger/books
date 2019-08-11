@@ -1008,7 +1008,7 @@ thematic groups:
 
 * images
 * tables
-* sUbstitutions
+* substitutions
 * body elements
 * admonitions
 * documents
