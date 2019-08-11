@@ -1075,8 +1075,8 @@ options:
 
 * ``figclass``
 
-   * set class attributes on the figure (by default the ``:class:`` option adds
-     classes only to the image)
+  * set class attributes on the figure (by default the ``:class:`` option adds
+    classes only to the image)
 
 Table Directives
 ^^^^^^^^^^^^^^^^
