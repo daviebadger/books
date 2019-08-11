@@ -935,60 +935,69 @@ Other possible inline directives and directives in general are covered in the
 Directives
 ==========
 
-Directives are the primary extension mechanism of |RST| (the secondary are
-`Interpreted Text Roles`_), how to extend or modify documents. Syntax is similar
-to `Hyperlinks`_, `Footnotes`_ or `Substitutions`_.
+Directives are the first standardized way of the extension mechanism in |RST|
+how to extend block markup. By directives is possible to better structure
+documents, add metadata or advanced body elements or load and transform data
+stored in other documents and files.
 
-They consists of two periods followed by a space, name of directive, two colons,
-optionally arguments for that directive and optionally block of content for the
-directive:
-
-.. code:: rst
-
-   .. directive-name:: argument
-
-   or
-
-   .. directive-name::
-
-      Long content over
-      multiple lines with a blank line
-      before this block.
-
-      Python documentation uses that way.
-
-Each directive may have options (configuration for that directive) via a field
-list inside the directive. There are two common options, ``class`` and
-``name``:
+The syntax of directives consists of two periods followed by a space and a
+directive name without whitespaces immediately followed by two colons on a
+separate line. Directives may further contain arguments, options like field
+lists or body elements after a blank line:
 
 .. code:: rst
 
-   .. directive-name:: argument
-      :class: a b c
-      :name: Human name for this directive
+   .. directive-name:: optional-directive-arguments
+      :optional-directive-option: optional-directive-option-value
 
-      Long content over
-      two lines.
+      optional-directive-body-elements
 
-The ``class`` option allows to define one or more classes separated by a space
-for HTML elements and may be additionally styled via CSS, if output of a
-document will be HTML page.
+Some examples of using directives in practice:
 
-The ``name`` allows to add custom human-readable name to directives. The name is
-then used like an ID attribute in HTML. This means that each directive with the
-name option may be referenced (hyperlinked):
+#. a directive without arguments, options and body elements:
 
-.. code:: rst
+   .. code:: rst
 
-   .. directive-name:: content
-      :name: Super name
+      .. contents::
 
-   See also `Super name`_.
+#. a directive with an argument:
 
-.. important::
+   .. code:: rst
 
-   When using the ``name`` option inside directives, the name (text) must be
-   unique across a document, otherwise a |RST| parser may raise an error.
+      .. include:: path/to/file
+
+#. a directive with an argument and an option without a value (interpreted as
+   a boolean flag, where if the option is present, then it is enabled, else
+   disabled):
+
+   .. code:: rst
+
+      .. include:: path/to/file
+         :literal:
+
+#. a directive with an argument and an option with a value:
+
+   .. code:: rst
+
+      .. image:: path/to/image
+         :alt: Alternate text description
+
+#. a directive with an argument, an option with a value and a body element:
+
+   .. code:: rst
+
+      .. figure:: path/to/image
+         :scale: 50 %
+
+         Image title rendered below the image
+
+#. a directive with a body element:
+
+   .. code:: rst
+
+      .. tip::
+
+         This tip helps you save your money.
 
 
 Built-In Directives
