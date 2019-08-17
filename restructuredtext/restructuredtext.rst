@@ -999,6 +999,35 @@ Some examples of using directives in practice:
 
          This tip helps you save your money.
 
+.. topic:: Common Directive Options
+
+   Most directives, notably who add new content to a document, support these two
+   directive options:
+
+   * ``class``
+
+     * add one or more HTML class attributes separated by a space to a
+       directive, which may be further styled via CSS, if an output of a
+       document will be HTML:
+
+       .. code:: rst
+
+          .. image:: path/to/image
+             :class: rounded trasparent
+
+   * ``name``
+
+     * add a human-redable name to a directive, which may be further used as a
+       hyperlink target (the name must be unique across a document otherwise RST
+       parser raises an error):
+
+       .. code:: rst
+
+          See below `My picture`_:
+
+          .. image:: path/to/image
+             :name: My picture
+
 
 Built-In Directives
 -------------------
