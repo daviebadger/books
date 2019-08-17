@@ -1480,7 +1480,30 @@ readers. |RST| has the following admonitions:
 * ``warning``
 
 Except for these built-in admonitions, there always exists an option to create
-a custom directive via ``admonition`` directive, if needed.
+a custom directive via an ``admonition`` directive, if needed.
+
+Admonition Directive
+""""""""""""""""""""
+
+Add a custom admonition with the given title to a text:
+
+.. code:: rst
+
+   .. admonition:: See also
+
+      www.example.com for more examples.
+
+.. tip::
+
+   Custom admonitions are easily accessible via their titles, which are
+   specially parsed and used as HTML class attributes. The previous example
+   would have an ``admonition-see-also`` class name.
+
+   The parsing mechanism consists of:
+
+   #. lowercasing all characters
+   #. replacing non-alphanumeric characters with hyphens
+   #. prefixing the parsed name with ``admonition-``
 
 Attention Directive
 """""""""""""""""""
