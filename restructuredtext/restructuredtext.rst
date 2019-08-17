@@ -1508,7 +1508,7 @@ Add a custom admonition with the given title to a text:
 Attention Directive
 """""""""""""""""""
 
-Add attentive information to a text:
+Add attentive information to a text (a user should notice something):
 
 .. code:: rst
 
@@ -1519,7 +1519,7 @@ Add attentive information to a text:
 Caution Directive
 """""""""""""""""
 
-Add cautious information to a text:
+Add cautious information to a text (a user should be careful with something):
 
 .. code:: rst
 
@@ -1530,7 +1530,7 @@ Add cautious information to a text:
 Danger Directive
 """"""""""""""""
 
-Add dangerous information to a text:
+Add dangerous information to a text (a user should not do something at all):
 
 .. code:: rst
 
@@ -1541,7 +1541,7 @@ Add dangerous information to a text:
 Hint Directive
 """"""""""""""
 
-Add a hint to a text:
+Add a hint to a text (an indirect help for a user):
 
 .. code:: rst
 
@@ -1574,7 +1574,7 @@ Add a note to a text:
 Tip Directive
 """""""""""""
 
-Add a tip to a text:
+Add a tip to a text (a direct help for a user):
 
 .. code:: rst
 
@@ -1585,7 +1585,7 @@ Add a tip to a text:
 Warning Directive
 """""""""""""""""
 
-Add a warning to a text:
+Add a warning to a text (a user should be warned about a possible problem):
 
 .. code:: rst
 
