@@ -2031,7 +2031,7 @@ Create a link to a specific `PEP`_ (**P**\ ython **E**\ nhancement
 
    See :PEP:`8` for Python style guide.
 
-.. note::
+.. Attention::
 
    The previous example could be also written as:
 
@@ -2053,7 +2053,7 @@ Create a link to a specific `RFC`_ (**R**\ equest **F**\ or **C**\ comments)
 
    See :RFC:`3339` for standard date and time formats.
 
-.. note::
+.. Attention::
 
    The previous example could be also written as:
 
