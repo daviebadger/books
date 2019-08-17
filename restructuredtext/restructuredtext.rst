@@ -1520,46 +1520,46 @@ Hint Directive
 Important Directive
 """""""""""""""""""
 
-Create an important admonition:
+Add important information to a text:
 
 .. code:: rst
 
    .. important::
 
-      This is really important.
+      Be consistent with heading levels through a document.
 
 Note Directive
 """"""""""""""
 
-Create a note admonition:
+Add a note to a text:
 
 .. code:: rst
 
    .. note::
 
-      This is a note.
+      Code samples using ``::`` markup are not highlighted at all.
 
 Tip Directive
 """""""""""""
 
-Create a tip admonition:
+Add a tip to a text:
 
 .. code:: rst
 
    .. tip::
 
-      This tip saves your life.
+      Subscripts are ideal candidates for substitutions.
 
 Warning Directive
 """""""""""""""""
 
-Create a warning admonition:
+Add a warning to a text:
 
 .. code:: rst
 
    .. warning::
 
-      Take this warning seriously.
+      Do not exceed the recommended daily dose.
 
 Document Directives
 ^^^^^^^^^^^^^^^^^^^
