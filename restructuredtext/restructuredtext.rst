@@ -1508,14 +1508,46 @@ Add a custom admonition with the given title to a text:
 Attention Directive
 """""""""""""""""""
 
+Add attentive information to a text:
+
+.. code:: rst
+
+   .. attention::
+
+      The previous example is not possible to create via inline literal markup.
+
 Caution Directive
 """""""""""""""""
+
+Add cautious information to a text:
+
+.. code:: rst
+
+   .. caution::
+
+      Use wisely the overloaded ``raw-*`` roles.
 
 Danger Directive
 """"""""""""""""
 
+Add dangerous information to a text:
+
+.. code:: rst
+
+   .. danger::
+
+      Do not try this at home!
+
 Hint Directive
 """"""""""""""
+
+Add a hint to a text:
+
+.. code:: rst
+
+   .. hint::
+
+      Look at already existing roles.
 
 Important Directive
 """""""""""""""""""
