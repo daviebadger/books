@@ -1466,10 +1466,9 @@ Add a summary at the end of a section:
 Admonition Directives
 ^^^^^^^^^^^^^^^^^^^^^
 
-Directives for semantic text (additional topic information for readers). |RST|
-has the following admonitions:
+Admonitions are specially styled semantic text with additional information to
+readers. |RST| has the following admonitions:
 
-* ``admonition`` (generic)
 * ``attention``
 * ``caution``
 * ``danger``
@@ -1480,8 +1479,8 @@ has the following admonitions:
 * ``tip``
 * ``warning``
 
-Some of these admonitions are almost overlaping (attention, caution, danger), so
-the last four admonitions are usually used (important, note, tip, warning).
+Except for these built-in admonitions, there always exists an option to create
+a custom directive via ``admonition`` directive, if needed.
 
 Important Directive
 """""""""""""""""""
