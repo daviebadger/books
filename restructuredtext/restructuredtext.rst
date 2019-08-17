@@ -1482,6 +1482,18 @@ readers. |RST| has the following admonitions:
 Except for these built-in admonitions, there always exists an option to create
 a custom directive via ``admonition`` directive, if needed.
 
+Attention Directive
+"""""""""""""""""""
+
+Caution Directive
+"""""""""""""""""
+
+Danger Directive
+""""""""""""""""
+
+Hint Directive
+""""""""""""""
+
 Important Directive
 """""""""""""""""""
 
