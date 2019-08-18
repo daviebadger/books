@@ -1467,20 +1467,19 @@ Admonition Directives
 ^^^^^^^^^^^^^^^^^^^^^
 
 Admonitions are specially styled semantic text with additional information to
-readers. |RST| has the following admonitions:
+readers. |RST| has namely the following admonitions:
 
 * ``attention``
 * ``caution``
 * ``danger``
-* ``error``
 * ``hint``
 * ``important``
 * ``note``
 * ``tip``
 * ``warning``
 
-Except for these built-in admonitions, there always exists an option to create
-a custom directive via an ``admonition`` directive, if needed.
+Except for these built-in admonitions, there exists an option to create a custom
+directive via an ``admonition`` directive, if needed.
 
 Admonition Directive
 """"""""""""""""""""
