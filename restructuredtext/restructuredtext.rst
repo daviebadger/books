@@ -1042,8 +1042,6 @@ thematic groups:
 * documents
 * HTML
 
-Other rarely used directives are covered in the reference documentation.
-
 Image Directives
 ^^^^^^^^^^^^^^^^
 
@@ -1912,9 +1910,6 @@ Built-In Roles
 * ``title``
 * ``PEP``
 * ``RFC``
-
-Other roles exist just for illustrative reasons, namely ``emphasis`` and
-``strong``, which are equivalents of italics and bold text styles.
 
 Finally, there are two special roles, a ``code`` role and a ``raw`` role, which
 cannot be used individually, but only in conjunction with a ``role`` directive.
