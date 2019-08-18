@@ -1006,7 +1006,7 @@ Some examples of using directives in practice:
    * ``class``
 
      * add one or more HTML class attributes separated by a space to a
-       directive, which may be further styled via CSS, if an output of a
+       directive, which may be further styled via CSS, if output of a
        document will be HTML:
 
        .. code:: rst
@@ -1746,7 +1746,11 @@ local disk or even from remote websites:
 HTML Directives
 ^^^^^^^^^^^^^^^
 
-Directives specially for HTML output.
+Special directives only for HTML output, namely:
+
+* ``title``
+* ``meta``
+* ``class``
 
 Title Directive
 """""""""""""""
