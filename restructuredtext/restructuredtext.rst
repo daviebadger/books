@@ -1754,6 +1754,7 @@ Special directives only for HTML output, namely:
 
 Title Directive
 """""""""""""""
+
 Set a different HTML document title for a browser tab, which will be used
 instead of a document title:
 
@@ -1768,8 +1769,8 @@ instead of a document title:
 Meta Directive
 """"""""""""""
 
-Add HTML metadata, if a document will be converted to HTML and metadata is
-desired:
+Add HTML meta tags, where a directive option represents ``name`` attribute and
+directive content ``content`` attribute:
 
 .. code:: rst
 
@@ -1778,31 +1779,15 @@ desired:
       :description: reStructuredText is a markup language used for documentation.
       :keywords: rst, reST, reStructuredText
 
-The meta directive supports out of box meta tags with name attributes in field
-lists and content for these fields. The previous code sample would be rendered
-as:
+.. note::
 
-.. code:: rst
+   The previous code sample would be rendered in the HTML ``head`` tag as:
 
-   <meta name="author" content="Davie Badger">
-   <meta name="description" content="reStructuredText is a markup language used for documentation.">
-   <meta name="keywords" content="rst, reST, reStructuredText">
+   .. code:: rst
 
-Other meta tags and attributes may be supported (not all of them, e.g. charset)
-via ``attr=value`` syntax within field names (values may be inside quotes):
-
-.. code:: rst
-
-   This metadata:
-
-   .. meta::
-      :description lang="cs": reStructuredText je značkovacý jazyk používaný v dokumentaci.
-      :http-equiv=Content-Type: text/html; charset=ISO-8859-1
-
-   would be rendered as::
-
-      <meta name="description" lang="cs" xml:lang="cs" content="reStructuredText je značkovacý jazyk používaný v dokumentaci.">
-      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="author" content="Davie Badger">
+      <meta name="description" content="reStructuredText is a markup language used for documentation.">
+      <meta name="keywords" content="rst, reST, reStructuredText">
 
 Class Directive
 """""""""""""""
