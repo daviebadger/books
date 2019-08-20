@@ -1754,9 +1754,8 @@ Special directives only for HTML output, namely:
 
 Title Directive
 """""""""""""""
-
-Set a document meta title, which will be visible in the browser tab, if a
-document title is not enough:
+Set a different HTML document title for a browser tab, which will be used
+instead of a document title:
 
 .. code:: rst
 
@@ -1764,11 +1763,7 @@ document title is not enough:
    Document Title
    **************
 
-   .. title:: Different Document Title
-
-   The document meta title above will be rendered in HTML head as::
-
-      <title>Different Document Title</title>
+   .. title:: Alternative Document Title
 
 Meta Directive
 """"""""""""""
