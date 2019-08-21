@@ -1,6 +1,6 @@
 # Davie's Technical Books
 
-My personal technical books of software I have been using.
+My personal technical books of software I have been using for a long time.
 
 ---
 
