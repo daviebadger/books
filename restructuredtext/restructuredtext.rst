@@ -1792,46 +1792,62 @@ directive content ``content`` attribute:
 Class Directive
 """""""""""""""
 
-Add HTML class attributes to the following non-comment element right after this
-class directive:
+Add HTML classes separated by a space right to the immediately following
+non-comment element(s):
 
-.. code:: rst
-
-   .. class:: super heading
-
-   Section Title With Classes
-   ==========================
-
-   .. class:: special
-
-   This is a paragraph with "special" class.
-
-If |RST| elements are nested in the class directive, then classes are applied to
-all nested elements:
-
-.. code:: rst
-
-   .. class:: wow
-
-      This paragraph has the "wow" class.
-
-      This paragraph has also the "wow" class.
-
-   Unfortunately, this paragraph has not the "wow" class.
-
-.. note::
-
-   If the class directive is intended to be used before block quotes, then
-   immediately after the class directive must follow a comment, otherwise the
-   block quote will not have the class attributes (will be misinterpreted as
-   paragrahs inside the directive):
+#. a single element outside of the ``class`` directive:
 
    .. code:: rst
 
-      .. class:: not-paragraph
+      .. class:: heading color-red
+
+      Section Title
+      =============
+
+#. multiple elements inside of the ``class`` directive:
+
+   .. code:: rst
+
+      .. class:: blink
+
+         This paragraph has the "blink" class.
+
+         This another paragraph also has the "blink" class.
+
+.. note::
+
+   If the ``class`` directive is intended to be used before block quotes, then
+   a comment must be placed right after the ``class`` directive otherwise the
+   block quotes will be misinterpreted as paragraphs inside the directive:
+
+   .. code:: rst
+
+      .. class:: block-quote
       ..
 
          This is a block quote.
+
+.. tip::
+
+   Before adding HTML classes to elements, try to convert a document to HTML
+   first, and then inspect tags with attributes whether the tags already contain
+   useful classes for styling or not.
+
+.. warning::
+
+   Although it is possible to use the ``class`` directive inside nested body
+   elements, e.g. bulleted lists, it is better to use them only at the left
+   edge of a line (unindented) to avoid some unexpected behavior:
+
+   .. code:: rst
+
+      .. note::
+
+         This is a note.
+
+         .. class:: cls
+
+      Unfortunately, this paragraph has the "cls" class by mistake.
 
 
 Custom Directives
