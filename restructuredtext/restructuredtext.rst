@@ -1593,7 +1593,7 @@ Add a warning to a text (a user should be warned about a possible problem):
 Document Directives
 ^^^^^^^^^^^^^^^^^^^
 
-Directives about documents, either a document itself or other documents.
+Directives about documents as a whole.
 
 Contents Directive
 """"""""""""""""""
