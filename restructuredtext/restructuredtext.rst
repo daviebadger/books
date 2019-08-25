@@ -1598,33 +1598,59 @@ Directives about documents as a whole.
 Contents Directive
 """"""""""""""""""
 
-Generate a table of contents (TOC) from all sections except for a document title
-or a subtitle) using a default title ``Contents`` for the TOC:
+Generate a table of contents (TOC) from sections and their nested subsections
+in a document (a document title and a subtitle are ignored):
 
-.. code:: rst
+#. using a default title for the table of contents:
 
-   .. contents::
+   .. code:: rst
 
-Alternatively, a different title may be set for the TOC:
+      .. contents::
 
-.. code:: rst
+      ----
 
-   .. contents:: Table of Contents
+      Contents
 
-To restrict section levels listed in the TOC, a ``depth`` option must be used:
+      * Section A
+        * Subsection AA
+          * Subsubsection AAA
+      * Section B
 
-.. code:: rst
+#. using a custom title for the table of contents:
 
-   .. contents::
-      :depth: 2
+   .. code:: rst
 
-   The table of contents above will show only sections and subsections.
+      .. contents:: Table of Contents
+
+      ----
+
+      Table of Contents
+
+      * Section A
+        * Subsection AA
+          * Subsubsection AAA
+      * Section B
+
+#. limiting section levels rendered in the table of contents:
+
+   .. code:: rst
+
+      .. contents::
+         :depth: 2
+
+      ----
+
+      Contents
+
+      * Section A
+        * Subsection AA
+      * Section B
 
 .. tip::
 
-   If a document has a table of contents and it is rendered for example to a
-   HTML format, then entries in the TOC and section headers in the document are
-   hyperlinked to each other.
+   In a rendered RST document with a table of contents, entries in the TOC lead
+   to sections in a document, whereas the sections in the document lead back to
+   the entries in the TOC after a click on a section title.
 
 Sectnum Directive
 """""""""""""""""
