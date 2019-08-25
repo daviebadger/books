@@ -1655,47 +1655,48 @@ in a document (a document title and a subtitle are ignored):
 Sectnum Directive
 """""""""""""""""
 
-Automatically number sections headers in a document:
+Automatically number section titles in a document (including those in a table
+of content):
 
-.. code:: rst
+#. without any directive options:
 
-   .. sectnum::
+   .. code:: rst
 
-   Sections headers will look like:
+      .. sectnum::
 
-   * 1 Section Title
-   * 1.1 Subsection Title
-   * 1.1.1 Subsubsection Title
-   * 2 Section Title
+      ----
 
-Add a prefix to each numbered section headers:
+      * 1 Section A
+      * 1.1 Subsection AA
+      * 1.1.1 Subsubsection AAA
+      * 2 Section B
 
-.. code:: rst
+#. with a suffix at the end of each number:
 
-   .. sectnum::
-      :suffix: .
+   .. code:: rst
 
-   Sections headers will look like:
+      .. sectnum::
+         :suffix: .
 
-   * 1. Section Title
-   * 1.1. Subsection Title
-   * 1.1.1. Subsubsection Title
-   * 2. Section Title
+      ----
 
-It is also possible to limit section headers, which will be numbered, using a
-``depth`` option, like in `Contents Directive`_:
+      * 1. Section A
+      * 1.1. Subsection AA
+      * 1.1.1. Subsubsection AAA
+      * 2. Section B
 
-.. code:: rst
+#. with limited section levels to be numbered:
 
-   .. sectnum::
-      :depth: 2
+   .. code:: rst
 
-   Sections headers will look like:
+      .. sectnum::
+         :depth: 2
 
-   * 1. Section Title
-   * 1.1. Subsection Title
-   *        Subsubsection Title
-   * 2. Section Title
+      ----
+
+      * 1 Section A
+      * 1.1 Subsection AA
+      * 2 Section B
 
 Include Directive
 """""""""""""""""
