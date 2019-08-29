@@ -1899,6 +1899,11 @@ Custom Directives
 
 TODO
 
+.. hint::
+
+   Look at already existing directives, either in |RST| or in Sphinx, before
+   creating new ones (do not reinvent the wheel).
+
 
 
 Interpreted Text Roles
