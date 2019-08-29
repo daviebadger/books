@@ -1748,44 +1748,42 @@ given place, where is the ``include`` directive located:
 
       Copyright |copy| Davie Badger 2019.
 
-   All the sets are listed `here`__.
+   All the sets are listed here__.
 
 __ http://docutils.sourceforge.net/docs/ref/rst/definitions.html#character-entity-sets
 
 Raw Directive
 """""""""""""
 
-Paste raw text, which will be used in another document type after rendering:
+Bypass parsing text for the given output formats separated by a space:
 
-.. code:: rst
+#. a text inside the ``raw`` directive:
 
-   .. raw:: html
+   .. code:: rst
 
-      <script>console.log('Hello World')</script>
+      .. raw:: html
 
-Like in `Include Directive`_, it is also possible to include raw documents from
-local disk or even from remote websites:
+         <iframe id="video-player" width="200" height="200" src="www"></iframe>
 
-.. code:: rst
+#. a text in a local file accessible via an absolute or a relative (preferred)
+   path:
 
-   .. raw:: html
-      :file: local.html
+   .. code:: rst
 
-   or
+      .. raw:: html
+         :file: index.html
 
-   .. raw:: html
-      :url: www.example.com/file.html
+#. a text accessible via a URL address:
 
-.. important::
+   .. code:: rst
+
+      .. raw:: html
+         :url: www.example.com/file.html
+
+.. caution::
 
    Use wisely the ``raw`` directive, because |RST| will not parse its content
-   and the content will be placed as it is. It may represent a potential
-   security hole.
-
-.. warning::
-
-   |RST| parsers may ignore the ``raw`` directive, if it is configured that way
-   or passed as an option to document convertors.
+   and the content will be placed as it is. It may contain malicious data.
 
 HTML Directives
 ^^^^^^^^^^^^^^^
