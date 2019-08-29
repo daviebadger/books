@@ -1701,39 +1701,56 @@ of content):
 Include Directive
 """""""""""""""""
 
-Include relatively another |RST| documents into a current document:
+Load text from a file using an absolute or a relative (preferred) path to the
+given place, where is the ``include`` directive located:
 
-.. code:: rst
+#. a |RST| document:
 
-   .. include:: file.rst
+   .. code:: rst
 
-   .. include:: directory/file.rst
+      .. include:: path/to/file.rst
 
-In general, other document types may be also included, however they should be
-rendered as code samples (either highlighted or not):
+#. a file rendered as literal code without syntax highlighting:
 
-.. code:: rst
+   .. code:: rst
 
-   Below will be included a code sample without syntax highlighting:
+      .. include:: test.py
+         :literal:
 
-   .. include:: test.py
-      :literal:
+#. a file rendered as code with syntax highlighting (language code is needed):
 
-   Below will be included a code sample with syntax highlighting:
+   .. code:: rst
 
-   .. include:: examples/test.py
-      :code: py
+      .. include:: test.py
+         :code: py
 
-.. note::
+.. caution::
 
-   Be aware, where is the ``include`` directive used, either at the left edge or
-   inside body elements. If it is the first option (edge), then section headers
-   are allowed in included documents, otherwise not.
+   When loading a |RST| file, if the ``include`` directive is used at the left
+   edge, then section levels in the loaded file must match those in the current
+   document's context otherwise the |RST| parser raises an error.
 
-.. warning::
+   The parser also raises an error, when the ``include`` directive with a |RST|
+   file is indented inside a body element. In this case, the loaded file cannot
+   contain sections at all.
 
-   |RST| parsers may ignore the ``include`` directive, if it is configured that
-   way or passed as an option to document convertors.
+   Overall, be aware of what you are loading.
+
+.. tip::
+
+   |RST| contains Unicode character sets with substitution definitions, which
+   may be loaded and used for substitutions in very technical documents instead
+   of writing custom ones:
+
+   .. code:: rst
+
+      .. include:: <isonum.txt>
+
+      Copyright |copy| Davie Badger 2019.
+
+   All the sets are listed `here`__.
+
+__ http://docutils.sourceforge.net/docs/ref/rst/definitions.html#character-entity-sets
 
 Raw Directive
 """""""""""""
