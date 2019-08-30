@@ -1315,18 +1315,13 @@ There are only three substitution directives:
 Replace Directive
 """""""""""""""""
 
-Replace text in substitutions:
+Substitute a substitution for a text:
 
 .. code:: rst
 
    .. |RST| replace:: reStructuredText
 
-   |RST| is really long to type.
-
-.. note::
-
-   Substitutions may be defined wherever in a document (before or after
-   replacement text).
+   |RST| is too long to type.
 
 Unicode Directive
 """""""""""""""""
