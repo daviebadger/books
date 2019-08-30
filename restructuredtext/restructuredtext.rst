@@ -1378,7 +1378,7 @@ the `time.strftime`_ function in Python:
 
 .. note::
 
-   The default format string is `%Y-%m-%d` (ISO 8601 date).
+   The default format string is ``%Y-%m-%d`` (ISO 8601 date).
 
 .. _time.strftime: https://docs.python.org/3/library/time.html#time.strftime
 
