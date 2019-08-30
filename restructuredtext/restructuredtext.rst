@@ -1304,7 +1304,7 @@ syntax:
 
 .. code:: rst
 
-   .. |substitution| directive-name:: substituted text .. optional-comment
+   .. |substitution| directive-name:: substituted text
 
 There are only three substitution directives:
 
@@ -1366,15 +1366,19 @@ Unicode numbers can be followed by a comment, which will not be rendered:
 Date Directive
 """"""""""""""
 
-Format datetime using Python `time.strftime`_ function (default format is
-``%Y-%m-%d``, which is ISO 8601 date):
+Substitute a substitution for a date(time) using the same format string like for
+the `time.strftime`_ function in Python:
 
 .. code:: rst
 
    .. |date| date::
    .. |time| date:: %H:%M:%S
 
-   This document was generated on |date| at |time|.
+   Last update: |date| at |time|
+
+.. note::
+
+   The default format string is `%Y-%m-%d` (ISO 8601 date).
 
 .. _time.strftime: https://docs.python.org/3/library/time.html#time.strftime
 
