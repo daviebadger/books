@@ -1337,8 +1337,8 @@ with a prefix (several prefixes are supported):
 
       Copyright |copy| Davie Badger 2019.
 
-#. substituting with a left whitespace trim (`:ltrim:`) or a right whitespace
-   trim (`:rtrim`) or both the left and the right trims (`:trim:`):
+#. substituting with a left whitespace trim (``:ltrim:``) or a right whitespace
+   trim (``:rtrim``) or both the left and the right trims (``:trim:``):
 
    .. code:: rst
 
