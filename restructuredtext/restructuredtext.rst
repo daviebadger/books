@@ -1326,42 +1326,31 @@ Substitute a substitution for a text:
 Unicode Directive
 """""""""""""""""
 
-Convert unicode numbers to characters:
+Substitute a substitution for a Unicode character using its hexadecimal value
+with a prefix (several prefixes are supported):
 
-.. code:: rst
-
-   .. |copy| unicode:: 0xA9
-
-   Copyright |copy| Davie Badger 2019.
-
-Unicode numbers can be followed by a comment, which will not be rendered:
-
-.. code:: rst
-
-   .. |copy| unicode:: 0xA9 .. copyright sign
-
-   Copyright |copy| Davie Badger 2019.
-
-.. note::
-
-   Special symbols should be always used via unicode substitutions, if they are
-   impossible to type via a keyboard.
-
-.. tip::
-
-   The unicode directive allows to use trim options as flags (no content for
-   the trim fields):
-
-   * ``:ltrim:`` - remove left whitespaces after a substitution
-   * ``:rtrim:`` - remove right whitespaces after a substitution
-   * ``:trim:`` - remove left and right whitespaces after a substitution
+#. substituting without trims (no trimming whitespace around):
 
    .. code:: rst
 
-      Davie Badger |TM| will be rendered like ``Davie Badger^TM``.
+      .. |copy| unicode:: 0xA9 .. copyright sign
+
+      Copyright |copy| Davie Badger 2019.
+
+#. substituting with a left whitespace trim (`:ltrim:`) or a right whitespace
+   trim (`:rtrim`) or both the left and the right trims (`:trim:`):
+
+   .. code:: rst
 
       .. |TM| unicode:: U+2122
          :ltrim:
+
+      Davie Badger |TM| will be rendered like ``Davie Badger^TM``.
+
+.. attention::
+
+   Comments for the ``unicode`` directive are optional. Nevertheless, it is
+   better to use them for description.
 
 Date Directive
 """"""""""""""
