@@ -1299,7 +1299,18 @@ quotes, then the ``csv-table`` directive must know about it via set options:
 Substitution Directives
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Directives suited for substitutions and nothing else.
+Special directives only for substitutions, which use a slightly different
+syntax:
+
+.. code:: rst
+
+   .. |substitution| directive-name:: substituted text .. optional-comment
+
+There are only three substitution directives:
+
+#. ``replace``
+#. ``unicode``
+#. ``date``
 
 Replace Directive
 """""""""""""""""
