@@ -1304,13 +1304,22 @@ syntax:
 
 .. code:: rst
 
-   .. |substitution| directive-name:: substituted text
+   .. |substitution| directive-name:: substituted-text
 
 There are only three substitution directives:
 
 #. ``replace``
 #. ``unicode``
 #. ``date``
+
+.. note::
+
+   The ``unicode`` directive is the only substitution directive which may contain
+   a comment after a substituted text:
+
+   .. code:: rst
+
+      .. |substitution| directive-name:: substituted-text .. comment
 
 Replace Directive
 """""""""""""""""
