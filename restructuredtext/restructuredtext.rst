@@ -850,8 +850,9 @@ are left-aligned with the left square bracket:
 Horizontal Lines
 ----------------
 
-Horizontal lines are at least four same successive punctuation characters
-surrounded by blank lines between paragraphs:
+Horizontal lines, respectively transitions are at least four same consecutive
+punctuation characters (usually a hyphen), which are surrounded by a blank line
+around:
 
 .. code:: rst
 
@@ -859,30 +860,13 @@ surrounded by blank lines between paragraphs:
 
    ----
 
-   This is another paragraph.
-
-Python documentation has no convention for the horizontal lines. Propably
-they are not used at all. However, documentation for |RST| uses hyphens in all
-examples.
+   This is a completely different paragraph.
 
 .. note::
 
-   The purpose of horizontal lines is to signal a change in a subject between
-   paragraphs in literature. In |RST| documents, the horizontal lines are rather
-   used at the end of files with footnotes.
-
-   If your editor allows you to quickly insert 80 hyphens at once, then you may
-   use them instead of four hyphens:
-
-   .. code:: rst
-
-      ...
-
-      --------------------------------------------------------------------------------
-
-      .. [#] Footnote A
-      .. [#] Footnote B
-      .. [#] Footnote C
+   The purpose of transitions is to signal a change in a subject between
+   paragraphs, and thus it is not possible to use them at the start or the end
+   of a section.
 
 
 Substitutions
@@ -2243,8 +2227,6 @@ Inline Markup
    `Footnotes`_ and `Substitutions`_ without parts inside ``..`` constructs.
 Literal Blocks
    `Code Samples`_
-Transitions
-   `Horizontal Lines`_
 
 
 
