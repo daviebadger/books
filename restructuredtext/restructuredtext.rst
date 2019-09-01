@@ -888,28 +888,31 @@ examples.
 Substitutions
 -------------
 
-Substitions are words inside vertical bars ("|"), which will be during rendering
-substituted with other words according to the given inline directive, which was
-used, e.g. a directive for replacing text:
+Substitutions are usually word shortcuts without spaces surrounded by vertical
+bars and used inline in text. Spaces are allowed, but cannot be used as the
+first or the last character in substitution references:
 
 .. code:: rst
 
-   |RST| is really long to type, so it is better to use a shorcut via
+   |RST| is really long to type, so it is better to use a word shortcut via
    substitutions.
 
-   Also |PY 3| is mentioned a lot of times within a document, so it is better to
-   replace it with a specific version.
+These marked substitution references will be substituted with a text declared in
+substitution definitions with the help of directives (will be covered in detail
+later) during a document conversion to other output formats:
+
+.. code:: rst
 
    .. |RST| replace:: reStructuredText
-   .. |PY 3| replace:: Python 3.7.
 
-Other possible inline directives and directives in general are covered in the
-`Directives`_ section.
+Substitution definitions may be defined either before substitution references or
+after them. The latter is a better choice because they may be organized at the
+end of a document after footnotes and hyperlink targets.
 
 .. note::
 
-   Like in text styles, if a substituion is needed inside a word, then it needs
-   spaces around (espaced) in order to be working:
+   If a substitution reference is placed inside a word, then it must be wrapped
+   with escaped spaces around or else it will not be replaced:
 
    .. code:: rst
 
@@ -919,11 +922,11 @@ Other possible inline directives and directives in general are covered in the
 
 .. tip::
 
-   Substitutions may be combined with hyperlinks:
+   Substitution references may be combined with hyperlink references:
 
    .. code:: rst
 
-      |RST|_ is really long to type, so it is better to use a shorcut via
+      |RST|_ is really long to type, so it is better to use a word shortcut via
       substitutions.
 
       .. |RST| replace:: reStructuredText
@@ -1299,8 +1302,8 @@ quotes, then the ``csv-table`` directive must know about it via set options:
 Substitution Directives
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Special directives only for substitutions, which use a slightly different
-syntax:
+Special directives only for substitution definitions, which use a slightly
+different syntax:
 
 .. code:: rst
 
