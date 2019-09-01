@@ -1033,6 +1033,12 @@ thematic groups:
 Image Directives
 ^^^^^^^^^^^^^^^^
 
+Images are not a part of markup by design. Directives provide better power in
+the sense of potential configuration. There are two image directives:
+
+* ``image``
+* ``figure``
+
 Image Directive
 """""""""""""""
 
