@@ -1759,6 +1759,10 @@ given place, where is the ``include`` directive located:
 
       Copyright |copy| Davie Badger 2019.
 
+   Take in mind that these substitution definitions cannot be overridden in the
+   sense of substituting for one way and later the other way in a document.
+   There may exist only one unique substitution definition.
+
    All the sets are listed here__.
 
 __ http://docutils.sourceforge.net/docs/ref/rst/definitions.html#character-entity-sets
