@@ -907,7 +907,8 @@ later) during a document conversion to other output formats:
 
 Substitution definitions may be defined either before substitution references or
 after them. The latter is a better choice because they may be organized at the
-end of a document after footnotes and hyperlink targets.
+end of a section or even better at the end of a document after footnotes and
+hyperlink targets.
 
 .. note::
 
