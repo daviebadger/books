@@ -1039,6 +1039,40 @@ the sense of potential configuration. There are two image directives:
 * ``image``
 * ``figure``
 
+The two have common directive options:
+
+* ``align``
+
+  * align the image in the center using the ``center`` value (default is
+    unaligned)
+
+* ``alt``
+
+  * an alternate text which is displayed when the image is not still rendered
+    or cannot be rendered or when it is read by an impaired use
+
+* ``height``
+
+  * new height for the image if the original height is not enough
+
+* ``scale``
+
+  * new proportional scale for the image if the original size is not enough
+    (default is ``100 %``)
+
+* ``target``
+
+  * add a hyperlink target to the image and make it clickable
+
+* ``width``
+
+  * new width for the image if the original width is not enough
+
+.. note::
+
+   It is also possible to align an image ``left`` or ``right``, but it will
+   change text flow around which may not be desired.
+
 Image Directive
 """""""""""""""
 
