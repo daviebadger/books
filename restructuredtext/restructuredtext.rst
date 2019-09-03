@@ -1044,44 +1044,30 @@ Image Directive
 
 Add an image:
 
-.. code:: rst
+#. from a local filesystem using either an absolute or a relative (preferred)
+   path:
 
-   Local image:
+   .. code:: rst
 
-   .. image:: path/to/image.png
+      .. image:: path/to/image.png
 
-   Remote image:
+#. from a remote location (must be a valid URL address):
 
-   .. image:: www.example.com/image.png
+   .. code:: rst
 
-The image directive supports these options:
+      .. image:: www.example.com/image.png
 
-* ``alt``
+.. note::
 
-  * alternate text, when the image cannot be rendered or for impaired users
+   The ``image`` directive also can be used in substitutions:
 
-* ``height``
+      .. code:: rst
 
-  * height of the image, e.g. 100 (default is original height)
+         |img|
 
-* ``width``
+         .. |img| image:: path/to/image.jpeg
 
-  * width of the image, e.g. 100 (default is original width)
-
-* ``scale``
-
-  * scale the image in % (bigger, smaller) with respect to ``height`` or
-    ``width`` values, e.g. ``50 %`` (default is 100 %)
-
-* ``align``
-
-  * align the image left or right (both set float and change text flow around)
-    or center (default is no alignment)
-
-* ``target``
-
-  * make the image clickable, either to an internal hyperlink target using
-    ``Link_`` syntax or to an external link
+   However, it is better to use only text-replacing substitution directives.
 
 Figure Directive
 """"""""""""""""
