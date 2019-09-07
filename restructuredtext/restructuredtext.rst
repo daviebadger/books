@@ -1106,39 +1106,29 @@ Add an image:
 Figure Directive
 """"""""""""""""
 
-Add an image with caption (optional):
+Add an image with a caption:
 
 .. code:: rst
 
    .. figure:: path/to/image.png
-      :alt: alternate text
 
       Caption for the image.
 
-Figures may also have a legend defined after a caption using common body
-elements:
-
-.. code:: rst
-
-   .. figure:: path/to/image.png
-      :alt: alternate text
-
-      Caption for the image.
-
-      Legend for the image with a grid table.
-
-The figure directive supports same options like for `Image Directive`_, except
-for the ``align`` option (now aligns the figure, not only image), plus these
-options:
+The ``figure`` directive supports two extra options:
 
 * ``figwidth``
 
-  * width of the image and caption in overall
+  * width of an image and a caption in total
 
 * ``figclass``
 
-  * set class attributes on the figure (by default the ``:class:`` option adds
-    classes only to the image)
+  * add HTML class attributes to a figure as a whole (the ``class`` option
+    adds classes only to an image)
+
+.. note::
+
+   In case of the ``figure`` directive, the ``align`` option aligns both an
+   image and a caption.
 
 Table Directives
 ^^^^^^^^^^^^^^^^
