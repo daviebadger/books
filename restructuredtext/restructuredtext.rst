@@ -1089,7 +1089,7 @@ Add an image:
 
    .. code:: rst
 
-      .. image:: www.example.com/image.png
+      .. image:: www.example.com/image.jpg
 
 .. note::
 
