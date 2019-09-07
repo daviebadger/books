@@ -1095,11 +1095,11 @@ Add an image:
 
    The ``image`` directive also can be used in substitutions:
 
-      .. code:: rst
+   .. code:: rst
 
-         |img|
+      |img|
 
-         .. |img| image:: path/to/image.jpeg
+      .. |img| image:: path/to/image.jpeg
 
    However, it is better to use only text-replacing substitution directives.
 
