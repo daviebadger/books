@@ -1387,7 +1387,7 @@ the `time.strftime`_ function in Python:
 Body Element Directives
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Directives to extend existing body elements.
+Directives which extend a collection of already existing body elements.
 
 Code Directive
 """"""""""""""
