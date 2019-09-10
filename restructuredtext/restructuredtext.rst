@@ -2227,26 +2227,6 @@ TODO
 
 
 
-Glossary
-========
-
-|RST| uses officially the following terminology for markup syntax:
-
-Citations
-   `Footnotes`_ with alphanumeric characters plus hyphens, underscores and
-   periods instead of numbered indexes, e.g. ``[label123]_``.
-
-   Citations are rarely used, footnotes are much more prefered.
-Doctest Blocks
-   `Code Samples`_ with interactive Python interpreter.
-Inline Markup
-   `Text Styles`_ plus markup inside paragraphs, like `Hyperlinks`_,
-   `Footnotes`_ and `Substitutions`_ without parts inside ``..`` constructs.
-Literal Blocks
-   `Code Samples`_
-
-
-
 References
 ==========
 
