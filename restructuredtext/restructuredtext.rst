@@ -1433,7 +1433,8 @@ Add a mathematical formula using LaTeX math syntax including AMS extensions:
 Rubric Directive
 """"""""""""""""
 
-Add an informal heading, which is not part of the table of contents:
+Add an informal heading, which will not be a part of an official document
+structure and thus not visible in a potential table of contents:
 
 .. code::
 
