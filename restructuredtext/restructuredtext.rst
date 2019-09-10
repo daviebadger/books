@@ -1392,7 +1392,7 @@ Directives which extend a collection of already existing body elements.
 Code Directive
 """"""""""""""
 
-Add a code sample with syntax highlightning:
+Add a code sample with syntax highlighting:
 
 .. code:: rst
 
@@ -1400,21 +1400,18 @@ Add a code sample with syntax highlightning:
 
       print("Hello World")
 
-Optionally, line numbers may be turned on:
+.. hint::
 
-.. code:: rst
-
-   .. code:: py
-      :number-lines:
-
-      print("Hello World")
+   Sphinx provides more powerful directives for code samples with a lot of
+   features via directive options.
 
 .. note::
 
-   Code examples are highligted via Pygments_ syntax highlighter, unless |RST|
-   documents are parsed in different parsers (not using Docutils at all).
+   Code examples are highlighted via Pygments_ syntax highlighter unless |RST|
+   documents are parsed by a different parser (not using Docutils at all).
 
-   List of supported languages (lexers) is in `Pygments documentation`_.
+   List of supported languages (so-called lexers) is in the
+   `Pygments documentation`_.
 
 .. _Pygments: http://pygments.org/
 .. _Pygments documentation: http://pygments.org/docs/lexers/
