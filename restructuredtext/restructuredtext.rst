@@ -1461,7 +1461,7 @@ from the flow of a document without a need to create another sections:
 Highlights Directive
 """"""""""""""""""""
 
-Add a summary at the end of a section:
+Add a summary of a whole document or a section:
 
 .. code:: rst
 
