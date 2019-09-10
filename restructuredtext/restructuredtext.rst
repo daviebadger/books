@@ -1422,13 +1422,15 @@ Optionally, line numbers may be turned on:
 Math Directive
 """"""""""""""
 
-Add a mathematical formula using LaTeX math syntax including AMS extensions:
+Add a mathematical formula using LaTeX_ math syntax with AMS_ extensions:
 
 .. code:: rst
 
    .. math::
 
       f(x) = x^2
+
+.. _AMS: http://www.ams.org/publications/authors/tex/amslatex
 
 Rubric Directive
 """"""""""""""""
@@ -2009,8 +2011,6 @@ formulas either into ``\(...\)`` (LaTeX) or ``$...$`` (TeX):
 
    Create a graph of a function :math:`f(x) = x^2`.
 
-.. _LaTeX: https://en.wikibooks.org/wiki/LaTeX/Mathematics
-
 Sub Role
 ^^^^^^^^
 
@@ -2285,6 +2285,7 @@ __ https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)
    formats or protocols) ratified by the IETF_ community.
 
 .. _IETF: https://www.ietf.org/about/who/
+.. _LaTeX: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 .. _PEPs: https://www.python.org/dev/peps/
 .. _RFCs: https://tools.ietf.org/rfc/index
 .. _Steering Council: https://www.python.org/dev/peps/pep-0013/#current-steering-council
