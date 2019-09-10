@@ -1444,19 +1444,19 @@ Add an informal heading, which is not part of the table of contents:
 Topic Directive
 """""""""""""""
 
-Add a topic container with a title to express a self-contained idea separated
-from the flow of a document without a need to create another sections:
+Add a topic container with a title to develop a self-contained idea without a
+need to create another (sub)section:
 
 .. code:: rst
 
    Section Title
    =============
 
-   Bla bla bla
+   ...
 
    .. topic:: Idea
 
-      Foo bar baz
+      Blah blah blah
 
 Highlights Directive
 """"""""""""""""""""
