@@ -1016,6 +1016,7 @@ Some examples of using directives in practice:
              :name: My picture
 
 
+
 Built-In Directives
 -------------------
 
@@ -1029,6 +1030,7 @@ thematic groups:
 * admonitions
 * documents
 * HTML
+
 
 Image Directives
 ^^^^^^^^^^^^^^^^
@@ -1129,6 +1131,7 @@ The ``figure`` directive supports two extra options:
 
    In case of the ``figure`` directive, the ``align`` option aligns both an
    image and a caption.
+
 
 Table Directives
 ^^^^^^^^^^^^^^^^
@@ -1300,6 +1303,7 @@ quotes, then the ``csv-table`` directive must know about it via set options:
    Options such as ``delim``, ``quote`` and ``escape`` may contain Unicode
    codes, for example ``0x09`` for tabs.
 
+
 Substitution Directives
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1383,6 +1387,7 @@ the `time.strftime`_ function in Python:
    The default format string is ``%Y-%m-%d`` (ISO 8601 date).
 
 .. _time.strftime: https://docs.python.org/3/library/time.html#time.strftime
+
 
 Body Element Directives
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1472,6 +1477,7 @@ Add a summary of a whole document or a section:
       * a
       * b
       * c
+
 
 Admonition Directives
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1601,6 +1607,7 @@ Add a warning to a text (a user should be warned about a possible problem):
    .. warning::
 
       Do not exceed the recommended daily dose.
+
 
 Document Directives
 ^^^^^^^^^^^^^^^^^^^
@@ -1801,6 +1808,7 @@ Bypass parsing text for the given output formats separated by a space:
    Use wisely the ``raw`` directive, because |RST| will not parse its content
    and the content will be placed as it is. It may contain malicious data.
 
+
 HTML Directives
 ^^^^^^^^^^^^^^^
 
@@ -1908,6 +1916,7 @@ non-comment element(s):
       Unfortunately, this paragraph has the "cls" class by mistake.
 
 
+
 Custom Directives
 -----------------
 
@@ -1917,6 +1926,7 @@ TODO
 
    Look at already existing directives, either in |RST| or in Sphinx, before
    creating new ones (do not reinvent the wheel).
+
 
 
 
