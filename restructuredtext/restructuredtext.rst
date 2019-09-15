@@ -1151,29 +1151,12 @@ Advanced directives for tables. Each of these directives supports these options:
 Table Directive
 """""""""""""""
 
-Add a title (optional) to simple or grid tables:
+Wrap either a simple or a grid table with an optional title or possible
+directive options:
 
 .. code:: rst
 
    .. table:: Users
-
-      =========  ========  ======  ===
-      Firstname  Lastname  Gender  Age
-      =========  ========  ======  ===
-      Davie      Badger    Male    24
-      Jacob      Badger    Male    19
-      =========  ========  ======  ===
-
-Align a table and set proportionally size of columns via table options:
-
-.. code:: rst
-
-   Below is a table with proportionally set size for each column except for
-   the last one:
-
-   .. table::
-      :align: center
-      :widths: 10, 10, 5
 
       =========  ========  ======  ===
       Firstname  Lastname  Gender  Age
