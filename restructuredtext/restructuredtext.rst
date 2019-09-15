@@ -1136,6 +1136,11 @@ The ``figure`` directive supports two extra options:
 Table Directives
 ^^^^^^^^^^^^^^^^
 
+table titles
+table directives
+
+----
+
 Advanced directives for tables. Each of these directives supports these options:
 
 * ``align``
@@ -1152,7 +1157,7 @@ Table Directive
 """""""""""""""
 
 Wrap either a simple or a grid table with an optional title or possible
-directive options:
+directive options, as mentioned in the introduction to table directives:
 
 .. code:: rst
 
@@ -1168,56 +1173,62 @@ directive options:
 List-table Directive
 """"""""""""""""""""
 
-Create a table via a list style without headers, column or row span (not
-allowed at all):
+Add a list-like table using a bulleted list where each sublist must have same
+count of items:
 
-.. code:: rst
+#. without a table header:
 
-   Below is a table without a table title:
+   .. code:: rst
 
-   .. list-table::
+      .. list-table:: Users
 
-      * - Davie
-        - Badger
-        - Male
-        - 24
-      * - Jacob
-        - Badger
-        - Male
-        - 19
+         * - Davie
+           - Badger
+           - Male
+           - 24
+         * - Jacob
+           - Badger
+           - Male
+           - 19
 
-List tables may have either headers in the first row using a ``header-rows``
-option or on the left in the first column, like in `Option Lists`_, using a
-``stub-columns`` option:
+#. with a table header in the first row of a table:
 
-.. code:: rst
-
-   .. list-table:: Table with headers in the first row
+   .. code:: rst
       :header-rows: 1
 
-      * - Firstname
-        - Lastname
-        - Gender
-        - Age
-      * - Davie
-        - Badger
-        - Male
-        - 24
+      .. list-table:: Users
 
-   .. list-table:: Table with headers in the first column
-      :stub-columns: 1
+         * - Davie
+           - Badger
+           - Male
+           - 24
+         * - Jacob
+           - Badger
+           - Male
+           - 19
 
-      * - Name
-        - reStructuredText
-      * - Shortcut
-        - rst
-      * - Parser
-        - Docutils
+#. with a table header in the first column of a table:
+
+   .. code:: rst
+
+      .. list-table::
+         :stub-columns: 1
+
+         * - Name
+           - reStructuredText
+         * - Shortcut
+           - rst
+         * - Parser
+           - Docutils
+
+.. note::
+
+   In list-like tables is not possible to span columns or rows at all.
 
 .. tip::
 
-   If in a row is a list item without content, then it is considered as an empty
-   cell:
+   If a table cell cannot contain a sensible value, then it may be left empty
+   to meet list-like table requirements:
 
    .. code:: rst
 
