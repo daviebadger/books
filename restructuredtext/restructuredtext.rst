@@ -1278,7 +1278,7 @@ Add a table using CSV_ format:
       .. csv-table::
          :url: www.example.com/data.csv
 
-#. external CSV table with a header in the first row:
+#. external CSV table with a header in the first row of a table:
 
    .. code:: rst
 
@@ -1290,7 +1290,7 @@ Add a table using CSV_ format:
          :url: www.example.com/data.csv
          :header-rows: 1
 
-#. external CSV table with a header in the first column:
+#. external CSV table with a header in the first column of a table:
 
    .. code:: rst
 
@@ -1302,7 +1302,7 @@ Add a table using CSV_ format:
          :url: www.example.com/data.csv
          :stub-columns: 1
 
-The ``csv-table`` supports these options:
+The ``csv-table`` directive supports these options:
 
 * ``delim``
 
