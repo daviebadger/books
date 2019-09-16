@@ -1136,22 +1136,25 @@ The ``figure`` directive supports two extra options:
 Table Directives
 ^^^^^^^^^^^^^^^^
 
-table titles
-table directives
+Directives for creating advanced and yet easy-to-design tables. There are three
+table directives:
 
-----
+* ``table``
+* ``list-table``
+* ``csv-table``
 
-Advanced directives for tables. Each of these directives supports these options:
+Each of these tables supports table titles, which are optional to use. The same
+goes for base table options:
 
 * ``align``
 
-  * align a table ``left`` (default), ``center`` or ``right`` in a document
+  * align horizontally a table ``left`` (default), ``center`` or ``right``
 
 * ``widths``
 
-  * ``auto`` according to text in columns, ``grid`` for more flexible columns or
-    comma-separated fixed numbers (ratio) for columns starting from the left
-    (columns from the right may be omitted), e.g. ``15, 10, 30``
+  * set column widths to ``auto`` mode according to text in columns (by default
+    ``csv-table`` and ``list-table`` tables have column-equal widths whereas
+    ``table`` tables not)
 
 Table Directive
 """""""""""""""
