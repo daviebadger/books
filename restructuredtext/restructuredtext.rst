@@ -1197,9 +1197,9 @@ the number of items:
 #. with a table header in the first row of a table:
 
    .. code:: rst
-      :header-rows: 1
 
       .. list-table:: Users
+         :header-rows: 1
 
          * - Davie
            - Badger
