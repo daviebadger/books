@@ -1174,7 +1174,7 @@ List-table Directive
 """"""""""""""""""""
 
 Add a list-like table using a bulleted list where each sublist must have same
-count of items:
+the number of items:
 
 #. without a table header:
 
@@ -1244,58 +1244,84 @@ count of items:
 Csv-table Directive
 """""""""""""""""""
 
-Create a table using CSV format:
+Add a table using CSV_ format:
 
-.. code:: rst
+#. embedded CSV table without a header:
 
-   .. csv-table:: CSV table without headers
+   .. code:: rst
 
-      "David", "Badger", "Male", 24
-      "Jacob", "Badger", "Male", 19
+      .. csv-table:: Users
 
-   .. csv-table:: CSV table with headers
-      :header: "Firstname", "Lastname", "Gender", "Age"
+         "David", "Badger", "Male", 24
+         "Jacob", "Badger", "Male", 19
 
-      "David", "Badger", "Male", 24
-      "Jacob", "Badger", "Male", 19
+#. embedded CSV table with a header:
 
-CSV tables may be loaded relatively from local files or externally from an URL
-address, in which case there may be headers in rows, columns or not at all:
+   .. code:: rst
 
-.. code:: rst
+      .. csv-table:: Users
+         :header: "Firstname", "Lastname", "Gender", "Age"
 
-   .. csv-table:: CSV table without headers
-      :file: data.csv
+         "David", "Badger", "Male", 24
+         "Jacob", "Badger", "Male", 19
 
-   .. csv-table:: CSV table with headers in the first row
-      :file: data.csv
-      :header-rows: 1
+#. external CSV table without a header:
 
-   .. csv-table:: Remote CSV table with headers in the first column
-      :url: www.example.com/data.csv
-      :stub-columns: 1
+   .. code:: rst
 
-Usually CSV tables are comma-separated values with double quoted values, which
-contain commas. Howoever, if a CSV table uses different delim character or
-quotes, then the ``csv-table`` directive must know about it via set options:
+      .. csv-table::
+         :file: data.csv
+
+      .. csv-table::
+         :url: www.example.com/data.csv
+
+#. external CSV table with a header in the first row:
+
+   .. code:: rst
+
+      .. csv-table::
+         :file: data.csv
+         :header-rows: 1
+
+      .. csv-table::
+         :url: www.example.com/data.csv
+         :header-rows: 1
+
+#. external CSV table with a header in the first column:
+
+   .. code:: rst
+
+      .. csv-table::
+         :file: data.csv
+         :stub-columns: 1
+
+      .. csv-table::
+         :url: www.example.com/data.csv
+         :stub-columns: 1
+
+The ``csv-table`` supports these options:
 
 * ``delim``
 
-  * any character, e.g. ``;``, but default is ``,``, other allowed values are
-    ``space`` or ``tab``
+  * a character for separating column values (Unicode characters are also
+    supported), which is by default ``,``
 
 * ``quote``
 
-  * quote for string values, default ``"``
+  * a quote for multi-word (string) values, where the ``delim`` character does
+    not separate a value (default is ``"``)
 
 * ``escape``
 
-  * escape character for quotes, default ``""``
+  * an escape character for the ``quote`` character used inside a string value
+    (default ``""``)
 
 .. note::
 
-   Options such as ``delim``, ``quote`` and ``escape`` may contain Unicode
-   codes, for example ``0x09`` for tabs.
+   Unlike strict list-style tables, the |RST| parser doest not strictly check a
+   number of values per row.
+
+.. _CSV: https://en.wikipedia.org/wiki/Comma-separated_values
 
 
 Substitution Directives
