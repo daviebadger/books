@@ -1565,7 +1565,7 @@ readers. |RST| has namely the following admonitions:
 * ``warning``
 
 Except for these built-in admonitions, there exists an option to create a custom
-directive via an ``admonition`` directive, if needed.
+directive via ``admonition`` directive, if needed.
 
 Admonition Directive
 """"""""""""""""""""
@@ -1682,7 +1682,12 @@ Add a warning to a text (a user should be warned about a possible problem):
 Document Directives
 ^^^^^^^^^^^^^^^^^^^
 
-Directives about documents as a whole.
+Directives about documents as a whole. There are four document directives:
+
+* ``contents``
+* ``sectnum``
+* ``include``
+* ``raw``
 
 Contents Directive
 """"""""""""""""""
@@ -1690,7 +1695,7 @@ Contents Directive
 Generate a table of contents (TOC) from sections and their nested subsections
 in a document (a document title and a subtitle are ignored):
 
-#. using a default title for the table of contents:
+#. using a default title for a table of contents:
 
    .. code:: rst
 
@@ -1705,7 +1710,7 @@ in a document (a document title and a subtitle are ignored):
           * Subsubsection AAA
       * Section B
 
-#. using a custom title for the table of contents:
+#. using a custom title for a table of contents:
 
    .. code:: rst
 
@@ -1720,7 +1725,7 @@ in a document (a document title and a subtitle are ignored):
           * Subsubsection AAA
       * Section B
 
-#. limiting section levels rendered in the table of contents:
+#. limiting section levels rendered in a table of contents:
 
    .. code:: rst
 
@@ -1737,15 +1742,16 @@ in a document (a document title and a subtitle are ignored):
 
 .. tip::
 
-   In a rendered RST document with a table of contents, entries in the TOC lead
-   to sections in a document, whereas the sections in the document lead back to
-   the entries in the TOC after a click on a section title.
+   When navigating in a rendered RST document with a table of contents, entries
+   in the TOC lead to sections in a document, whereas the sections in the
+   document lead back to the entries in the TOC after a click on a section
+   title.
 
 Sectnum Directive
 """""""""""""""""
 
-Automatically number section titles in a document (including those in a table
-of content):
+Automatically number section titles in a document (will be automatically
+propagated to a table of content in the document):
 
 #. without any directive options:
 
@@ -1790,8 +1796,8 @@ of content):
 Include Directive
 """""""""""""""""
 
-Load text from a file using an absolute or a relative (preferred) path to the
-given place, where is the ``include`` directive located:
+Load text from a file using either an absolute or a relative (preferred) path
+to the given place in filesystem:
 
 #. a |RST| document:
 
@@ -1850,7 +1856,7 @@ Raw Directive
 
 Bypass parsing text for the given output formats separated by a space:
 
-#. a text inside the ``raw`` directive:
+#. a text embedded in the ``raw`` directive:
 
    .. code:: rst
 
