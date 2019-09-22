@@ -1374,7 +1374,7 @@ different syntax:
 
    .. |substitution| directive-name:: substituted-text
 
-There are only three substitution directives:
+There are three text-replacing substitution directives:
 
 #. ``replace``
 #. ``unicode``
@@ -1382,12 +1382,12 @@ There are only three substitution directives:
 
 .. note::
 
-   The ``unicode`` directive is the only substitution directive which may contain
-   a comment after a substituted text:
+   The ``unicode`` directive is the only substitution directive which may
+   contain a comment after a substituted text:
 
    .. code:: rst
 
-      .. |substitution| directive-name:: substituted-text .. comment
+      .. |substitution| unicode:: substituted-text .. comment
 
 Replace Directive
 """""""""""""""""
@@ -1404,7 +1404,7 @@ Unicode Directive
 """""""""""""""""
 
 Substitute a substitution for a Unicode character using its hexadecimal value
-with a prefix (several prefixes are supported):
+with a prefix, such as ``0x`` or ``U+``:
 
 #. substituting without trims (no trimming whitespace around):
 
@@ -1422,12 +1422,13 @@ with a prefix (several prefixes are supported):
       .. |TM| unicode:: U+2122
          :ltrim:
 
-      Davie Badger |TM| will be rendered like ``Davie Badger^TM``.
+      Davie Badger |TM| will be rendered as ``Davie Badger^TM``.
 
 .. attention::
 
    Comments for the ``unicode`` directive are optional. Nevertheless, it is
-   better to use them for description.
+   better to use them for description, if a substitution is not
+   self-descriptive.
 
 Date Directive
 """"""""""""""
@@ -1444,9 +1445,10 @@ the `time.strftime`_ function in Python:
 
 .. note::
 
-   The default format string is ``%Y-%m-%d`` (ISO 8601 date).
+   The default format string is ``%Y-%m-%d`` (`ISO 8601`_ date).
 
 .. _time.strftime: https://docs.python.org/3/library/time.html#time.strftime
+.. _ISO 8601: https://www.iso.org/iso-8601-date-and-time-format.html
 
 
 Body Element Directives
