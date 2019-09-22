@@ -1454,12 +1454,19 @@ the `time.strftime`_ function in Python:
 Body Element Directives
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Directives which extend a collection of already existing body elements.
+Directives which extend a collection of already existing body elements. There
+are five body element directives:
+
+* ``code``
+* ``math``
+* ``rubric``
+* ``topic``
+* ``highlights``
 
 Code Directive
 """"""""""""""
 
-Add a code sample with syntax highlighting:
+Add a code sample from a specific language with syntax highlighting:
 
 .. code:: rst
 
@@ -1470,7 +1477,7 @@ Add a code sample with syntax highlighting:
 .. hint::
 
    Sphinx provides more powerful directives for code samples with a lot of
-   features via directive options.
+   features via directive options than this one.
 
 .. note::
 
@@ -1486,7 +1493,8 @@ Add a code sample with syntax highlighting:
 Math Directive
 """"""""""""""
 
-Add a mathematical formula using LaTeX_ math syntax with AMS_ extensions:
+Add a mathematical formula using LaTeX_ math syntax, which also supports AMS_
+extensions:
 
 .. code:: rst
 
