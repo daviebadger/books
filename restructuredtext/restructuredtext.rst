@@ -1866,7 +1866,6 @@ directive content ``content`` attribute:
    .. meta::
       :author: Davie Badger
       :description: reStructuredText is a markup language used for documentation.
-      :keywords: rst, reST, reStructuredText
 
 .. note::
 
@@ -1876,7 +1875,6 @@ directive content ``content`` attribute:
 
       <meta name="author" content="Davie Badger">
       <meta name="description" content="reStructuredText is a markup language used for documentation.">
-      <meta name="keywords" content="rst, reST, reStructuredText">
 
 Class Directive
 """""""""""""""
@@ -2091,7 +2089,7 @@ material or even artwork:
 
 .. code:: rst
 
-  `title:`How to Title My Book` is the most selling book in the world.
+   :title:`How to Title My Book` is the most selling book in the world.
 
 .. note::
 
