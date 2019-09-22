@@ -1967,7 +1967,7 @@ non-comment element(s):
 
          This is a block quote.
 
-.. tip::
+.. hint::
 
    Before adding HTML classes to elements, try to convert a document to HTML
    first, and then inspect tags with attributes whether the tags already contain
