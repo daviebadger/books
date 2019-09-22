@@ -1035,8 +1035,8 @@ thematic groups:
 Image Directives
 ^^^^^^^^^^^^^^^^
 
-Images are not a part of markup by design. Directives provide better power in
-the sense of potential configuration. There are two image directives:
+Images are not a part of markup by design, because directives provide better
+power in the sense of potential configuration. There are two image directives:
 
 * ``image``
 * ``figure``
@@ -1046,20 +1046,20 @@ The two have common directive options:
 * ``alt``
 
   * an alternate text which is displayed when the image is not still rendered
-    or cannot be rendered or when it is read by an impaired use
+    or cannot be rendered or when it is read by an impaired user
 
 * ``width``
 
-  * new width for the image if the original width is not enough
+  * new width in pixels for the image if the original width is unwanted
 
 * ``height``
 
-  * new height for the image if the original height is not enough
+  * new height in pixels for the image if the original height is unwanted
 
 * ``scale``
 
-  * new proportional scale for the image if the original size is not enough
-    (default is ``100 %``)
+  * new proportional scale in percentages for the image if the original size is
+    unwanted (default is ``100 %``)
 
 * ``align``
 
@@ -1073,7 +1073,7 @@ The two have common directive options:
 .. note::
 
    It is also possible to align an image ``left`` or ``right``, but it will
-   change text flow around which may not be desired.
+   change text flow around (make it float) which may not be desired.
 
 Image Directive
 """""""""""""""
@@ -1108,7 +1108,7 @@ Add an image:
 Figure Directive
 """"""""""""""""
 
-Add an image with a caption:
+Add an image with a caption, though it is optional:
 
 .. code:: rst
 
@@ -1120,12 +1120,45 @@ The ``figure`` directive supports two extra options:
 
 * ``figwidth``
 
-  * width of an image and a caption in total
+  * width of an image and a caption in total (pixels)
 
 * ``figclass``
 
   * add HTML class attributes to a figure as a whole (the ``class`` option
     adds classes only to an image)
+
+.. hint::
+
+   The ``figure`` directive supports any body elements after a caption, which
+   are considered as a legend for an image:
+
+   .. code:: rst
+
+      .. figure:: path/to/image.svg
+
+         Caption for the image.
+
+         Legend:
+
+         * a is a
+         * b is b
+         * c is c
+
+   it is okay only, if the figure is not aligned otherwise it may break the
+   legend visually. When the figure needs to be aligned, a legend should be
+   placed after the directive as new block markup:
+
+   .. code:: rst
+
+      .. figure:: path/to/image.svg
+         :align: center
+         :name: img
+
+         Caption for the image.
+
+      Legend for the `img`_ figure:
+
+      ...
 
 .. note::
 
