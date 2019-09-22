@@ -1209,8 +1209,8 @@ directive options, as mentioned in the introduction to table directives:
 List-table Directive
 """"""""""""""""""""
 
-Add a list-like table using a bulleted list where each sublist must have same
-the number of items:
+Add a list-like table using a bulleted list where each sublist must contain the
+same number of list items:
 
 #. without a table header:
 
@@ -1234,6 +1234,10 @@ the number of items:
       .. list-table:: Users
          :header-rows: 1
 
+         * - Firstname
+           - Lastname
+           - Gender
+           - Age
          * - Davie
            - Badger
            - Male
@@ -1264,7 +1268,7 @@ the number of items:
 .. tip::
 
    If a table cell cannot contain a sensible value, then it may be left empty
-   to meet list-like table requirements:
+   to meet the ``list-table`` directive requirements:
 
    .. code:: rst
 
@@ -1282,7 +1286,7 @@ Csv-table Directive
 
 Add a table using CSV_ format:
 
-#. embedded CSV table without a header:
+#. embedded CSV table without a table header:
 
    .. code:: rst
 
@@ -1291,7 +1295,7 @@ Add a table using CSV_ format:
          "David", "Badger", "Male", 24
          "Jacob", "Badger", "Male", 19
 
-#. embedded CSV table with a header:
+#. embedded CSV table with a table header:
 
    .. code:: rst
 
@@ -1301,7 +1305,7 @@ Add a table using CSV_ format:
          "David", "Badger", "Male", 24
          "Jacob", "Badger", "Male", 19
 
-#. external CSV table without a header:
+#. external CSV table without a table header:
 
    .. code:: rst
 
@@ -1311,7 +1315,7 @@ Add a table using CSV_ format:
       .. csv-table::
          :url: www.example.com/data.csv
 
-#. external CSV table with a header in the first row of a table:
+#. external CSV table with a table header in the first row of a table:
 
    .. code:: rst
 
@@ -1323,7 +1327,7 @@ Add a table using CSV_ format:
          :url: www.example.com/data.csv
          :header-rows: 1
 
-#. external CSV table with a header in the first column of a table:
+#. external CSV table with a table header in the first column of a table:
 
    .. code:: rst
 
@@ -1354,8 +1358,8 @@ The ``csv-table`` directive supports these options:
 
 .. note::
 
-   Unlike strict list-style tables, the |RST| parser doest not strictly check a
-   number of values per row.
+   Unlike strict list-style tables, the |RST| parser doest not strictly check,
+   whether each row contain the same number of columns or not.
 
 .. _CSV: https://en.wikipedia.org/wiki/Comma-separated_values
 
