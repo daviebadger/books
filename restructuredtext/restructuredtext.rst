@@ -923,7 +923,7 @@ Directives
 ==========
 
 Directives are the first standardized way of the extension mechanism in |RST|
-how to extend block markup. By directives is possible to better structure
+how to extend block elements. By directives is possible to better structure
 documents, add metadata or advanced body elements or load and transform data
 stored in other documents and files.
 
@@ -1146,7 +1146,7 @@ The ``figure`` directive supports two extra options:
 
    it is okay only, if the figure is not aligned otherwise it may break the
    legend visually. When the figure needs to be aligned, a legend should be
-   placed after the directive as new block markup:
+   placed after the directive as a new block element:
 
    .. code:: rst
 
