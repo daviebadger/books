@@ -787,15 +787,39 @@ author of that quotes, if before name are two hyphens:
 Comments
 --------
 
-Comments are hidden pagraphs, which starts with two periods followed by a space
-and other lines are left-aligned to this indentation:
+Comments are usually plain yet hidden paragraphs without any constructs, which
+start with two periods followed by a space, and any other lines are left-aligned
+to this indentation:
 
 .. code:: rst
 
    .. This is a comment
       over two lines.
 
-      This is another paragraph inside this single comment.
+      This paragraph is also a part of the comment.
+
+.. note::
+
+   Comments may be empty as it was shown in block quotes. It is useful as a
+   block-level separator in such situations when the |RST| parser would
+   misinterpret a document structure.
+
+.. warning::
+
+   In some rare cases, notably using markup constructs unintentionally in a
+   comment, it is needed to break a line right after the two periods and indent
+   text otherwise the |RST| parser will not recognize it as a comment:
+
+   .. code:: rst
+
+      Invalid comment (a warning will occur when parsing a document):
+
+      .. |substitution|: It is not OK
+
+      Valid comment:
+
+      ..
+        |substitution|: It is OK
 
 
 Footnotes
@@ -1005,8 +1029,8 @@ Some examples of using directives in practice:
    * ``name``
 
      * add a human-redable name to a directive, which may be further used as a
-       hyperlink target (the name must be unique across a document otherwise RST
-       parser raises an error):
+       hyperlink target (the name must be unique across a document otherwise
+       |RST| parser raises an error):
 
        .. code:: rst
 
@@ -1957,8 +1981,8 @@ non-comment element(s):
 .. note::
 
    If the ``class`` directive is intended to be used before block quotes, then
-   a comment must be placed right after the ``class`` directive otherwise the
-   block quotes will be misinterpreted as paragraphs inside the directive:
+   an empty comment must be placed right after the ``class`` directive otherwise
+   the block quotes will be misinterpreted as paragraphs inside the directive:
 
    .. code:: rst
 
@@ -2075,7 +2099,7 @@ preserved:
 .. attention::
 
    The previous example is not possible to create via inline literal markup like
-   :literal:`\`\`\`\`...\`\`\`\``, because the Docutils parser would have a
+   :literal:`\`\`\`\`...\`\`\`\``, because the |RST| parser would have a
    problem to find out where is the start and the end of the inline code sample.
    The same goes for a single backquote like :literal:`\`\`\``.
 
