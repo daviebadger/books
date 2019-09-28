@@ -741,26 +741,24 @@ interactive interpreter (no need to indent code):
 Block Quotes
 ------------
 
-Block quotes are just indented paragraphs, which may be nested, if text is
-left-aligned with the previous lines and the indentations are keeped:
+Block quotes are just indented paragraphs, which are surrounded by a blank line
+around. They may be nested and contain inline text styles, although it is not
+common for ordinary quotes:
 
 .. code:: rst
 
-   This is a ordinary paragraph.
+   This is an ordinary paragraph.
 
-      This is a **quoted** paragraph.
-
-         This is a *nested* quoted paragraph.
-
-      This is another quoted paragraph
+      This is a quoted paragraph
       over two lines.
 
-Several block quotes may be separated from each other either by another ordinary
-paragraphs or using two periods as a separator (empty comment):
+Multiple block quotes may be separated from each other either by ordinary
+paragraphs or even better using two periods as a separator with a blank line
+around:
 
 .. code:: rst
 
-   Famoues quotes from X Y:
+   Famous quotes from X Y:
 
       First quote.
 
@@ -772,14 +770,16 @@ paragraphs or using two periods as a separator (empty comment):
 
       Third quote.
 
-At the end of block quotes, it is possible to give attribution to a specific
-author of that quotes, if before name are two hyphens:
+If a block quote can be associated with an author, it is polite to give
+attribution. The attribution is usually written at the end of a quote with a
+blank line before, on a separate line with two hyphens at the beginning
+followed by a space and the author name:
 
 .. code:: rst
 
-   This is a ordinary paragraph.
+   This is an ordinary paragraph.
 
-      This is a super quote.
+      This is a quote.
 
       -- X Y
 
@@ -874,7 +874,7 @@ are left-aligned with the left square bracket:
 Horizontal Lines
 ----------------
 
-Horizontal lines, respectively transitions are at least four same consecutive
+Horizontal lines, respectively transitions, are at least four same consecutive
 punctuation characters (usually a hyphen), which are surrounded by a blank line
 around:
 
