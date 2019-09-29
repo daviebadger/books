@@ -825,58 +825,60 @@ to this indentation:
 Footnotes
 ---------
 
-Footnotes consits of numbers (indexes) inside square brackets followed by an
-underscore in text and descriptions (footnote) for that indexes usually at the
-end of documents:
+Footnotes are notes at the end of a document that explain special terms used in
+a text without disrupting a reader's flow. The terms have a numbered reference
+at the end, which consists of a number inside square brackets and immediately
+followed by an underscore:
 
 .. code:: rst
 
-   ``#`` with overline is used as an adornment style for document titles in
-   master documents in Sphinx [1]_.
+   This section adornment style is used in master documents [1]_ in Sphinx.
 
-   .. [1] Master documents are special ``index.rst`` files with a TOC.
-
-For short documents may be explicit numbers enough, but if a document is long or
-regularly changed, it is better to use auto-numbered footnotes to save time with
-overriding:
+These footnote references are associated with footnotes via syntax similar to
+hyperlink targets on a separate line, which starts with two colons, followed by
+a footnote reference in square brackets with spaces around and a footnote
+itself:
 
 .. code:: rst
 
-   ``#`` with overline is used as an adornment style for document titles in
-   master documents in Sphinx [#]_.
+   .. [1] Master documents are special ``index.rst`` files in directories, which
+      serve as introductory pages.
 
-   .. [#] Master documents are special ``index.rst`` files with a TOC.
-
-Long footnotes may continue on another lines with other body elements if they
-are left-aligned with the left square bracket:
+Manual footnote references are good enough for short documents. However, if a
+document is long or regularly edited, then it is better to used auto-numbered
+footnotes via number signs instead of numbers:
 
 .. code:: rst
 
-   .. [#] Master documents are special ``index.rst``
-      files with a TOC.
+   This section adornment style is used in master documents [#]_ in Sphinx.
 
-      They are stored in each directory (group of documents).
+   .. [#] Master documents are special ``index.rst`` files in directories, which
+      serve as introductory pages to sections in the documentation.
 
 .. note::
 
-   Each footnote is automatically hyperlinked to itself. It is possible in
-   rendered |RST| documents to click on an index in text, see a footnote at the
-   end of a document, click on the index next to the footnote and be back in
-   text where I had been previously.
+   In a rendered document, footnote references are automatically hyperlinked to
+   footnotes and vice versa for quick navigation in within documents.
 
 .. tip::
 
-   To insert another footnote between existing auto-numebered footnotes requires
-   only to find a previous or next occurence of ``[#]_`` to know where to
-   properly place the new footnote.
+   Long footnotes may contain any body elements if they are left-aligned with
+   the opening square bracket:
+
+   .. code:: rst
+
+      .. [#] Master documents are special ``index.rst`` files in directories, which
+         serve as introductory pages to sections in the documentation.
+
+         They usually contain a table of contents composed of documentation files.
 
 
-Horizontal Lines
-----------------
+Transitions
+-----------
 
-Horizontal lines, respectively transitions, are at least four same consecutive
-punctuation characters (usually a hyphen), which are surrounded by a blank line
-around:
+Transitions, respectively horizontal lines, are at least four same consecutive
+punctuation characters (transition markers), usually hyphens, which are
+surrounded by a blank line around:
 
 .. code:: rst
 
@@ -1766,7 +1768,7 @@ in a document (a document title and a subtitle are ignored):
 
 .. tip::
 
-   When navigating in a rendered RST document with a table of contents, entries
+   When navigating in a rendered |RST| document with a table of contents, entries
    in the TOC lead to sections in a document, whereas the sections in the
    document lead back to the entries in the TOC after a click on a section
    title.
