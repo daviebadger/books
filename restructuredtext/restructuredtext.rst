@@ -873,6 +873,24 @@ footnotes via number signs instead of numbers:
          They usually contain a table of contents composed of documentation files.
 
 
+Citations
+---------
+
+Citations are syntactically very similar to footnotes. They also have references
+in a document, but unlike them, citations mention a source, from where was a
+term or text cited instead of explaining yourself.
+
+The citation references must be in a non-numeric format (ideally an alphanumeric
+label), rest is the same:
+
+.. code:: rst
+
+   CVE is a shortcut for Common Vulnerabilities and Exposures, which is a list
+   of software bugs that allow hackers to get into a system or network. [CVE]_
+
+   .. [CVE] CVE terminology and information; https://www.cvedetails.com/cve-help.php
+
+
 Transitions
 -----------
 
