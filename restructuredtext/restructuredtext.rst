@@ -687,14 +687,21 @@ separator between table headers and other rows:
 Code Samples
 ------------
 
-Literal blocks
+|RST| has two basic block markup for showcasing code samples:
+
+* literal blocks
+* doctest blocks
+
+Both literal and doctest blocks are usually rendered in a monospaced typeface
+without syntax highlighting. For advance code snippets with syntax highlighting,
+a ``code`` directive has to be used.
+
+Literal Blocks
 ^^^^^^^^^^^^^^
 
-Doctest blocks
-^^^^^^^^^^^^^^
-
-Code samples are indented pieces of code, which begin with a special unindented
-paragraph containing only two colons followed by a blank line:
+Literal blocks are indented paragraphs with pieces of code. Before them, there
+must be a special unindented paragraph with only two colons to signal that the
+following indented lines are code samples and not a different body element:
 
 .. code:: rst
 
@@ -709,26 +716,24 @@ paragraph containing only two colons followed by a blank line:
       hello()
       hello("Davie")
 
-The two colons may appear at the end of text followed by a space:
+.. tip::
 
-.. code:: rst
+   The previous example may be shortened, if two colons are used right at the end
+   of a text. |RST| parser will automatically remove one colon during rendering.
+   This feature saves two lines in a document:
 
-   Example from Python: ::
+   .. code:: rst
 
-      hello()
+      Example from Python::
 
-Both previous examples may be even further shortened, when |RST| will left one
-colon instead of two colons at the end of the paragraph which will look exactly
-like in the first example:
+         hello()
 
-.. code:: rst
+Doctest Blocks
+^^^^^^^^^^^^^^
 
-   Example from Python::
-
-      hello()
-
-Short Python code samples without blank lines may be also written like
-interactive interpreter (no need to indent code):
+Doctest blocks are code samples, which imitate an interactive Python shell. The
+first line must start with ``>>>`` prompt. Unlike the literal blocks, doctest
+blocks are not indented:
 
 .. code:: rst
 
@@ -737,11 +742,11 @@ interactive interpreter (no need to indent code):
    >>> print("Hello World")
    Hello World
 
-.. note::
+.. caution::
 
-   Code samples using ``::`` markup are not highlighted at all, except the
-   Python interactive examples. There are special directives for this case
-   (either in |RST| or Sphinx).
+   A blank line in the doctest format signals the end of a code sample. If the
+   blank line is needed somewhere in the code sample, then literal blocks
+   should be used instead.
 
 
 Block Quotes
