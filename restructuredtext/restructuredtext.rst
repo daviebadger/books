@@ -687,6 +687,12 @@ separator between table headers and other rows:
 Code Samples
 ------------
 
+Literal blocks
+^^^^^^^^^^^^^^
+
+Doctest blocks
+^^^^^^^^^^^^^^
+
 Code samples are indented pieces of code, which begin with a special unindented
 paragraph containing only two colons followed by a blank line:
 
@@ -967,7 +973,7 @@ Directives
 ==========
 
 Directives are the first standardized way of the extension mechanism in |RST|
-how to extend block elements. By directives is possible to better structure
+how to extend block markup. By directives is possible to better structure
 documents, add metadata or advanced body elements or load and transform data
 stored in other documents and files.
 
@@ -1188,9 +1194,9 @@ The ``figure`` directive supports two extra options:
          * b is b
          * c is c
 
-   it is okay only, if the figure is not aligned otherwise it may break the
+   It is okay only, if the figure is not aligned otherwise it may break the
    legend visually. When the figure needs to be aligned, a legend should be
-   placed after the directive as a new block element:
+   placed after the directive as a new body element:
 
    .. code:: rst
 
@@ -2381,8 +2387,7 @@ __ https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)
 
 .. [#] Special ``index.rst`` files which serves as a welcoming page with a table
    of contents.
-.. [#] Body elements are markup inside sections (paragraphs, lists, tables
-   etc.).
+.. [#] Body elements are block markup except for sections and transitions.
 .. [#] PEPs_ are documents about enhancing the Python language (such as style
    guides, syntax, evaluations, protocols, plans) reviewed by the Python's
    `Steering Council`_.
