@@ -693,8 +693,11 @@ Code Samples
 * doctest blocks
 
 Both literal and doctest blocks are usually rendered in a monospaced typeface
-without syntax highlighting. For advance code snippets with syntax highlighting,
-a ``code`` directive has to be used.
+without syntax highlighting. Depending on which |RST| parser is used, doctest
+blocks may be highlighted.
+
+Alternatively, for code snippets with syntax highlighting, a ``code`` directive
+has to be used.
 
 Literal Blocks
 ^^^^^^^^^^^^^^
