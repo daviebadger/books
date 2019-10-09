@@ -617,6 +617,15 @@ centered, though it has no effect in a rendered document:
    Value C  Value Z  Value 3
    =======  =======  ===
 
+A table header is not necessary, but it is best practice to write it:
+
+.. code:: rst
+
+   =====  ======  ====  ==
+   Davie  Badger  Male  24
+   Jacob  Badger  Male  19
+   =====  ======  ====  ==
+
 .. note::
 
    In fact, simple tables allow using column spans in a table header via
@@ -642,17 +651,12 @@ centered, though it has no effect in a rendered document:
 Grid Tables
 ^^^^^^^^^^^
 
-Grid tables are tables with full suport for row spans, column spans, empty cells
-and body elements inside cells. However, these features come at cost, because
-grid tables are really cumbersome to design without a |RST| plugin in an editor.
-
-Grid tables consists of plus signs ("+") as corners, vertical bars ("|") as
-column separators, minus signs ("-") as row separators and equal signs ("=") as
-separator between table header and other rows:
+Grid tables are tables with full support for row spans, column spans, and body
+body elements inside cells. They consist of plus signs as corners, vertical
+bars as column separators, minus signs as row separators and equal signs as a
+separator between a table header and other rows:
 
 .. code:: rst
-
-   This is a grid table:
 
    +------------+--------------------+----------+
    | Header A   | Header B           | Header C |
@@ -668,14 +672,26 @@ separator between table header and other rows:
 
 .. note::
 
-   If vertical bars are used inside cells, for example in inline code samples,
-   then it is really important, where are the vertical bars located in that
-   cells.
+   Like in simple tables, a table header is optional to use:
 
-   |RST| may be confused, if a vertical bar is placed right in a place, which
-   indicates column separation. Therefore a blank line on the next line is
-   needed in this case to signal |RST| that the vertical bar has a different
-   purpose:
+   .. code:: rst
+
+      +------------+-------------------------------+
+      | A1         | B1 + C1 (column span)         |
+      +------------+--------------------+----------+
+      | A2 + A3    | * first item       | C2       |
+      | (row span) | * second item      |          |
+      |            | * third item       |          |
+      |            +--------------------+----------+
+      |            | C3 is **empty**    |          |
+      +------------+--------------------+----------+
+
+.. warning::
+
+   If a vertical bar is unintentionally placed right in a place, which
+   indicates a column separation, then a blank row must be used on the next
+   line. Otherwise, |RST| parser will misinterpret it and create an unwanted
+   extra column:
 
    .. code:: rst
 
