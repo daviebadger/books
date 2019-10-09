@@ -590,13 +590,11 @@ read.
 Simple Tables
 ^^^^^^^^^^^^^
 
-Simple tables are tables without row or column spans (only in header), in which
-are equal signs ("=") used as an adornment style for table header and for
-ending a table. Each column must be separated by two spaces:
+Simple tables are tables without row or column spans. Equal signs are used as
+an adornment style for a table header (both overline and underline) and for
+ending a table. Each table column must be separated via two spaces:
 
 .. code:: rst
-
-   This is a simple table:
 
    =========  ========  ======  ===
    Firstname  Lastname  Gender  Age
@@ -605,8 +603,9 @@ ending a table. Each column must be separated by two spaces:
    Jacob      Badger    Male    19
    =========  ========  ======  ===
 
-All columns except the last one must be adorned as long as the widest cell in
-that column. Within these long columns, table header may be centered:
+All table columns except the last one must be adorned as long as the widest cell
+in that column. Within these long columns, text in a table header may be
+centered, though it has no effect in a rendered document:
 
 .. code:: rst
 
@@ -620,10 +619,25 @@ that column. Within these long columns, table header may be centered:
 
 .. note::
 
-   Although simple tables enable to use column spans in table header or empty
-   cells via single backward slash ("\") in that cells, it is better to use
-   `Grid Tables`_ for these features and leave simple tables to be just simple
-   tables.
+   In fact, simple tables allow using column spans in a table header via
+   hyphens. However, a grid table is the go-to table for spans overall. Simple
+   tables should be simple according to their name.
+
+.. tip::
+
+   To mark a table cell as empty, a backward slash in that cell must be used:
+
+   .. code:: rst
+
+      =========  ========  ======  ===
+      Firstname  Lastname  Gender  Age
+      =========  ========  ======  ===
+      Davie      Badger    Male    24
+      Jacob      Badger    Male    \
+      =========  ========  ======  ===
+
+   Two periods also may be used instead of the backward slash, but the latter
+   is more practical.
 
 Grid Tables
 ^^^^^^^^^^^
