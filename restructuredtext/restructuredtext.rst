@@ -577,8 +577,15 @@ The anonymous hyperlink targets may be shortened:
 Tables
 ------
 
-|RST| has two builtin types of tables, simple and grid. Other advanced table
-types use `Directives`_ notation.
+|RST| has two builtin types of tables:
+
+* simple tables
+* grid tables
+
+These base tables are easy to read in plaintext format, but hard to create
+without a |RST| plugin in your editor. There also exists advanced tables via
+directive notations, which are easy to create without the plugin, but hard to
+read.
 
 Simple Tables
 ^^^^^^^^^^^^^
@@ -617,12 +624,6 @@ that column. Within these long columns, table header may be centered:
    cells via single backward slash ("\") in that cells, it is better to use
    `Grid Tables`_ for these features and leave simple tables to be just simple
    tables.
-
-.. tip::
-
-   There may exist a |RST| plugin to your editor, which can speed up modifying
-   simple tables by highlighting a table and applying a keyboard shortcut for
-   extending / shortering adornment and realigning text within that table.
 
 Grid Tables
 ^^^^^^^^^^^
@@ -672,11 +673,6 @@ separator between table header and other rows:
       +--------------+----------+-----------+-----------+
       | row 3        |          |           |           |
       +--------------+----------+-----------+-----------+
-
-.. tip::
-
-   |RST| provides directives for simplier work with tables, which will be
-   covered later in this book.
 
 
 Code Samples
