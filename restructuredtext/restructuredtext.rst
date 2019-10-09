@@ -53,11 +53,10 @@ Markup is a set of special characters within text. Parsers thanks to them know,
 how to transform the given text in a document to other text or file formats, for
 example HTML or PDF.
 
-
 Sections
 --------
 
-Sections headers are a single line of text with an underline or an underline and
+Sections are a single line of text with an underline or an underline and
 an overline of non-alphanumeric characters (adornment), which are at least as
 long as the text:
 
@@ -156,11 +155,10 @@ recommended by |RST|:
 .. tip::
 
    There may exist a |RST| plugin to your editor, which can speed up creating
-   section headers by highlighting a section title and applying a keyboard
-   shortcut for a specific heading level.
+   section by highlighting a section title and applying a keyboard shortcut for
+   a specific heading level.
 
 .. _The Python documentation: https://devguide.python.org/documenting/#sections
-
 
 Paragraphs
 ----------
@@ -206,7 +204,6 @@ containing a line break:
    Python documentation uses maximally 80 characters per line except a few
    special cases (tables, hyperlinks, code samples), when it is allowed to
    exceed this limit.
-
 
 Text Styles
 -----------
@@ -254,7 +251,6 @@ Each character inside double backquotes ("``") is preserved:
 
    Because both emphasis and strong emphasis use asterisks, it is not possible
    to use italics and boldface at the same time.
-
 
 Lists
 -----
@@ -578,7 +574,6 @@ The anonymous hyperlink targets may be shortened:
 
       reST has a few shortcuts, see `List of shortcuts`_ (above).
 
-
 Tables
 ------
 
@@ -588,8 +583,8 @@ types use `Directives`_ notation.
 Simple Tables
 ^^^^^^^^^^^^^
 
-Simple tables are tables without row or column spans (only in headers), in which
-are equal signs ("=") used as an adornment style for table headers and for
+Simple tables are tables without row or column spans (only in header), in which
+are equal signs ("=") used as an adornment style for table header and for
 ending a table. Each column must be separated by two spaces:
 
 .. code:: rst
@@ -604,7 +599,7 @@ ending a table. Each column must be separated by two spaces:
    =========  ========  ======  ===
 
 All columns except the last one must be adorned as long as the widest cell in
-that column. Within these long columns, table headers may be centered:
+that column. Within these long columns, table header may be centered:
 
 .. code:: rst
 
@@ -618,7 +613,7 @@ that column. Within these long columns, table headers may be centered:
 
 .. note::
 
-   Although simple tables enable to use column spans in table headers or empty
+   Although simple tables enable to use column spans in table header or empty
    cells via single backward slash ("\") in that cells, it is better to use
    `Grid Tables`_ for these features and leave simple tables to be just simple
    tables.
@@ -638,7 +633,7 @@ grid tables are really cumbersome to design without a |RST| plugin in an editor.
 
 Grid tables consists of plus signs ("+") as corners, vertical bars ("|") as
 column separators, minus signs ("-") as row separators and equal signs ("=") as
-separator between table headers and other rows:
+separator between table header and other rows:
 
 .. code:: rst
 
@@ -797,7 +792,6 @@ followed by a space and the author name:
 
       -- X Y
 
-
 Comments
 --------
 
@@ -834,7 +828,6 @@ to this indentation:
 
       ..
         |substitution|: It is OK
-
 
 Footnotes
 ---------
@@ -886,7 +879,6 @@ footnotes via number signs instead of numbers:
 
          They usually contain a table of contents composed of documentation files.
 
-
 Citations
 ---------
 
@@ -903,7 +895,6 @@ label), rest is the same:
    of software bugs that allow hackers to get into a system or network. [CVE]_
 
    .. [CVE] CVE terminology and information; https://www.cvedetails.com/cve-help.php
-
 
 Transitions
 -----------
@@ -925,7 +916,6 @@ surrounded by a blank line around:
    The purpose of transitions is to signal a change in a subject between
    paragraphs, and thus it is not possible to use them at the start or the end
    of a section.
-
 
 Substitutions
 -------------
@@ -1073,8 +1063,6 @@ Some examples of using directives in practice:
           .. image:: path/to/image
              :name: My picture
 
-
-
 Built-In Directives
 -------------------
 
@@ -1088,7 +1076,6 @@ thematic groups:
 * admonitions
 * documents
 * HTML
-
 
 Image Directives
 ^^^^^^^^^^^^^^^^
@@ -2048,7 +2035,6 @@ non-comment element(s):
       Unfortunately, this paragraph has the "cls" class by mistake.
 
 
-
 Custom Directives
 -----------------
 
@@ -2058,7 +2044,6 @@ TODO
 
    Look at already existing directives, either in |RST| or in Sphinx, before
    creating new ones (do not reinvent the wheel).
-
 
 
 
@@ -2101,7 +2086,6 @@ Examples of using roles in practice:
    .. code:: rst
 
       Thisis\ :strong:`one`\ word, where the word "one" will be formatted as bold text.
-
 
 Built-In Roles
 --------------
