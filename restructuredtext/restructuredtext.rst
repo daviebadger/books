@@ -532,9 +532,13 @@ reference:
 Anonymous Hyperlinks
 ^^^^^^^^^^^^^^^^^^^^
 
-Hyperlinks can be anonymous (not named), which may be handy in cases when same
-hyperlink text need to target two different locations. They may be also used in
-a list with hyperlinks. Anonymous hyperlinks require two trailing underscores:
+Anonymous hyperlinks are handy in cases when the same hyperlink references need
+to point to different targets, which is not possible via named hyperlinks. They
+are quick to write, but you have to keep the right order of hyperlink targets
+then.
+
+The syntax is very similar to named hyperlinks, only one more trailing
+underscore must be used and no names in hyperlink targets:
 
 .. code:: rst
 
@@ -547,18 +551,20 @@ a list with hyperlinks. Anonymous hyperlinks require two trailing underscores:
    .. __: www for link
    .. __: www for long link
 
-The anonymous hyperlink targets may be shortened:
+.. tip::
 
-.. code:: rst
+   The anonymous hyperlink targets may be shortened:
 
-   References
-   ==========
+   .. code:: rst
 
-   * link__
-   * `long link`__
+      References
+      ==========
 
-   __ www for link
-   __ www for long link
+      * link__
+      * `long link`__
+
+      __ www for link
+      __ www for long link
 
 Internal Hyperlinks
 ^^^^^^^^^^^^^^^^^^^
