@@ -487,8 +487,8 @@ For this reason, there exist:
 #. named hyperlinks
 #. anonymous hyperlinks
 
-The last type of hyperlinks is an internal hyperlink reference for
-cross-referencing in a document.
+The last type of hyperlinks is an internal hyperlink for cross-referencing in a
+document.
 
 Named Hyperlinks
 ^^^^^^^^^^^^^^^^
@@ -563,7 +563,8 @@ The anonymous hyperlink targets may be shortened:
 Internal Hyperlinks
 ^^^^^^^^^^^^^^^^^^^
 
-Sections in documents may be also hyperlinked according to their titles:
+By default sections in documents are hyperlink targets that may be namely
+referenced:
 
 .. code:: rst
 
@@ -575,8 +576,8 @@ Sections in documents may be also hyperlinked according to their titles:
    Section B
    =========
 
-Other body elements may be also hyperlinked, if they have an internal
-hyperlink reference in the prior paragraph:
+To create a custom internal hyperlink target in a document, an empty hyperlink
+target without a URI must be placed before a body element:
 
 .. code:: rst
 
@@ -585,7 +586,9 @@ hyperlink reference in the prior paragraph:
    * rst / RST
    * reST
 
-   reST has a few shortcuts, see `List of shortcuts`_ (above).
+   ----
+
+   reStructuredText has a few shortcuts, see `List of shortcuts`_.
 
 
 Tables
