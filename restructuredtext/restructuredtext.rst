@@ -465,24 +465,33 @@ is needed for the body elements on the next lines:
 Hyperlinks
 ----------
 
-Hyperlinks point to internal or external location. The most easiest way to
-create a hyperlink target is to place an URI into text:
+|RST| has a couple of ways for writing hyperlinks. They point either to internal
+or external location. The easiest way to create a hyperlink target is to place
+a URI or an email address into a text (so-called standalone hyperlinks):
 
 .. code:: rst
 
    Python documentation is located on https://docs.python.org/.
 
-Alternatively, URIs may be embedded (surrounded by angle brackets "<>") within
-a hyperlink text inside backquotes (also backticks "`") followed by an
-underscore:
+   ----
 
-.. code:: rst
+   Contact me on email davie.badger@gmail.com.
 
-   Python documentation is `HERE <https://docs.python.org/>`_.
+In |RST| philosophy, hyperlink targets should be placed away of text due to
+better readability, especially for very long URIs. Possible places are the end
+of a section or a whole document. These hyperlink targets are referenced from a
+text after.
 
-Nevertheless, in |RST| philosophy, hyperlink targets should be placed away of
-text due to readability. Possible places are the end of a section or a whole
-document. Hyperlinks within text should reference to these targets.
+For this reason, there exist:
+
+#. named hyperlinks
+#. anonymous hyperlinks
+
+The last type of hyperlinks is an internal hyperlink reference for
+cross-referencing in a document.
+
+Named Hyperlinks
+^^^^^^^^^^^^^^^^
 
 Hyperlink references may be single words followed by an underscore or several
 words inside backqoutes also followed by an underscore, which are associated
@@ -507,6 +516,21 @@ reference:
    .. _Python 3:
    .. _Python 3.7: https://www.python.org/
    .. _location: Python_
+
+.. note::
+
+   If hyperlink references contain colons, then they must be escaped or
+   backquoted within hyperlink targets:
+
+   .. code:: rst
+
+      `Link: with colon`_ or `Another link: with colon`_
+
+      .. _`Link: with colon`: ...
+      .. _Another link\: with colon: ...
+
+Anonymous Hyperlinks
+^^^^^^^^^^^^^^^^^^^^
 
 Hyperlinks can be anonymous (not named), which may be handy in cases when same
 hyperlink text need to target two different locations. They may be also used in
@@ -536,48 +560,39 @@ The anonymous hyperlink targets may be shortened:
    __ www for link
    __ www for long link
 
-.. note::
+Internal Hyperlinks
+^^^^^^^^^^^^^^^^^^^
 
-   If hyperlink references contain colons, then they must be escaped or
-   backquoted within hyperlink targets:
+Sections in documents may be also hyperlinked according to their titles:
 
-   .. code:: rst
+.. code:: rst
 
-      `Link: with colon`_ or `Another link: with colon`_
+   Section A
+   =========
 
-      .. _`Link: with colon`: ...
-      .. _Another link\: with colon: ...
+   See `Section B`_ below.
 
-.. tip::
+   Section B
+   =========
 
-   Sections in documents may be also hyperlinked according to their titles:
+Other body elements may be also hyperlinked, if they have an internal
+hyperlink reference in the prior paragraph:
 
-   .. code:: rst
+.. code:: rst
 
-      Section A
-      =========
+   .. _List of shortcuts:
 
-      See `Section B`_ below.
+   * rst / RST
+   * reST
 
-      Section B
-      =========
+   reST has a few shortcuts, see `List of shortcuts`_ (above).
 
-   Other body elements may be also hyperlinked, if they have an internal
-   hyperlink reference in the prior paragraph:
-
-   .. code:: rst
-
-      .. _List of shortcuts:
-
-      * rst / RST
-      * reST
-
-      reST has a few shortcuts, see `List of shortcuts`_ (above).
 
 Tables
 ------
 
-|RST| has two builtin types of tables:
+|RST| has two builtin types of tables (both requires a blank line before and
+after):
 
 * simple tables
 * grid tables
