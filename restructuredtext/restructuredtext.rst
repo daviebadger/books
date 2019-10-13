@@ -269,8 +269,8 @@ dictionaries (glossary). Field and option lists are rather special tables.
 Bulleted Lists
 ^^^^^^^^^^^^^^
 
-Bulleted lists consists of a bullet point character, usually an asterisk (like
-in Python documentation) followed by one space and an item:
+Bulleted lists consist of a bullet point character, usually an asterisk,
+followed by one space and an item:
 
 .. code:: rst
 
@@ -278,8 +278,8 @@ in Python documentation) followed by one space and an item:
    * second item
    * third item
 
-Items may continue on the next lines like pagraphs with line breaks or have
-other body elements inside text:
+Items may continue on next lines like paragraphs with line breaks or have other
+body elements inside:
 
 .. code:: rst
 
@@ -289,8 +289,8 @@ other body elements inside text:
 
      This is the **second** pagagraph.
 
-Bulleted lists may be also nested, if the inner lists are surrounded by blank
-lines and left-aligned with text at the previous line:
+Bulleted lists also may be nested, if inner lists start and end with a blank
+line, and are left-aligned with text at previous line:
 
 .. code:: rst
 
@@ -309,8 +309,8 @@ lines and left-aligned with text at the previous line:
 Numbered Lists
 ^^^^^^^^^^^^^^
 
-Numbered (enumerated) lists consists of a number and a formatting type, usually
-a period (like in Python documentation) followed by one space and an item:
+Numbered (enumerated) lists consist of a number and a formatting type, usually
+a period, followed by one space and an item:
 
 .. code:: rst
 
@@ -319,44 +319,49 @@ a period (like in Python documentation) followed by one space and an item:
       two lines
    3. third item
 
-Items may be automatically numbered for greater convenience:
+.. note::
 
-.. code:: rst
+   Both bulleted and enumerated lists may be naturally combined:
 
-   #. item
-   #. item
-   #. item
+   .. code:: rst
 
-Both bulleted and enumerated lists may be combined:
+      * first outer bulleted item
 
-.. code:: rst
+        A. first numbered item
 
-   * first outer bulleted item
+           * first inner bulleted item
 
-     1. first numbered item
+        B. second numbered item
 
-        * first inner bulleted item
+      * second outer bulleted item
+      * third outer bulleted item
 
-     2. second numbered item
+.. tip::
 
-   * second outer bulleted item
-   * third outer bulleted item
+   Items may be automatically numbered via hash character for greater convenience:
+
+   .. code:: rst
+
+      #. item
+      #. item
+      #. item
 
 Definition Lists
 ^^^^^^^^^^^^^^^^
 
-Definitions lists consists of a term and a definition for that term starting at
-the next line with indentation and separated by a blank line from other terms:
+Definitions lists consist of a term and a definition for that term starting at
+the next indented line and separated by a blank line from other terms:
 
 .. code:: rst
 
    RST
-      A shortcut for reStructuredText markup language.
+      Shortcut for the reStructuredText markup language.
 
    HTML
       Hypertext Markup Language for creating web pages.
 
-Definitions may contain more than one paragraph or other body elements:
+Definitions may contain more than one paragraph or other body elements if they
+are left-aligned with previous lines:
 
 .. code:: rst
 
@@ -367,22 +372,24 @@ Definitions may contain more than one paragraph or other body elements:
 
 .. tip::
 
-   Python documentation uses 3 spaces for indentation in |RST| documents
-   (mainly due to Directives, described later in his book).
+   Python documentation uses three spaces for indentation in reST documents
+   (mainly due to directives, described later in his book).
 
 Field Lists
 ^^^^^^^^^^^
 
 Field lists are actually two-column tables, where each row has a header (field)
-in the first column and content (field body) in the second column:
+inside colons in the first column and content (field body) in the second column
+separated by a space:
 
 .. code:: rst
 
    :Shortcut: RST or reST
    :Filename extension: ``.rst``
-   :Reference documentation: www
 
-Field bodies may contain more than one paragraph or other body elements:
+Field bodies may contain more than one paragraph or other body elements if they
+are left-aligned with previous lines. Long bodies usually start on a separate
+line with three spaces as indentation:
 
 .. code:: rst
 
@@ -392,11 +399,10 @@ Field bodies may contain more than one paragraph or other body elements:
 
       etc.
 
-.. note::
+.. topic:: Bibliographic Fields
 
-   If a field list is used right after a document title or a subtitle, then
-   the field list is supposed to be a bibliographic field list (metadata about
-   the document):
+   If a field list is used right after a document title or a subtitle, then it
+   is supposed to be a bibliographic field list (metadata about the document):
 
    .. code:: rst
 
@@ -406,8 +412,7 @@ Field bodies may contain more than one paragraph or other body elements:
 
       :Author: Davie Badger
 
-   Tbere are special bibliographic fields, which are rendered differently than
-   other fields:
+   There are special fields:
 
    * ``:Abstract:`` - body elements are allowed
    * ``:Address:`` - a multi-line address with preserved newlines
@@ -424,21 +429,20 @@ Field bodies may contain more than one paragraph or other body elements:
 Option Lists
 ^^^^^^^^^^^^
 
-Option lists are two-column tables, where each row has an option(s) in the first
-column and a description for that option in the second column which is separated
-by at least two spaces:
+Option lists are also two-column tables, where each row has an option(s) in the
+first column and a description for that option in the second column which is
+separated by at least two spaces:
 
 .. code:: rst
 
    -v               Verbose
    -h, --help       Display help message
                     and exit
-   -n number        Provide a number
+   -p number        Provide a port number
    -h, --host=host  Host to connect
 
 It is possible to use body elements in descriptions, but they must be
-left-aligned with the previous lines. The longer options, the more indentations
-is needed for the body elements on the next lines:
+left-aligned with the previous lines:
 
 .. code:: rst
 
@@ -449,17 +453,12 @@ is needed for the body elements on the next lines:
               * integer
               * float
 
-.. note::
+.. hint::
 
    If |RST| documents are written inside Sphinx, then it is better to use its
-   directives for documenting command-line programs and options, because they
-   more scalable, easier to maintain and better rendered in other formats.
-
-.. tip::
-
-   There may exist a |RST| plugin to your editor which support automatic
-   alignment in option lists by highlighting an option list and applying a
-   keyboard shortcut.
+   directives for documenting command-line programs and options. They are more
+   scalable, far easier to maintain (no care for vertical alignment), and better
+   rendered in other document formats.
 
 
 Hyperlinks
@@ -926,7 +925,7 @@ itself:
 
 Manual footnote references are good enough for short documents. However, if a
 document is long or regularly edited, then it is better to used auto-numbered
-footnotes via number signs instead of numbers:
+footnotes via hash character instead of numbers:
 
 .. code:: rst
 
