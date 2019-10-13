@@ -493,34 +493,51 @@ document.
 Named Hyperlinks
 ^^^^^^^^^^^^^^^^
 
-Hyperlink references may be single words followed by an underscore or several
-words inside backqoutes also followed by an underscore, which are associated
-with hyperlink targets leading to URIs:
+Named hyperlinks consist of two parts. The first is a named hyperlink reference,
+which marks text as a hyperlink. If the hyperlink is a single word, then it must
+have a trailing underscore at the end. If the hyperlink is a phrase, then it
+must be wrapped in backquotes and then followed with the trailing underscore:
 
 .. code:: rst
 
-   Python_ has `official documentation`_
+   Python_ has `official documentation`_.
+
+In a whole document, named hyperlink references must be unique, because they
+are directly associated with hyperlink targets (second part).
+
+The hyperlink targets must start on a separate line. They begin with two
+periods, followed by a space, a leading underscore, a hyperlink reference, a
+colon, and finally, a URI after a single space:
+
+.. code:: rst
 
    .. _Python: https://www.python.org/
    .. _official documentation: https://docs.python.org/
 
-Within hyperlink targets it is possible to group several targets and point to
-single location or point from one hyperlink target to another hyperlink
-reference:
+Within hyperlink targets, it is possible to group them and point to a single
+location, if previous hyperlink targets are empty and the last one in the group
+has a URI:
 
 .. code:: rst
 
-   Python_, `Python 3`_, `Python 3.7`_, all point to the same location_.
+   Python_, `Python 3`_, `Python 3.7`_, all point to the same location.
 
    .. _Python:
    .. _Python 3:
    .. _Python 3.7: https://www.python.org/
+
+Hyperlink targets may refer to other ones if instead of a URI is a hyperlink
+reference placed:
+
+   Python_ point to the same location_.
+
+   .. _Python: https://www.python.org/
    .. _location: Python_
 
 .. note::
 
-   If hyperlink references contain colons, then they must be escaped or
-   backquoted within hyperlink targets:
+   If a hyperlink reference contain colons, then they must be escaped or
+   better backquoted (1:1 with references) within hyperlink targets:
 
    .. code:: rst
 
@@ -548,8 +565,8 @@ underscore must be used and no names in hyperlink targets:
    * link__
    * `long link`__
 
-   .. __: www for link
-   .. __: www for long link
+   __ URI (for link)
+   __ URI (for long link)
 
 .. tip::
 
@@ -563,8 +580,8 @@ underscore must be used and no names in hyperlink targets:
       * link__
       * `long link`__
 
-      __ www for link
-      __ www for long link
+      __ URI (for link)
+      __ URI (for long link)
 
 Internal Hyperlinks
 ^^^^^^^^^^^^^^^^^^^
@@ -595,6 +612,12 @@ target without a URI must be placed before a body element:
    ----
 
    reStructuredText has a few shortcuts, see `List of shortcuts`_.
+
+.. note::
+
+   |RST| support creating internal hyperlink targets even in nested body
+   elements or inline in a text, but it is more sensible to use them only before
+   block markup (lists, tables) or refer a reader to a section.
 
 
 Tables
