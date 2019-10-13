@@ -257,14 +257,15 @@ Lists
 
 |RST| has oficially five types of lists, namely:
 
-* bulleted
-* numbered (also enumerated)
-* definition
-* field
-* option
+* bulleted lists
+* numbered lists (also enumerated)
+* definition lists
+* field lists
+* option lists
 
-Bulleted and numbered lists are classic lists. Definition lists are rather
-dictionaries (glossary). Field and option lists are rather special tables.
+Bulleted and numbered lists are classic list types. Definition lists are rather
+dictionaries (glossary). The last two, field and options lists, are two-column
+tables.
 
 Bulleted Lists
 ^^^^^^^^^^^^^^
