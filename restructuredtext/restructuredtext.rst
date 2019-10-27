@@ -208,49 +208,66 @@ containing a line break:
 Text Styles
 -----------
 
-Text in paragraphs and other body elements [#]_ is normal by default (no text
-style), unless some parts of text need to be emphasized. One asterisk ("*")
-around a word(s) indicates emphasis (italics), whereas two asterisks indicate
-strong emphasis (boldface):
+Ordinary text in paragraphs and other body elements [#]_ is not styled
+(formatted) by default. Nevertheless, some pieces of text may be formatted to
+have special meaning.
+
+|RST| has three text styles:
+
+* emphasis
+* strong emphasis
+* inline literal
+
+Emphasis and strong emphasis use asterisks as a marker (starting and ending
+string). The first needs only one asterisk before and after text, while the
+latter two:
 
 .. code:: rst
 
-   *This part of text will be rendered in italics*,
-   **while this one in bold**.
+   *This piece of text will be rendered in italics.*
+   **This piece of text will be rendered in boldface.**
 
-|RST| is pretty smart when to not use italics or boldface, if there are spaces
-or asterisks inside a word:
+|RST| parser is pretty smart when to use or not use text styles. They are
+applied if there is no whitespace after a starting and before an ending marker,
+else not:
 
 .. code:: rst
 
    1 * 1 is 1. 2*2 is 4. 3 ** 3 is 27.
 
-However, if there is a need to emphasis characters inside a word, then around
-asterisks must be spaces escaped:
+The last one, inline literal, is used for inline code samples with preserved
+characters (text is monospaced). In this case, the marker is double backquotes:
 
 .. code:: rst
 
-   thisis\ **one**\ word (thisisoneword with "one" in bold)
+   Use single ``*`` for emphasis, double ``**`` for strong emphasis.
 
-Escaping can be also used with asterisks or any other special markup found later
-in this book:
+.. attention::
 
-.. code:: rst
+   Both emphasis and strong emphasis use asterisks, therefore it is not possible
+   to use italics and boldface at the same time. The same goes for mixing with
+   inline literals.
 
-   Explicitly: \*italics\* (twice)
-   Implicitly: \**bold** (once)
+   Overall, any text style cannot be combined at all.
 
-Besides emphasis, text may be monospaced, which is used for inline code samples.
-Each character inside double backquotes ("``") is preserved:
+.. topic:: Escape Mechanism
 
-.. code:: rst
+   There may be cases where it is needed to turn on / off text styles, and the
+   only way is to use the escape mechanism via backslashes when a character
+   after a backslash is not interpreted:
 
-   To emphesasize text, you need to use ``*`` around a word, e.g. ``*italics*``.
+   #. enable formatting text, even if it does not have ordinary spaces around:
 
-.. note::
+      .. code:: rst
 
-   Because both emphasis and strong emphasis use asterisks, it is not possible
-   to use italics and boldface at the same time.
+         thisis\ **one**\ word (thisisoneword with "one" in bold)
+
+   #. disable formatting text, which would be naturally styled:
+
+      .. code:: rst
+
+         Explicitly: \*italics\* (twice)
+         Implicitly: \**bold** (once)
 
 Lists
 -----
