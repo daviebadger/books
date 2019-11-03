@@ -49,9 +49,18 @@
 Markup
 ======
 
-Markup is a set of special characters within text. Parsers thanks to them know,
-how to transform the given text in a document to other text or file formats, for
-example HTML or PDF.
+Markup is a set of special constructs within text. |RST| parser thanks to them
+know, how to transform the given text in a document to a different file format,
+such as HTML or PDF.
+
+There are two types of markup:
+
+#. block markup
+#. inline markup
+
+Block markup are constructs which start on a new unindented or indented line
+depending on its context, while inline markup are constructs used inside body
+elements, which cannot begin or end with whitespace.
 
 Sections
 --------
