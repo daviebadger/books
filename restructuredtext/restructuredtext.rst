@@ -66,99 +66,73 @@ long as the text:
    Section Title
    *************
 
-   ...
-
 Although there are many non-alphanumeric characters, none of them is associated
 with a specific heading level. Therefore, it is very important to be consistent
-with heading levels through a document.
+with heading levels through a document. Documentation standards taken from
+Python may help with that.
 
-Python documentation has the following convention (with analogous heading levels
-in HTML), which may be followed:
+Document titles use three different adornment styles depending on a context:
 
-* ``#`` with overline and centered title text using 2 spaces at the left edge,
-  for parts (H1 in master documents in Sphinx) [#]_
+#. a standalone document, which is not part of any documentation (standard from
+   |RST| reference documentation, not Python one):
 
-  .. code:: rst
+   .. code:: rst
 
-     ##################
+      ================
        Document Title
-     ##################
+      ================
+      ----------
+       Subtitle
+      ----------
 
-* ``*`` with overline, for chapters (H1 in ordinary documents)
+#. an ordinary document, which is part of a Sphinx documentation:
 
-  .. code:: rst
+   .. code:: rst
 
-     **************
-     Document Title
-     **************
+      **************
+      Document Title
+      **************
+#. a master document [#]_, which is part of a Sphinx documentation:
 
-* ``=`` for sections (H2)
+   .. code:: rst
 
-  .. code:: rst
+      ##################
+        Document Title
+      ##################
 
-     Section Title
-     =============
-
-* ``-`` for subsections (H3)
-
-  .. code:: rst
-
-     Subsection Title
-     ----------------
-
-* ``^`` for subsubsections (H4)
-
-  .. code:: rst
-
-     Subsubsection Title
-     ^^^^^^^^^^^^^^^^^^^
-
-* ``"`` for paragraphs (H5)
-
-  .. code:: rst
-
-     Paragraph Title
-     """""""""""""""
-
-For standalone documents out of documentation, if there is a need to use a
-document title with a subtitle, then the following adornment style is
-recommended by |RST|:
+Other heading levels with the help of HTML tags for illustration:
 
 .. code:: rst
 
-   ================
-    Document Title
-   ================
-   ----------
-    Subtitle
-   ----------
+   Section Title (H2)
+   ==================
 
-   Section Title
-   =============
+   Subsection Title (H3)
+   ---------------------
 
-.. note::
+   Subsubsection Title (H4)
+   ^^^^^^^^^^^^^^^^^^^^^^^^
 
-   When a document has a lot of text within sections and scrolling is needed in
-   that document, then it may easily get you lost unless you use a |RST| plugin
-   with quick table of contents.
+   Paragraph Title (H5)
+   """"""""""""""""""""
 
-   Python documention has mention about generous using blank lines, but nothing
-   concrete, how many should be used. In generous, it makes sense to use more
-   than one blank line between sections with body elements.
+.. topic:: Blank Lines
 
-   The following numbers may be used:
+   When a document has a lot of sections, it may harder to navigate between them
+   unless using smart editor features, such as folding / unfolding whole
+   sections with text or showing a section tree. With that in mind, using more
+   than one blank line between sections may slightly help.
 
-   * 3 blank lines between sections (H2)
-   * 2 blank lines between subsections (H3)
-   * 1 blank line between subsubsections (H4)
+   Python documentation has a mention about using blank lines generously, but
+   nothing particular. It is only up to you how many blank lines you use.
 
-.. tip::
+   I personally use two blank lines before a section, if the previous one has a
+   lower level, and three blank lines before and after a H2 section.
+
+.. hint::
 
    There may exist a |RST| plugin to your editor, which can speed up creating
-   section by highlighting a section title and applying a keyboard shortcut for
-   a specific heading level.
-
-.. _The Python documentation: https://devguide.python.org/documenting/#sections
+   sections by applying a keyboard shortcut to a section title.
 
 Paragraphs
 ----------
@@ -546,6 +520,8 @@ has a URI:
 
 Hyperlink targets may refer to other ones if instead of a URI is a hyperlink
 reference placed:
+
+.. code:: rst
 
    Python_ point to the same location_.
 
@@ -2468,8 +2444,8 @@ __ https://en.wikipedia.org/wiki/Sphinx_(documentation_generator)
 
 .. rubric:: Footnotes
 
-.. [#] Special ``index.rst`` files which serves as a welcoming page with a table
-   of contents.
+.. [#] Master documents are special ``index.rst`` files in directories, which
+   serve as introductory pages.
 .. [#] Body elements are block markup except for sections and transitions.
 .. [#] PEPs_ are documents about enhancing the Python language (such as style
    guides, syntax, evaluations, protocols, plans) reviewed by the Python's
