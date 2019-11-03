@@ -163,8 +163,8 @@ recommended by |RST|:
 Paragraphs
 ----------
 
-Paragraphs are chunks of text aligned at the left edge and separated by a blank
-line:
+Paragraphs are chunks of text, which are aligned at the left edge and separated
+by a blank line from other:
 
 .. code:: rst
 
@@ -174,9 +174,9 @@ line:
 
    This is another paragraph.
 
-To preserve line breaks in paragraphs, a vertical bar ("|") with a space must be
-used at the left edge of each line with a line break in order to create line
-blocks:
+To preserve line breaks in paragraphs, a vertical bar followed by a space must
+be used at the left edge of each line with a line break to create a so-called
+line block:
 
 .. code:: rst
 
@@ -186,24 +186,25 @@ blocks:
    |
    | Fifth line
 
-   ...
+.. hint::
 
-It is also possible to join lines if they are left-aligned with text at a line
-containing a line break:
+   Python documentation uses maximally 80 characters per line except for a few
+   special cases (tables, hyperlinks, code samples) in which it is allowed to
+   exceed the limit.
 
-.. code:: rst
+.. note::
 
-   | A really long line
-     which continues over
-     another lines
+   Long lines with line breaks, which do not fit a single line, may continue on
+   the next lines if they are left-aligned with the text starting on a previous
+   line:
 
-   ...
+   .. code:: rst
 
-.. tip::
+      | A long line which
+        continues on another line.
 
-   Python documentation uses maximally 80 characters per line except a few
-   special cases (tables, hyperlinks, code samples), when it is allowed to
-   exceed this limit.
+   These multi-lines with line breaks will be auto automatically joined during
+   a document parsing.
 
 Text Styles
 -----------
