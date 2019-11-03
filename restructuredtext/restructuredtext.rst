@@ -10,20 +10,19 @@
 :Copyright: `Creative Commons Attribution 4.0 International Public License`_
 
 :Abstract:
-   `reStructuredText`_ (RST or also reST) is heavily used in Python community
-   for writing technical documentation, both Python docstrings and standalone
-   documents. Other notable projects using |RST| for documentation are Blender_,
-   CMake_ or `Linux Kernel`_.
+   `reStructuredText`_ (RST or also reST) is heavily used in the Python
+   community for writing technical documentation. Other notable projects using
+   it for documentation are Blender_, CMake_, or `Linux Kernel`_.
 
-   Unlike `Markdown`_, |RST| covers officially many advanced markup, for example
-   document metadata, automatic table of contents, tables and semantic text. It
-   has also a standardized way for writing custom extensions (directives and
+   Unlike `Markdown`_, |RST| has officially standardized advanced markup, such
+   as document metadata, automatic table of contents, tables, and semantic text.
+   It also has a standardized way for writing custom extensions (directives and
    interpreted text roles) via `Docutils`_ library written in Python.
 
-   |RST| is commonly used with `Sphinx`_, which is a documentation generator
-   originally developed for official `Python documentation`_, but now it is
-   independent from projects using a different programming language or none at
-   all.
+   |RST| is commonly used in conjunction with `Sphinx`_, which is a
+   documentation generator originally developed for official
+   `Python documentation`_, but now it is independent from projects using a
+   different programming language or none at all.
 
    :Filename extension: ``.rst``
    :Reference documentation: http://docutils.sourceforge.net/rst.html#reference-documentation
