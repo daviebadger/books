@@ -10,19 +10,19 @@
 :Copyright: `Creative Commons Attribution 4.0 International Public License`_
 
 :Abstract:
-   `reStructuredText`_ is mostly used in the Python community for writing
+   reStructuredText__ is mostly used in the Python community for writing
    technical documentation. Other notable projects using it for documentation
    are Blender_, CMake_, or `Linux Kernel`_.
 
-   Unlike `Markdown`_, |RST| has officially standardized advanced markup, such
+   Unlike Markdown_, |RST| has officially standardized advanced markup, such
    as document metadata, automatic table of contents, tables, and semantic text.
    It also has a standardized way for writing custom extensions (directives and
-   interpreted text roles) via `Docutils`_ library written in Python.
+   interpreted text roles) via Docutils_ library written in Python.
 
-   |RST| is commonly used in conjunction with `Sphinx`_, which is a
-   documentation generator originally developed for official
-   `Python documentation`_, but now it is independent from projects using a
-   different programming language or none at all.
+   |RST| is commonly used in conjunction with Sphinx_, which is a documentation
+   generator originally developed for official `Python documentation`_, but now
+   it is independent from projects using a different programming language or
+   none at all.
 
    :Abbreviation: ``RST`` (most common) or ``ReST`` or ``reST``
    :Filename extension:
@@ -34,6 +34,8 @@
 .. sectnum::
    :suffix: .
 
+__ http://docutils.sourceforge.net/rst.html
+
 .. _Blender: https://docs.blender.org/manual/en/latest/
 .. _CMake: https://cmake.org/cmake/help/latest/
 .. _Creative Commons Attribution 4.0 International Public License: https://creativecommons.org/licenses/by/4.0/
@@ -42,7 +44,6 @@
 .. _Linux Kernel: https://www.kernel.org/doc/html/latest/
 .. _Markdown: https://daringfireball.net/projects/markdown/
 .. _Python documentation: https://docs.python.org
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://www.sphinx-doc.org
 
 
@@ -2442,7 +2443,6 @@ References
 
 __ http://docutils.sourceforge.net/FAQ.html
 __ https://devguide.python.org/documenting/
-__ reStructuredText_
 __ http://docutils.sourceforge.net/docs/ref/rst/directives.html
 __ http://docutils.sourceforge.net/docs/ref/rst/roles.html
 __ http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
