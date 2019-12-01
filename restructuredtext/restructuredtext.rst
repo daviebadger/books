@@ -2116,12 +2116,28 @@ non-comment element(s):
 Custom Directives
 -----------------
 
-TODO
+It is highly unlikely you will need to create a custom directive just for |RST|
+outside of Sphinx documentation. If you miss some functionality in |RST|, which
+is common in other document formats, then it is better to discuss it by sending
+a message to a Docutils-users__ mailing list.
 
-.. hint::
+Moreover, Sphinx has another set of powerful directives you may use. The same
+goes for its extensions. But if you still tend to create custom directives, you
+will need to do several steps:
 
-   Look at already existing directives, either in |RST| or in Sphinx, before
-   creating new ones (do not reinvent the wheel).
+#. learn about Docutils API
+#. create a directive
+#. create an improved translator (HTML, LaTeX, ...), how to output the
+   directive, if it returns a custom node
+#. register the directive
+#. write a logic which takes an input and generate an output
+
+.. note::
+
+   Writing and registering custom directives inside a Sphinx project is much
+   easier than for plain RST.
+
+__ http://docutils.sourceforge.net/docs/user/mailing-lists.html
 
 
 
