@@ -2440,7 +2440,13 @@ Examples of creating roles via the role directive:
 Custom Roles via Programming
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TODO
+The setup is in principle similar to custom directives.
+
+.. note::
+
+   Words about Sphinx mentioned in directives, also count for roles. You should
+   not reinvent them from scratch if they already exist in Sphinx or its
+   extensions.
 
 
 
