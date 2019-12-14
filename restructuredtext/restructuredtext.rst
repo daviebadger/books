@@ -2483,6 +2483,52 @@ __ https://pip.pypa.io/en/stable/quickstart/
 __ https://pypi.org/search/?q=rst2&o=
 __ https://pandoc.org/
 
+rst2html5.py
+------------
+
+Convert a |RST| to an HTML5 document:
+
+.. code:: sh
+
+   $ rst2html5.py document.rst document.html
+
+rst2latex.py
+------------
+
+Convert a |RST| to a LaTeX document:
+
+.. code:: sh
+
+   $ rst2latex.py document.rst document.tex
+
+rst2odt.py
+----------
+
+Convert a |RST| to an ODT document:
+
+.. code:: sh
+
+   $ rst2odt.py document.rst document.odt
+
+rst2pseudoxml.py
+----------------
+
+Convert a |RST| to a pseudo-XML document for debugging purposes only (usually to
+stdout):
+
+.. code:: sh
+
+   $ rst2pseudoxml.py document.rst
+
+rst2xml.py
+----------
+
+Convert a |RST| to an XML document:
+
+.. code:: sh
+
+   $ rst2xml.py document.rst document.xml
+
 
 
 References
