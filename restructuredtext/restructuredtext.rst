@@ -2486,7 +2486,7 @@ __ https://pandoc.org/
 rst2html5.py
 ------------
 
-Convert a |RST| to an HTML5 document:
+Convert a |RST| document to an HTML5 document:
 
 .. code:: sh
 
@@ -2495,7 +2495,7 @@ Convert a |RST| to an HTML5 document:
 rst2latex.py
 ------------
 
-Convert a |RST| to a LaTeX document:
+Convert a |RST| document to a LaTeX document:
 
 .. code:: sh
 
@@ -2504,7 +2504,7 @@ Convert a |RST| to a LaTeX document:
 rst2odt.py
 ----------
 
-Convert a |RST| to an ODT document:
+Convert a |RST| document to an ODT document:
 
 .. code:: sh
 
@@ -2513,8 +2513,8 @@ Convert a |RST| to an ODT document:
 rst2pseudoxml.py
 ----------------
 
-Convert a |RST| to a pseudo-XML document for debugging purposes only (usually to
-stdout):
+Convert a |RST| document to a pseudo-XML document for debugging purposes only
+(usually to stdout):
 
 .. code:: sh
 
@@ -2523,7 +2523,7 @@ stdout):
 rst2xml.py
 ----------
 
-Convert a |RST| to an XML document:
+Convert a |RST| document to an XML document:
 
 .. code:: sh
 
