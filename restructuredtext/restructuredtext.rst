@@ -2450,6 +2450,41 @@ The setup is in principle similar to custom directives.
 
 
 
+Document Converters
+===================
+
+By installing ``docutils`` via pip__ installer for Python packages, you gain
+access to several official document converters (front-end tools). These tools
+accept a source (input) and a destination (output):
+
+.. code:: sh
+
+   $ tool input output
+
+.. note::
+
+   Both input and output are optional, and that is why all these combos are
+   possible to execute, although it is unlikely:
+
+   .. code:: sh
+
+      $ tool input  # to stdout
+      $ tool input > output  # redirect stdout somewhere else
+      $ tool   # from stdin (finish by pressing CTRL + D) to stdout
+      $ tool > output  # from stdin to redirected stdout
+
+.. hint::
+
+   Other unofficial converters exist in the PyPI__ registry, such as
+   ``rst2pdf``. Alternatively, you also may use a universal document converter,
+   such as Pandoc__.
+
+__ https://pip.pypa.io/en/stable/quickstart/
+__ https://pypi.org/search/?q=rst2&o=
+__ https://pandoc.org/
+
+
+
 References
 ==========
 
