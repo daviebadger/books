@@ -2492,6 +2492,21 @@ Convert a |RST| document to an HTML5 document:
 
    $ rst2html5.py document.rst document.html
 
+.. topic:: Stylesheets
+
+   Docutils comes with minimalistic stylesheets for HTML itself (``minimal.css``
+   and ``plain.css``) and math output (``math.css``) stored in source code
+   (``docutils/writers/html5_polyglot/``).
+
+   Via ``--stylesheet-path=FILES`` option is possible to define a custom
+   comma-separated list of relative paths to an HTML to CSS files. Docutils is
+   first looking for stylesheets in a current directory and then in the system
+   one.
+
+   Via ``--stylesheet-dirs=DIRS`` option is possible to define a custom
+   comma-separated list of paths to directories, where should Docutils look for
+   CSS files, if the local and system directories are not enough.
+
 rst2latex.py
 ------------
 
