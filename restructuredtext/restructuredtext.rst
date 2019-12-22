@@ -2454,8 +2454,9 @@ Docutils
 ========
 
 By installing ``docutils`` via pip__ installer for Python packages, you gain
-moreover (except for API for writing custom extensions) access to several
-official document converters (front-end tools), which may be further configured.
+moreover (except for API for writing custom directives and roles) access to
+several official document converters (front-end tools), which may be further
+configured.
 
 .. hint::
 
@@ -2553,6 +2554,28 @@ Convert a |RST| document to an XML document:
 
 Configuration
 -------------
+
+TODO
+
+Configuration Files
+^^^^^^^^^^^^^^^^^^^
+
+There are a few locations where Docutils is looking for a configuration file:
+
+#. ``/etc/docutils.conf`` - An implicit system-wide configuration file
+#. ``./docutils.conf`` - An implicit project-specific configuration file
+#. ``~/.docutils`` - An implicit user-specific configuration file
+
+If there exists the only of them, then that one is read. However, if they exist
+in more places, then they are all read exactly in the given order as they are
+numbered in the previous list (next one overrides previous ones).
+
+Finally, the resulting configuration values may be completely overridden by
+explicit configuration file passed as a ``--config=path/to/config`` option to a
+document converter.
+
+Configuration Values
+^^^^^^^^^^^^^^^^^^^^
 
 TODO
 
