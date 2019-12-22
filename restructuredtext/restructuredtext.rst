@@ -2450,12 +2450,28 @@ The setup is in principle similar to custom directives.
 
 
 
-Document Converters
-===================
+Docutils
+========
 
 By installing ``docutils`` via pip__ installer for Python packages, you gain
-access to several official document converters (front-end tools). These tools
-accept a source (input) and a destination (output):
+moreover (except for API for writing custom extensions) access to several
+official document converters (front-end tools), which may be further configured.
+
+.. hint::
+
+   Other unofficial converters exist in the PyPI__ registry, such as
+   ``rst2pdf``. Alternatively, you also may use a universal document converter,
+   such as Pandoc__.
+
+__ https://pip.pypa.io/en/stable/quickstart/
+__ https://pypi.org/search/?q=rst2&o=
+__ https://pandoc.org/
+
+Document Converters
+-------------------
+
+In general, document converters accept a source |RST| file (input) and a
+destination file (output):
 
 .. code:: sh
 
@@ -2473,18 +2489,8 @@ accept a source (input) and a destination (output):
       $ tool   # from stdin (finish by pressing CTRL + D) to stdout
       $ tool > output  # from stdin to redirected stdout
 
-.. hint::
-
-   Other unofficial converters exist in the PyPI__ registry, such as
-   ``rst2pdf``. Alternatively, you also may use a universal document converter,
-   such as Pandoc__.
-
-__ https://pip.pypa.io/en/stable/quickstart/
-__ https://pypi.org/search/?q=rst2&o=
-__ https://pandoc.org/
-
 rst2html5.py
-------------
+^^^^^^^^^^^^
 
 Convert a |RST| document to an HTML5 document:
 
@@ -2508,7 +2514,7 @@ Convert a |RST| document to an HTML5 document:
    CSS files, if the local and system directories are not enough.
 
 rst2latex.py
-------------
+^^^^^^^^^^^^
 
 Convert a |RST| document to a LaTeX document:
 
@@ -2517,7 +2523,7 @@ Convert a |RST| document to a LaTeX document:
    $ rst2latex.py document.rst document.tex
 
 rst2odt.py
-----------
+^^^^^^^^^^
 
 Convert a |RST| document to an ODT document:
 
@@ -2526,7 +2532,7 @@ Convert a |RST| document to an ODT document:
    $ rst2odt.py document.rst document.odt
 
 rst2pseudoxml.py
-----------------
+^^^^^^^^^^^^^^^^
 
 Convert a |RST| document to a pseudo-XML document for debugging purposes only
 (usually to stdout):
@@ -2536,13 +2542,19 @@ Convert a |RST| document to a pseudo-XML document for debugging purposes only
    $ rst2pseudoxml.py document.rst
 
 rst2xml.py
-----------
+^^^^^^^^^^
 
 Convert a |RST| document to an XML document:
 
 .. code:: sh
 
    $ rst2xml.py document.rst document.xml
+
+
+Configuration
+-------------
+
+TODO
 
 
 
