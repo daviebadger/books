@@ -1,8 +1,8 @@
 # Davie's Technical Books
 
-My personal technical books of software I have been using for a long time.
+My personal technical books of software I have been using for a long time:
 
----
+* [reStructuredText](restructuredtext/restructuredtext.rst)
 
 Beside these books, there are complementary projects:
 
@@ -11,10 +11,6 @@ Beside these books, there are complementary projects:
 
 [notes]: https://github.com/daviebadger/notes
 [cheatsheets]: https://github.com/daviebadger/cheatsheets
-
-## Books
-
-* [reStructuredText](restructuredtext/restructuredtext.rst)
 
 ## License
 
