@@ -2685,7 +2685,7 @@ which have own configuration subsection:
   * ``math_output`` (default ``HTML math.css``)
 
     * how should be mathematical formulas formatted (``HTML``, ``MathJax``,
-      ``MathML`` or ``LaTeX``) + options (it may be a path to a CSS file or a
+      ``MathML`` or ``LaTeX``) + option (it may be a path to a CSS file or a
       Javascript file location or even name of an executable depending on a
       chosen format)
 
