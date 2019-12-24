@@ -2602,7 +2602,53 @@ document converter.
 Configuration Values
 ^^^^^^^^^^^^^^^^^^^^
 
-TODO
+Configuration values are split into several thematical sections within a
+configuration file. There are three section worth a mention:
+
+* ``general``
+* ``readers``
+* ``writers``
+
+[general]
+"""""""""
+
+General configuration values are always applied when using any document
+converter:
+
+* ``exit_status_level`` (default ``5``, also as ``--exit-status=5``)
+
+  * exit with a non-zero exit code if a system message is at or above the status
+    level (all matching system messages are printed to stdout)
+
+* ``halt_level`` (default ``4``, also as ``--halt=4``)
+
+  * exit immediately with a non-zero exit code after a first system message at
+    or above the halt level (only the first system message is printed to stdout)
+
+* ``language_code`` (default ``en``, also as ``--language=en``)
+
+  * a 2-letter or 3-letter language code (`ISO 639`__) of language used in a
+    document, which may be suffixed by a 2-letter country code, e.g. ``en-GB``
+
+* ``strip_comments`` (default ``None``, also as ``--strip-comments``)
+
+  * whether to remove comments from an output document or not
+
+Other general values are fully covered on
+https://docutils.sourceforge.io/docs/user/config.html#general.
+
+.. note::
+
+   System messages used by Docutils:
+
+   + ``info`` - ``1``
+   + ``warning`` - ``2``
+   + ``error`` - ``3``
+   + ``severe`` - ``4``
+   + ``none`` - ``5``
+
+__ https://www.loc.gov/standards/iso639-2/php/code_list.php
+__ https://www.iso.org/iso-3166-country-codes.html
 
 
 
