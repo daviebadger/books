@@ -2506,9 +2506,9 @@ Convert a |RST| document to an HTML5 document:
    (``docutils/writers/html5_polyglot/``).
 
    Via a ``--stylesheet-path=FILES`` option is possible to define a custom
-   comma-separated list of relative paths to an HTML to CSS files. Docutils is
-   first looking for stylesheets in a current directory and then in the system
-   one.
+   comma-separated list of relative paths from HTML files to CSS files. Docutils
+   is first looking for stylesheets in a current directory and then in the
+   system one.
 
    Via a ``--stylesheet-dirs=DIRS`` option is possible to define a custom
    comma-separated list of paths to directories, where should Docutils look for
@@ -2673,6 +2673,34 @@ understands only |RST| syntax, so there is only one subsection, namely
 
 Other parsers values are fully covered on
 https://docutils.sourceforge.io/docs/user/config.html#parsers.
+
+[writers]
+"""""""""
+
+Writers configuration values are applied only to a specific document converter,
+which have own configuration subsection:
+
+* ``[html writers]``
+
+  * ``math_output`` (default ``HTML math.css``)
+
+    * how should be mathematical formulas formatted (``HTML``, ``MathJax``,
+      ``MathML`` or ``LaTeX``) + options (it may be a path to a CSS file or a
+      Javascript file location or even name of an executable depending on a
+      chosen format)
+
+  * ``stylesheet_dirs`` (default ``.,/path/to/python/site-packages/docutils/writers/html5_polyglot``)
+
+    * a comma-separated list of paths to directories, where should Docutils look
+      for CSS files
+
+  * ``stylesheet_path`` (default ``minimal.css,plain.css``)
+
+    * a comma-separated list of relative paths from HTML files to CSS files in
+      the ``stylesheet_dirs`` configuration value
+
+Other writers values are fully covered on
+https://docutils.sourceforge.io/docs/user/config.html#writers.
 
 
 
