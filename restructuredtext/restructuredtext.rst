@@ -2559,7 +2559,27 @@ Convert a |RST| document to an XML document:
 Configuration
 -------------
 
-TODO
+Docutils uses a configparser__ format, which is similar to the Microsoft Windows
+INI files, for configuring document converters. Here is a quick syntax
+cheatsheet, which should be fine for the most of values in a configuration file:
+
+.. code:: ini
+
+   [section]
+   # comment
+   number = 1
+   boolean = true
+   text = text
+
+       [subsection]
+       # last values in lists may end with a comma
+       list = 1, 2, 3
+       list_multiline =
+           1,
+           2,
+           3,
+
+__ https://docs.python.org/3/library/configparser.html
 
 Configuration Files
 ^^^^^^^^^^^^^^^^^^^
