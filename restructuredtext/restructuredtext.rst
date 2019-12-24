@@ -2655,6 +2655,25 @@ https://docutils.sourceforge.io/docs/user/config.html#general.
 __ https://www.loc.gov/standards/iso639-2/php/code_list.php
 __ https://www.iso.org/iso-3166-country-codes.html
 
+[parsers]
+"""""""""
+
+Parsers configuration values are applied when parsing a |RST| document. Docutils
+understands only |RST| syntax, so there is only one subsection, namely
+``[restructuredtext parser]``:
+
+* ``file_insertion_enabled`` (default ``true``, also as ``--file-insertion-enabled`` or ``--no-file-insertion``)
+
+  * whether to allow to load external files in directives (``include`` and those
+    with ``:file:`` or ``:url:``) or not
+
+* ``raw_enabled`` (default ``true``, also as ``--raw-enabled`` or ``--no-raw``)
+
+  * whether to allow using ``raw`` directive and role or not
+
+Other parsers values are fully covered on
+https://docutils.sourceforge.io/docs/user/config.html#parsers.
+
 
 
 References
