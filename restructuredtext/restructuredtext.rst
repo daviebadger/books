@@ -2563,7 +2563,8 @@ Configuration Files
 There are a few locations where Docutils is looking for a configuration file:
 
 #. ``/etc/docutils.conf`` - An implicit system-wide configuration file
-#. ``./docutils.conf`` - An implicit project-specific configuration file
+#. ``./docutils.conf`` - An implicit project-specific configuration file (must
+   be right next to a |RST| document)
 #. ``~/.docutils`` - An implicit user-specific configuration file
 
 If there exists the only of them, then that one is read. However, if they exist
