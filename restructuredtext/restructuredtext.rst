@@ -2679,7 +2679,10 @@ https://docutils.sourceforge.io/docs/user/config.html#parsers.
 References
 ==========
 
+* `Docutils - Configuration`__
+* `Docutils - Front-End Tools`__
 * `Docutils - FAQ`__
+* `Docutils - Mailing Lists`__
 * `Python Developer's Guide - Documenting Python`__
 * `reStructuredText - Directives`__
 * `reStructuredText - Interpreted Text Roles`__
@@ -2689,7 +2692,10 @@ References
 * `Wikipedia - reStructuredText`__
 * `Wikipedia - Sphinx (documentation generator)`__
 
+__ http://docutils.sourceforge.io/docs/user/config.html
+__ http://docutils.sourceforge.io/docs/user/tools.html
 __ http://docutils.sourceforge.net/FAQ.html
+__ http://docutils.sourceforge.io/docs/user/mailing-lists.html
 __ https://devguide.python.org/documenting/
 __ http://docutils.sourceforge.net/docs/ref/rst/directives.html
 __ http://docutils.sourceforge.net/docs/ref/rst/roles.html
