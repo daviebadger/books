@@ -2652,6 +2652,23 @@ https://docutils.sourceforge.io/docs/user/config.html#general.
    * ``severe`` - ``4``
    * ``none`` - ``5``
 
+.. tip::
+
+   Document converters, namely the ``rst2pseudoxml.py`` (it is the fastest from
+   all), may be used for linting |RST| documents in continuous integration (CI)
+   either via passed CLI options or a configuration file::
+
+   .. code:: sh
+
+      $ # strict (from INFO): report_level=1, exit_status_level=1
+      $ rst2pseudoxml.py -v --exit-status=1 document.rst /dev/null
+      $ # less strict (from WARNING): report_level=2, exit_status_level=2
+      $ rst2pseudoxml.py --exit-status=2 document.rst /dev/null
+
+   If no system message is printed to stderr, then the CI passes. Otherwise, it
+   fails due to a non-zero exit code returned from the document converter
+   (``echo $?``).
+
 __ https://www.loc.gov/standards/iso639-2/php/code_list.php
 __ https://www.iso.org/iso-3166-country-codes.html
 
