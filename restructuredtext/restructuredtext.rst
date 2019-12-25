@@ -2490,8 +2490,8 @@ destination file (output):
       $ tool   # from stdin (finish by pressing CTRL + D) to stdout
       $ tool > output  # from stdin to redirected stdout
 
-rst2html5.py
-^^^^^^^^^^^^
+rst2html5.py Converter
+^^^^^^^^^^^^^^^^^^^^^^
 
 Convert a |RST| document to an HTML5 document:
 
@@ -2518,8 +2518,8 @@ Convert a |RST| document to an HTML5 document:
    mathematical formulas formatted. The default value is set to
    ``'HTML math.css'``, which should be sufficient.
 
-rst2latex.py
-^^^^^^^^^^^^
+rst2latex.py Converter
+^^^^^^^^^^^^^^^^^^^^^^
 
 Convert a |RST| document to a LaTeX document:
 
@@ -2527,8 +2527,8 @@ Convert a |RST| document to a LaTeX document:
 
    $ rst2latex.py document.rst document.tex
 
-rst2odt.py
-^^^^^^^^^^
+rst2odt.py Converter
+^^^^^^^^^^^^^^^^^^^^
 
 Convert a |RST| document to an ODT document:
 
@@ -2536,8 +2536,8 @@ Convert a |RST| document to an ODT document:
 
    $ rst2odt.py document.rst document.odt
 
-rst2pseudoxml.py
-^^^^^^^^^^^^^^^^
+rst2pseudoxml.py Converter
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Convert a |RST| document to a pseudo-XML document for debugging purposes only
 (usually to stdout):
@@ -2546,8 +2546,8 @@ Convert a |RST| document to a pseudo-XML document for debugging purposes only
 
    $ rst2pseudoxml.py document.rst
 
-rst2xml.py
-^^^^^^^^^^
+rst2xml.py Converter
+^^^^^^^^^^^^^^^^^^^^
 
 Convert a |RST| document to an XML document:
 
@@ -2609,8 +2609,8 @@ configuration file. There are three section worth a mention:
 * ``readers``
 * ``writers``
 
-[general]
-"""""""""
+[general] Section
+"""""""""""""""""
 
 General configuration values are always applied when using any document
 converter:
@@ -2672,8 +2672,8 @@ https://docutils.sourceforge.io/docs/user/config.html#general.
 __ https://www.loc.gov/standards/iso639-2/php/code_list.php
 __ https://www.iso.org/iso-3166-country-codes.html
 
-[parsers]
-"""""""""
+[parsers] Section
+"""""""""""""""""
 
 Parsers configuration values are applied when parsing a |RST| document. Docutils
 understands only |RST| syntax, so there is only one subsection, namely
@@ -2691,8 +2691,8 @@ understands only |RST| syntax, so there is only one subsection, namely
 Other parsers values are fully covered on
 https://docutils.sourceforge.io/docs/user/config.html#parsers.
 
-[writers]
-"""""""""
+[writers] Section
+"""""""""""""""""
 
 Writers configuration values are applied only to a specific document converter,
 which have own configuration subsection:
