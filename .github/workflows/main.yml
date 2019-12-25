@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Is docutils installed?
-        run: which rst2pseudoxml.py
+      - name: Install docutils library
+        run: python3 -m pip install docutils
+      - name: Lint restructuredtext.rst
+        run: rst2pseudoxml.py -v --exit-status=1 restructuredtext/restructuredtext.rst /dev/null
