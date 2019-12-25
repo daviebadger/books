@@ -2450,11 +2450,11 @@ The setup is in principle similar to custom directives.
 
 
 
-Docutils
-========
+Docutils Library
+================
 
 By installing ``docutils`` via pip__ installer for Python packages, you gain
-moreover (except for API for writing custom directives and roles) access to
+moreover (not only API for writing custom directives and roles) access to
 several official document converters (front-end tools), which may be further
 configured.
 
