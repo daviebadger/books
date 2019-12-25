@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+      - name: Is docutils installed?
+        run: which rst2pseudoxml.py
