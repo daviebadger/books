@@ -2602,7 +2602,7 @@ document converter.
 Configuration Values
 ^^^^^^^^^^^^^^^^^^^^
 
-Configuration values are split into several thematical sections within a
+Configuration values are split into several thematic sections within a
 configuration file. There are three section worth a mention:
 
 * ``general``
