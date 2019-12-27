@@ -14,4 +14,5 @@ Beside these books, there are complementary projects:
 
 ## License
 
-This project is licensed under the [Creative Commons Attribution 4.0 International](LICENSE).
+This project is licensed under the
+[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE).
