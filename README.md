@@ -1,6 +1,6 @@
 # Davie's Technical Books
 
-My personal technical books of software I have been using for a long time:
+My technical books of tools I have been using:
 
 * [reStructuredText](restructuredtext/restructuredtext.rst)
 
