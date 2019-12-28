@@ -7,7 +7,8 @@
 
 :Author: `Davie Badger`_
 :Contact: davie.badger@gmail.com
-:Copyright: `Creative Commons Attribution 4.0 International Public License`_
+:Copyright:
+   `Creative Commons Attribution-ShareAlike 4.0 International Public License`__
 
 :Abstract:
    reStructuredText__ is mostly used in the Python community for writing
@@ -34,11 +35,11 @@
 .. sectnum::
    :suffix: .
 
+__ https://creativecommons.org/licenses/by-sa/4.0/
 __ http://docutils.sourceforge.net/rst.html
 
 .. _Blender: https://docs.blender.org/manual/en/latest/
 .. _CMake: https://cmake.org/cmake/help/latest/
-.. _Creative Commons Attribution 4.0 International Public License: https://creativecommons.org/licenses/by/4.0/
 .. _Davie Badger: https://github.com/daviebadger
 .. _Docutils: http://docutils.sourceforge.net/
 .. _Linux Kernel: https://www.kernel.org/doc/html/latest/
