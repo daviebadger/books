@@ -9,4 +9,4 @@ jobs:
       - name: Install dependencies for linting documents
         run: python3 -m pip install docutils pygments
       - name: Lint restructuredtext.rst
-        run: rst2pseudoxml.py -v --exit-status=1 restructuredtext/restructuredtext.rst /dev/null
+        run: rst2pseudoxml.py --config=docutils.conf restructuredtext/restructuredtext.rst /dev/null
