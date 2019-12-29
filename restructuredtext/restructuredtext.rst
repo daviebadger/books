@@ -1,9 +1,9 @@
 ==================
  reStructuredText
 ==================
----------------------------------------------------------
- Lightweight Markup Language for Technical Documentation
----------------------------------------------------------
+-----------------------------
+ Lightweight Markup Language
+-----------------------------
 
 :Author: `Davie Badger`_
 :Contact: davie.badger@gmail.com
@@ -11,9 +11,9 @@
    `Creative Commons Attribution-ShareAlike 4.0 International Public License`__
 
 :Abstract:
-   reStructuredText__ is mostly used in the Python community for writing
-   technical documentation. Other notable projects using it for documentation
-   are Blender_, CMake_, or `Linux Kernel`_.
+   reStructuredText__ (also ``RST`` or ``reST``) is mostly used in the Python
+   community for writing technical documentation. Other notable projects using
+   it for documentation are Blender_, CMake_, or `Linux Kernel`_.
 
    Unlike Markdown_, |RST| has officially standardized advanced markup, such
    as document metadata, automatic table of contents, tables, and semantic text.
@@ -25,10 +25,9 @@
    it is independent from projects using a different programming language or
    none at all.
 
-   :Abbreviation: ``RST`` (most common) or ``ReST`` or ``reST``
    :Filename extension:
       ``.txt``, but ``.rst`` is more common due to syntax highlighting
-   :Reference documentation: http://docutils.sourceforge.net/rst.html#reference-documentation
+   :Documentation: http://docutils.sourceforge.net/rst.html
 
 .. contents::
 
