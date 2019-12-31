@@ -2656,7 +2656,7 @@ https://docutils.sourceforge.io/docs/user/config.html#general.
 
    Document converters, namely the ``rst2pseudoxml.py`` (it is the fastest from
    all), may be used for linting |RST| documents in continuous integration (CI)
-   either via passed CLI options or a configuration file::
+   either via passed CLI options or a configuration file:
 
    .. code:: sh
 
