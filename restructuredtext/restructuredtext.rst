@@ -2474,7 +2474,7 @@ Document Converters
 In general, document converters accept a source |RST| file (input) and a
 destination file (output):
 
-.. code:: sh
+.. code:: console
 
    $ tool input output
 
@@ -2483,7 +2483,7 @@ destination file (output):
    Both input and output are optional, and that is why all these combos are
    possible to execute, although it is unlikely:
 
-   .. code:: sh
+   .. code:: console
 
       $ tool input  # to stdout
       $ tool input > output  # redirect stdout somewhere else
@@ -2495,7 +2495,7 @@ rst2html5.py Converter
 
 Convert a |RST| document to an HTML5 document:
 
-.. code:: sh
+.. code:: console
 
    $ rst2html5.py document.rst document.html
 
@@ -2523,7 +2523,7 @@ rst2latex.py Converter
 
 Convert a |RST| document to a LaTeX document:
 
-.. code:: sh
+.. code:: console
 
    $ rst2latex.py document.rst document.tex
 
@@ -2532,7 +2532,7 @@ rst2odt.py Converter
 
 Convert a |RST| document to an ODT document:
 
-.. code:: sh
+.. code:: console
 
    $ rst2odt.py document.rst document.odt
 
@@ -2542,7 +2542,7 @@ rst2pseudoxml.py Converter
 Convert a |RST| document to a pseudo-XML document for debugging purposes only
 (usually to stdout):
 
-.. code:: sh
+.. code:: console
 
    $ rst2pseudoxml.py document.rst
 
@@ -2551,7 +2551,7 @@ rst2xml.py Converter
 
 Convert a |RST| document to an XML document:
 
-.. code:: sh
+.. code:: console
 
    $ rst2xml.py document.rst document.xml
 
@@ -2658,7 +2658,7 @@ https://docutils.sourceforge.io/docs/user/config.html#general.
    all), may be used for linting |RST| documents in continuous integration (CI)
    either via passed CLI options or a configuration file:
 
-   .. code:: sh
+   .. code:: console
 
       $ # strict (from INFO): report_level=1, exit_status_level=1
       $ rst2pseudoxml.py -v --exit-status=1 document.rst /dev/null
