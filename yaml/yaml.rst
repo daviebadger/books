@@ -26,3 +26,14 @@
 __ https://creativecommons.org/licenses/by-sa/4.0/
 
 .. _Davie Badger: https://github.com/daviebadger
+
+
+
+References
+==========
+
+* `Stack Overflow - Is it .yaml or .yml?`__
+* `Wikipedia - YAML`__
+
+__ https://stackoverflow.com/questions/21059124/is-it-yaml-or-yml
+__ https://en.wikipedia.org/wiki/YAML
