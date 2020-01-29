@@ -2,7 +2,7 @@
  YAML
 ======
 ------------------------------------------
- Human-Readable Data-Serialization Format
+ Human-Readable Data Serialization Format
 ------------------------------------------
 
 :Author: `Davie Badger`_
@@ -32,8 +32,14 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 References
 ==========
 
+* `Learn yaml in Y Minutes`__
 * `Stack Overflow - Is it .yaml or .yml?`__
 * `Wikipedia - YAML`__
+* `YAML`__
+* `YAML -  YAML Ain’t Markup Language (YAML™) Version 1.2`__
 
+__ https://learnxinyminutes.com/docs/yaml/
 __ https://stackoverflow.com/questions/21059124/is-it-yaml-or-yml
 __ https://en.wikipedia.org/wiki/YAML
+__ https://yaml.org/
+__ https://yaml.org/spec/1.2/spec.html
