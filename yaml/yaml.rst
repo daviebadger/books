@@ -44,6 +44,7 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 .. _Envoy: https://www.envoyproxy.io/docs/envoy/latest/start/start
 .. _GitHub Actions: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow
 .. _GitLab CI/CD: https://docs.gitlab.com/ee/ci/#getting-started
+.. _JSON: https://www.json.org/json-en.html
 .. _Kubernetes: https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/
 .. _Salt: https://docs.saltstack.com/en/latest/topics/yaml/index.html
 
