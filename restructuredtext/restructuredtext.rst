@@ -18,7 +18,8 @@
    Unlike Markdown_, |RST| has officially standardized advanced markup, such
    as document metadata, automatic table of contents, tables, and semantic text.
    It also has a standardized way for writing custom extensions (directives and
-   interpreted text roles) via Docutils_ library written in Python.
+   interpreted text roles) via Docutils_ library written in Python. Downsides
+   are a steep learning curve, verbosity, and complexity for someone.
 
    |RST| is commonly used in conjunction with Sphinx_, which is a documentation
    generator originally developed for official `Python documentation`_, but now
