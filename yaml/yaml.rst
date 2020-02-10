@@ -50,6 +50,20 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 
 
 
+Scalars
+=======
+
+Collections
+===========
+
+Mappings
+--------
+
+Sequences
+---------
+
+
+
 References
 ==========
 
