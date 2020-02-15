@@ -60,15 +60,15 @@ Use a boolean value:
 
 * true:
 
-   .. code:: yaml
+  .. code:: yaml
 
-      true
+     true
 
 * false:
 
-   .. code:: yaml
+  .. code:: yaml
 
-      false
+     false
 
 .. note::
 
@@ -77,12 +77,33 @@ Use a boolean value:
    * ``on`` / ``off``
    * ``yes`` / ``no``
 
-   Both lowercased and uppercased variants are valid. However, it may be
-   ambiguous, especially the ``NO`` variant. Did I mean Norway (alpha-2 countr
-   code) or the false value?
+   Capitalized, lowercased or uppercased variants are also valid. However, it
+   may be ambiguous, especially the ``NO`` variant. Did I mean Norway (alpha-2
+   country code) or the false value?
 
    That is why it is reduced in the YAML version 1.2 only to ``true`` or
    ``false``, like in JSON.
+
+Null
+----
+
+Use a null (empty) value:
+
+.. code:: yaml
+
+   null
+
+.. hint::
+
+   In block mappings and sequences (collections), if a value is not defined
+   (left empty), then it is interpreted as a null value. This way is not
+   possible to use in flow collections. Therefore, it is better to use
+   explicitly ``null``.
+
+.. note::
+
+   Alternatively, ``~`` is also interpreted as a null value, nevertheless
+   ``null`` is 1:1 to JSON null value.
 
 
 
