@@ -53,6 +53,32 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 Scalars
 =======
 
+Numbers
+-------
+
+Integers
+^^^^^^^^
+
+Use an integer value:
+
+* positive
+
+  .. code:: yaml
+
+     1
+
+* negative
+
+  .. code:: yaml
+
+     -1
+
+.. note::
+
+   YAML supports octal or hexadecimal numbers, such as ``0o0`` or ``0x0``.
+   However, there are converted to decimal ones.
+
+
 Booleans
 --------
 
