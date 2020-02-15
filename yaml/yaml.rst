@@ -29,7 +29,7 @@
 
    :Filename extension:
       ``.yaml``, but ``.yml`` is more common due to archaic maximal 3-letter
-      limit
+      extension limit
    :Documentation: https://yaml.org/spec/1.2/spec.html
 
 .. contents::
@@ -52,6 +52,39 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 
 Scalars
 =======
+
+Booleans
+--------
+
+Use a boolean value:
+
+#. true:
+
+   .. code:: yml
+
+      true
+
+#. false:
+
+   .. code:: yml
+
+      false
+
+.. note::
+
+   Old YAML version 1.1 supports more values as boolean ones:
+
+   * ``on`` / ``off``
+   * ``yes`` / ``no``
+
+   Both lowercased and uppercased variants are valid. However, it may be
+   ambiguous, especially the ``NO`` variant. Did I mean Norway (alpha-2 countr
+   code) or the false value?
+
+   That is why it is reduced in the YAML version 1.2 only to ``true`` or
+   ``false``, like in JSON.
+
+
 
 Collections
 ===========
