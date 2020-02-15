@@ -27,6 +27,7 @@
    inherits data types, there may be surprises you would not expect if you do
    not know these catches.
 
+   :Version: 1.2
    :Filename extension:
       ``.yaml``, but ``.yml`` is more common due to archaic maximal 3-letter
       extension limit
