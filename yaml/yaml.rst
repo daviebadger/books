@@ -1,6 +1,6 @@
-======
- YAML
-======
+==========
+ YAML 1.2
+==========
 ------------------------------------------
  Human-Readable Data Serialization Format
 ------------------------------------------
@@ -27,7 +27,6 @@
    inherits data types, there may be surprises you would not expect if you do
    not know these catches.
 
-   :Version: 1.2
    :Filename extension:
       ``.yaml``, but ``.yml`` is more common due to archaic maximal 3-letter
       extension limit
@@ -59,15 +58,15 @@ Booleans
 
 Use a boolean value:
 
-#. true:
+* true:
 
-   .. code:: yml
+   .. code:: yaml
 
       true
 
-#. false:
+* false:
 
-   .. code:: yml
+   .. code:: yaml
 
       false
 
