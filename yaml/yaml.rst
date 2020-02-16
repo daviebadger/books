@@ -61,23 +61,62 @@ Integers
 
 Use an integer value:
 
-* positive
+* positive:
 
   .. code:: yaml
 
      1
 
-* negative
+* negative:
 
   .. code:: yaml
 
      -1
 
-.. note::
+Floating Points
+^^^^^^^^^^^^^^^
 
-   YAML supports octal or hexadecimal numbers, such as ``0o0`` or ``0x0``.
-   However, there are converted to decimal ones.
+Use a floating point (float) value:
 
+* positive:
+
+  .. code:: yaml
+
+     1.0
+
+* positive infinity:
+
+  .. code:: yaml
+
+     .inf
+
+* negative:
+
+  .. code:: yaml
+
+     -1.0
+
+* negative infinity:
+
+  .. code:: yaml
+
+     -.inf
+
+.. tip::
+
+   Since YAML version 1.2 is possible to use the scientific notation for writing
+   too big or too small numbers like:
+
+   * ``1e+0`` (1.0)
+   * ``1.0e+1`` (10.0)
+   * ``-1e+0`` (-1.0)
+   * ``-1.0e+1`` (-10.0)
+   * ``1e-0`` (1.0)
+   * ``1.0e-1`` (0.1)
+
+   The E notation may be uppercased like in calculators, but it subjectively
+   blends in with numbers due to the same text size. Next, the plus sign may be
+   omitted.
 
 Booleans
 --------
