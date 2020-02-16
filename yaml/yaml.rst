@@ -53,6 +53,35 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 Scalars
 =======
 
+Strings
+-------
+
+Flow Style
+^^^^^^^^^^
+
+Use a string value:
+
+* plain style without the support for escape characters:
+
+  .. code:: yaml
+
+     text
+
+* single-quoted style without the support for escape characters (the only way is
+  to double single quotes):
+
+  .. code:: yaml
+
+     'I''m David'
+
+* double-quoted style with the support for escape characters, such as ``\"``
+  or ``\n``:
+
+  .. code:: yaml
+
+     "Hello\nWorld"
+
+
 Numbers
 -------
 
@@ -117,6 +146,7 @@ Use a floating point (float) value:
    The E notation may be uppercased like in calculators, but it subjectively
    blends in with numbers due to the same text size. Next, the plus sign may be
    omitted.
+
 
 Booleans
 --------
@@ -187,7 +217,7 @@ References
 ==========
 
 * `Google Search - YAML Reference`__
-* `Learn yaml in Y Minutes`__
+* `Learn X in Y minutes - Learn yaml in Y Minutes`__
 * `Stack Overflow - Is it .yaml or .yml?`__
 * `Wikipedia - YAML`__
 * `YAML`__
