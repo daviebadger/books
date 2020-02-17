@@ -208,6 +208,12 @@ Use a null (empty) value:
 Collections
 -----------
 
+Collections are advanced data structures that contain either primitive scalar
+values or nested collections inside. They are represented by:
+
+* mappings (also known as objects in JSON or dicts in Python)
+* sequences (also known as arrays in JSON or lists in Python)
+
 Mappings
 ^^^^^^^^
 
