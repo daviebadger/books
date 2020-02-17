@@ -50,14 +50,18 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 
 
 
-Scalars
-=======
+Syntax
+======
 
-Strings
+
+Scalars
 -------
 
+Strings
+^^^^^^^
+
 Flow Style
-^^^^^^^^^^
+""""""""""
 
 Use a string value:
 
@@ -83,10 +87,10 @@ Use a string value:
 
 
 Numbers
--------
+^^^^^^^
 
 Integers
-^^^^^^^^
+""""""""
 
 Use an integer value:
 
@@ -103,7 +107,7 @@ Use an integer value:
      -1
 
 Floating Points
-^^^^^^^^^^^^^^^
+"""""""""""""""
 
 Use a floating point (float) value:
 
@@ -149,7 +153,7 @@ Use a floating point (float) value:
 
 
 Booleans
---------
+^^^^^^^^
 
 Use a boolean value:
 
@@ -180,7 +184,7 @@ Use a boolean value:
    ``false``, like in JSON.
 
 Null
-----
+^^^^
 
 Use a null (empty) value:
 
@@ -201,15 +205,14 @@ Use a null (empty) value:
    ``null`` is 1:1 to JSON null value.
 
 
-
 Collections
-===========
+-----------
 
 Mappings
---------
+^^^^^^^^
 
 Sequences
----------
+^^^^^^^^^
 
 
 
