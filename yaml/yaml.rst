@@ -50,17 +50,24 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 
 
 
-Syntax
-======
-
 Scalars
--------
+=======
+
+Scalars are one of three basic primitives in YAML (in the sense of data
+structures). They are not usually used alone but as values in collections.
+
+They are represented by:
+
+* strings
+* numbers
+* booleans
+* null
 
 Strings
-^^^^^^^
+-------
 
 Flow Style
-""""""""""
+^^^^^^^^^^
 
 Use a string value:
 
@@ -86,10 +93,10 @@ Use a string value:
 
 
 Numbers
-^^^^^^^
+-------
 
 Integers
-""""""""
+^^^^^^^^
 
 Use an integer value:
 
@@ -106,7 +113,7 @@ Use an integer value:
      -1
 
 Floating Points
-"""""""""""""""
+^^^^^^^^^^^^^^^
 
 Use a floating point (float) value:
 
@@ -152,7 +159,7 @@ Use a floating point (float) value:
 
 
 Booleans
-^^^^^^^^
+--------
 
 Use a boolean value:
 
@@ -183,7 +190,7 @@ Use a boolean value:
    ``false``, like in JSON.
 
 Null
-^^^^
+----
 
 Use a null (empty) value:
 
@@ -205,7 +212,7 @@ Use a null (empty) value:
 
 
 Collections
------------
+===========
 
 Collections are in general data containers, which contain a collection of scalar
 values or also a collection of data containers (collections inside collections).
@@ -216,10 +223,10 @@ They are represented by:
 * sequences (also known as arrays in JSON or lists in Python)
 
 Mappings
-^^^^^^^^
+--------
 
 Sequences
-^^^^^^^^^
+---------
 
 
 
