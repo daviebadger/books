@@ -66,6 +66,16 @@ They are represented by:
 Strings
 -------
 
+Strings may be written in two ways (styles or also concepts) that are common
+in YAML:
+
+* flow style
+* block style
+
+In general, flow style means that values are written inline (before or after
+may be indicators or other values within the same line), while in a block style,
+values start on separate lines.
+
 Flow Style
 ^^^^^^^^^^
 
