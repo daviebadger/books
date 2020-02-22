@@ -76,30 +76,46 @@ In general, flow style means that values are written inline (before or after
 may be indicators or other values within the same line), while in a block style,
 values start on separate lines.
 
-Flow Style
-^^^^^^^^^^
+Flow Style Strings
+^^^^^^^^^^^^^^^^^^
 
-Use a string value:
+Strings in the flow style may be written in three possible ways:
 
-* plain style without the support for escape characters:
+#. plain style without quotes around, where is not possible to use escape
+   characters at all:
 
-  .. code:: yaml
+   .. code:: yaml
 
-     text
+      text
 
-* single-quoted style without the support for escape characters (the only way is
-  to double single quotes):
+#. single-quoted style using a :literal:`\`` indicator without the support for
+   escape characters (the only possible way is to double single quotes if
+   needed):
 
-  .. code:: yaml
+   .. code:: yaml
 
-     'I''m David'
+      'I''m David'
 
-* double-quoted style with the support for escape characters, such as ``\"``
-  or ``\n``:
+#. double-quoted style using a ``"`` indicator with the support for escape
+   characters, such as ``\"`` or ``\n``:
 
-  .. code:: yaml
+   .. code:: yaml
 
-     "Hello\nWorld"
+      "Hello\nWorld"
+
+.. hint::
+
+   In all of the three flow styles is possible to write multi-line strings by
+   continuing on the next lines like:
+
+   .. code:: yaml
+
+      'This is a long sentence
+      over two lines.'
+
+   However, it has some downsides, mostly aesthetics, when using quotes or in
+   mappings where are indentation. Therefore it is better to use block style
+   strings.
 
 
 Numbers
@@ -247,14 +263,12 @@ References
 * `Learn X in Y minutes - Learn yaml in Y Minutes`__
 * `Stack Overflow - Is it .yaml or .yml?`__
 * `Wikipedia - YAML`__
-* `YAML`__
-* `YAML -  YAML Ain’t Markup Language (YAML™) Version 1.1`__
-* `YAML -  YAML Ain’t Markup Language (YAML™) Version 1.2`__
+* `YAML - YAML Ain’t Markup Language (YAML™) Version 1.1`__
+* `YAML - YAML Ain’t Markup Language (YAML™) Version 1.2`__
 
 __ https://www.google.com/search?q=yaml+reference
 __ https://learnxinyminutes.com/docs/yaml/
 __ https://stackoverflow.com/questions/21059124/is-it-yaml-or-yml
 __ https://en.wikipedia.org/wiki/YAML
-__ https://yaml.org/
 __ https://yaml.org/spec/1.1/
 __ https://yaml.org/spec/1.2/spec.html
