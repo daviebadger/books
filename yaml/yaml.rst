@@ -59,7 +59,8 @@ structures). They are not usually used alone but as values in collections.
 They are represented by:
 
 * strings
-* numbers
+* integers
+* floating points
 * booleans
 * null
 
@@ -79,7 +80,7 @@ values start on separate lines.
 Flow Style Strings
 ^^^^^^^^^^^^^^^^^^
 
-Strings in the flow style may be written in three possible ways:
+Strings in the flow style may be written in three possible styles:
 
 #. plain style without quotes around, where is not possible to use escape
    characters at all:
@@ -88,9 +89,8 @@ Strings in the flow style may be written in three possible ways:
 
       text
 
-#. single-quoted style using a :literal:`\`` indicator without the support for
-   escape characters (the only possible way is to double single quotes if
-   needed):
+#. single-quoted style using a ``'`` indicator without the support for escape
+   characters (the only possible way is to double single quotes if needed):
 
    .. code:: yaml
 
@@ -117,12 +117,84 @@ Strings in the flow style may be written in three possible ways:
    mappings where are indentation. Therefore it is better to use block style
    strings.
 
+Block Style Strings
+^^^^^^^^^^^^^^^^^^^
 
-Numbers
--------
+Strings in the block style may be written in two possible styles, where both do
+not support escape characters (text is literally kept as is):
+
+#. literal style using a ``|`` indicator, where non-empty lines are joined by
+   newlines:
+
+   .. code:: yaml
+
+      |
+        pwd
+        ls
+        touch file.txt
+
+#. folded style using a ``>`` indicator, where non-empty lines are joined by
+   spaces:
+
+   .. code:: yaml
+
+      >
+        This is
+        the first paragraph.
+
+        This is the second paragraph
+        after a line break.
+
+Both literal and folded style strings end by default with a newline(s) after
+deserialization. These final line breaks may be controlled by chomping
+indicators used after block style indicators.
+
+There are three ways (methods):
+
+#. clip (no chomping indicator) - a string ends with a single newline (the
+   default behavior)
+
+   .. code:: yaml
+
+      >-
+        a
+        b
+        c
+
+      # Deserialized string: "a b c\n"
+
+#. strip (``-`` indicator) - a string does not end with a newline(s) at all:
+
+   .. code:: yaml
+
+      >-
+        a
+        b
+        c
+
+      # Deserialized string: "a b c"
+
+#. keep (``+`` indicator) - a string ends with more newlines if the string has
+   trailing line breaks (very rarely used):
+
+   .. code:: yaml
+
+      >+
+        a
+        b
+        c
+
+      # Deserialized string: "a b c\n\n"
+
+.. tip::
+
+   Although YAML does not have strictly set indentation levels in documents, it
+   is common to use consistently two spaces as indentation. Most examples in the
+   YAML reference guide use this level.
+
 
 Integers
-^^^^^^^^
+--------
 
 Use an integer value:
 
@@ -139,7 +211,7 @@ Use an integer value:
      -1
 
 Floating Points
-^^^^^^^^^^^^^^^
+---------------
 
 Use a floating point (float) value:
 
