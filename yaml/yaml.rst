@@ -53,7 +53,6 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 Syntax
 ======
 
-
 Scalars
 -------
 
@@ -208,8 +207,10 @@ Use a null (empty) value:
 Collections
 -----------
 
-Collections are advanced data structures that contain either primitive scalar
-values or nested collections inside. They are represented by:
+Collections are in general data containers, which contain a collection of scalar
+values or also a collection of data containers (collections inside collections).
+
+They are represented by:
 
 * mappings (also known as objects in JSON or dicts in Python)
 * sequences (also known as arrays in JSON or lists in Python)
