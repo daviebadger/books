@@ -335,6 +335,7 @@ References
 * `Learn X in Y minutes - Learn yaml in Y Minutes`__
 * `Stack Overflow - Is it .yaml or .yml?`__
 * `Wikipedia - YAML`__
+* `YAML - Reference card`__
 * `YAML - YAML Ain’t Markup Language (YAML™) Version 1.1`__
 * `YAML - YAML Ain’t Markup Language (YAML™) Version 1.2`__
 
@@ -342,5 +343,6 @@ __ https://www.google.com/search?q=yaml+reference
 __ https://learnxinyminutes.com/docs/yaml/
 __ https://stackoverflow.com/questions/21059124/is-it-yaml-or-yml
 __ https://en.wikipedia.org/wiki/YAML
+__ https://yaml.org/refcard.html
 __ https://yaml.org/spec/1.1/
 __ https://yaml.org/spec/1.2/spec.html
