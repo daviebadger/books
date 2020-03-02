@@ -298,23 +298,20 @@ Use a boolean value:
 Null
 ----
 
-Use a null (empty) value:
+Null is an empty value (also known as ``None`` in Python), which is represented
+by the same name keyword:
 
 .. code:: yaml
 
    null
 
-.. hint::
-
-   In block mappings and sequences (collections), if a value is not defined
-   (left empty), then it is interpreted as a null value. This way is not
-   possible to use in flow collections. Therefore, it is better to use
-   explicitly ``null``.
-
 .. note::
 
-   Alternatively, ``~`` is also interpreted as a null value, nevertheless
-   ``null`` is 1:1 to JSON null value.
+   YAML also has other variants of the null value you may ever encounter with.
+
+   The first variant is via a ``~`` indicator instead of the ``null`` keyword.
+   The second variant is just not using any value at all in block style
+   collections (empty list item or key).
 
 
 Collections
