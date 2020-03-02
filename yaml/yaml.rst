@@ -305,13 +305,15 @@ by the same name keyword:
 
    null
 
+YAML also has other variants of the null value you may ever encounter with. The
+first variant is via a ``~`` indicator instead of the ``null`` keyword. The
+second variant is just not using any value at all in block style collections
+(empty list item or key).
+
 .. note::
 
-   YAML also has other variants of the null value you may ever encounter with.
-
-   The first variant is via a ``~`` indicator instead of the ``null`` keyword.
-   The second variant is just not using any value at all in block style
-   collections (empty list item or key).
+   The ``null`` keyword also may be written as ``Null`` or ``NULL``. However,
+   the lowercased one is the go-to variant.
 
 
 Collections
