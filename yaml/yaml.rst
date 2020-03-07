@@ -221,7 +221,7 @@ Integers are either positive or negative without infinity:
 Floating Points
 ---------------
 
-Floating points are decimal numbers including infinity:
+Floating points are numbers with a decimal point, including infinity:
 
 * positive float:
 
@@ -287,7 +287,7 @@ These booleans are also valid in capitalized or uppercased variants. However, it
 may be ambiguous, especially the ``NO`` variant. Did I mean Norway (alpha-2
 country code) as a string or the false value?
 
-Despite that, there are still used popular YAML libraries, which support only
+Despite that, there are still some popular YAML libraries, which support only
 the 1.1 version, and this behavior may surprise someone. That is why it is
 reduced in the version 1.2 only to ``true`` or ``false``, like in JSON.
 
