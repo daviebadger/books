@@ -67,8 +67,8 @@ They are represented by:
 Strings
 -------
 
-Strings may be written in two ways (styles or also concepts) that are common
-in YAML:
+Strings (text) may be written in two ways (styles or also concepts) that are
+common in YAML:
 
 * flow style
 * block style
@@ -267,7 +267,7 @@ Use a floating point (float) value:
 Booleans
 --------
 
-Use a boolean value:
+Booleans are represented by true or false:
 
 * true:
 
@@ -281,19 +281,23 @@ Use a boolean value:
 
      false
 
+Previous YAML version 1.1 supports more values as boolean ones, namely:
+
+* ``on`` / ``off``
+* ``yes`` / ``no``
+
+These booleans are also valid in capitalized or uppercased variants. However, it
+may be ambiguous, especially the ``NO`` variant. Did I mean Norway (alpha-2
+country code) as a string or the false value?
+
+Despite that, there are still used popular YAML libraries, which support only
+the 1.1 version, and this behavior may surprise someone. That is why it is
+reduced in the version 1.2 only to ``true`` or ``false``, like in JSON.
+
 .. note::
 
-   Old YAML version 1.1 supports more values as boolean ones:
-
-   * ``on`` / ``off``
-   * ``yes`` / ``no``
-
-   Capitalized, lowercased or uppercased variants are also valid. However, it
-   may be ambiguous, especially the ``NO`` variant. Did I mean Norway (alpha-2
-   country code) or the false value?
-
-   That is why it is reduced in the YAML version 1.2 only to ``true`` or
-   ``false``, like in JSON.
+   Booleans also may be written as ``True`` / ``TRUE``, respectively ``False``
+   / ``FALSE``. However, the lowercased ones are the go-to variants.
 
 Null
 ----
