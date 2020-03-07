@@ -221,9 +221,9 @@ Integers are either positive or negative without infinity:
 Floating Points
 ---------------
 
-Use a floating point (float) value:
+Floating points are decimal numbers including infinity:
 
-* positive:
+* positive float:
 
   .. code:: yaml
 
@@ -235,7 +235,7 @@ Use a floating point (float) value:
 
      .inf
 
-* negative:
+* negative float:
 
   .. code:: yaml
 
@@ -247,21 +247,19 @@ Use a floating point (float) value:
 
      -.inf
 
-.. tip::
+Moreover, from YAML version 1.2 is possible to use the scientific notation for
+writing too big or too small numbers like:
 
-   Since YAML version 1.2 is possible to use the scientific notation for writing
-   too big or too small numbers like:
+* ``1e+0`` (1.0)
+* ``1.0e+1`` (10.0)
+* ``-1e+0`` (-1.0)
+* ``-1.0e+1`` (-10.0)
+* ``1e-0`` (1.0)
+* ``1.0e-1`` (0.1)
 
-   * ``1e+0`` (1.0)
-   * ``1.0e+1`` (10.0)
-   * ``-1e+0`` (-1.0)
-   * ``-1.0e+1`` (-10.0)
-   * ``1e-0`` (1.0)
-   * ``1.0e-1`` (0.1)
-
-   The E notation may be uppercased like in calculators, but it subjectively
-   blends in with numbers due to the same text size. Next, the plus sign may be
-   omitted.
+The E notation may be uppercased like in calculators, but it subjectively
+blends in with numbers due to the same text size. Next, the plus sign may be
+omitted.
 
 Booleans
 --------
