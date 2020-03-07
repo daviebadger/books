@@ -63,6 +63,7 @@ They are represented by:
 * floating points
 * booleans
 * null
+* timestamps
 
 Strings
 -------
@@ -315,6 +316,68 @@ second variant is just not using any value at all in block style collections
 
    The ``null`` keyword also may be written as ``Null`` or ``NULL``. However,
    the lowercased one is the go-to variant.
+
+Timestamps
+----------
+
+Timestamps are represented by `ISO 8601`_ dates and datetimes (date and time)
+or also by spaced datetimes, which are allowed according to :RFC:`3339`:
+
+* ISO-formatted date:
+
+  .. code:: yaml
+
+     2020-02-20
+
+* ISO-formatted datetime without optional microseconds and a time zone:
+
+  .. code:: yaml
+
+     2020-02-20T00:00:00
+
+* ISO-formatted datetime with microseconds:
+
+  .. code:: yaml
+
+     2020-02-20T00:00:00.123
+
+* ISO-formatted datetime with a time zone:
+
+  .. code:: yaml
+
+     2020-02-20T00:00:00+02:30
+
+* ISO-formatted datetime with microseconds and a time zone:
+
+  .. code:: yaml
+
+     2020-02-20T00:00:00.123+02:30
+
+* spaced datetime without optional microseconds and a time zone:
+
+  .. code:: yaml
+
+     2020-02-20 00:00:00
+
+* spaced datetime with microseconds:
+
+  .. code:: yaml
+
+     2020-02-20 00:00:00.123
+
+* spaced datetime with a time zone:
+
+  .. code:: yaml
+
+     2020-02-20 00:00:00 -1
+
+* spaced datetime with microseconds and a time zone:
+
+  .. code:: yaml
+
+     2020-02-20 00:00:00.123 -1
+
+.. _ISO 8601: https://en.wikipedia.org/wiki/ISO_8601
 
 
 Collections
