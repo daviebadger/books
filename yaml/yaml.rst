@@ -204,15 +204,15 @@ There are three ways (methods):
 Integers
 --------
 
-Use an integer value:
+Integers are either positive or negative without infinity:
 
-* positive:
+* positive integer:
 
   .. code:: yaml
 
      1
 
-* negative:
+* negative integer:
 
   .. code:: yaml
 
@@ -262,7 +262,6 @@ Use a floating point (float) value:
    The E notation may be uppercased like in calculators, but it subjectively
    blends in with numbers due to the same text size. Next, the plus sign may be
    omitted.
-
 
 Booleans
 --------
