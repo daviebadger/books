@@ -104,6 +104,7 @@ Document titles use three different adornment styles depending on a context:
       **************
       Document Title
       **************
+
 #. a master document [#]_, which is part of a Sphinx documentation:
 
    .. code:: rst
