@@ -377,6 +377,13 @@ or also by spaced datetimes, which are allowed according to :RFC:`3339`:
 
      2020-02-20 00:00:00.123 -1
 
+.. note::
+
+   Although timestamps are a part of scalars, they may not be easily converted
+   to JSON like other YAML primitives, which have counterparts in JSON. This
+   goes especially for Python, where timestamps are converted to special
+   date(time) objects and which are not JSON serializable by default.
+
 .. _ISO 8601: https://en.wikipedia.org/wiki/ISO_8601
 
 
