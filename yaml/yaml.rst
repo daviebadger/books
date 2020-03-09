@@ -401,8 +401,39 @@ They are represented by:
 Mappings
 --------
 
+Mappings may be written in two styles:
+
+* flow style
+* block style
+
+Flow Style Mappings
+^^^^^^^^^^^^^^^^^^^
+
+TODO
+
+Block Style Mappings
+^^^^^^^^^^^^^^^^^^^^
+
+TODO
+
+
 Sequences
 ---------
+
+Sequences also may be written in two styles:
+
+* flow style
+* block style
+
+Flow Style Sequences
+^^^^^^^^^^^^^^^^^^^^
+
+TODO
+
+Block Style Sequences
+^^^^^^^^^^^^^^^^^^^^^
+
+TODO
 
 
 
