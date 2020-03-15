@@ -420,7 +420,43 @@ case, all case styles are valid from a YAML point of view.
 Flow Style Mappings
 ^^^^^^^^^^^^^^^^^^^
 
-TODO
+Flow style mappings are usually inline mappings, although they may span multiple
+lines. They are using ``{}`` indicators as borders. Inside are keys, which are
+separated from values by a ``:`` indicator followed by space. Key/value pairs
+are separated from each other by a ``,`` indicator followed by space:
+
+.. code:: yaml
+
+   {x: 0, y: 1}
+
+Because of their compatibility with JSON objects, keys also may be quoted,
+though it is optional:
+
+.. code:: yaml
+
+   {"x": 0, "y": 1}
+
+.. note::
+
+   YAML is benevolent with spacing. They are not limited when using right after
+   curly braces or before them. The same goes after key/value pairs:
+
+      .. code:: yaml
+
+         { x: 0,   y: 1 }
+
+   Even the last key/value pair may end with a comma before the ending curly
+   brace:
+
+      .. code:: yaml
+
+         { x: 0, y: 1, }
+
+.. tip::
+
+   Flow style mappings are ideally used with block style sequences, where their
+   values are just inline mappings, which fit into a line length. It may look
+   like a row-oriented table.
 
 Block Style Mappings
 ^^^^^^^^^^^^^^^^^^^^
