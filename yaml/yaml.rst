@@ -460,7 +460,29 @@ though it is optional:
 Block Style Mappings
 ^^^^^^^^^^^^^^^^^^^^
 
-TODO
+Block style mappings have keys starting on a new line, which also may be
+indented. There are no curly braces, only the ``:`` indicator for separating
+keys from values:
+
+.. code:: yaml
+
+   boolean: true
+   floating point: 1.0
+   flow_string: "text"
+   integer: 1
+   NestedBlockMapping:
+     blockString: |-
+       text
+     NestedFlowMapping: {x: 0, y: 1}
+   null: null
+   timestamp: 2020-02-20
+
+.. note::
+
+   YAML has a ``?`` indicator. If it is used before a key, then the key may be
+   any primitive such as a sequence. Nevertheless, these special keys may not be
+   supported in the targeted programming language. Therefore it is safe to use
+   only a single word key ideally.
 
 
 Sequences
