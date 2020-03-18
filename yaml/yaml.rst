@@ -440,16 +440,16 @@ though it is optional:
    YAML is benevolent with spacing. They are not limited when using right after
    curly braces or before them. The same goes after key/value pairs:
 
-      .. code:: yaml
+   .. code:: yaml
 
-         { x: 0,   y: 1 }
+      { x: 0,   y: 1 }
 
    Even the last key/value pair may end with a comma before the ending curly
    brace:
 
-      .. code:: yaml
+   .. code:: yaml
 
-         { x: 0, y: 1, }
+      { x: 0, y: 1, }
 
 .. tip::
 
