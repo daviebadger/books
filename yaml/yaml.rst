@@ -120,11 +120,10 @@ Strings in the flow style may be written in three possible styles:
 
 .. tip::
 
-   It is better to use only quoted styles (double-quoted preferably due to the
-   support for escape characters) for flow style strings to be consistent
-   throughout a document and also to avoid pitfalls when using YAML indicators
-   in the plain style strings by mistake which could cause a syntax error during
-   parsing.
+   It is better to use only the quoted styles for flow style strings to be
+   consistent throughout a document and also to avoid pitfalls when using YAML
+   indicators in the plain style strings by mistake which could cause a syntax
+   error during parsing.
 
 Block Style Strings
 ^^^^^^^^^^^^^^^^^^^
