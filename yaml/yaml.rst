@@ -409,7 +409,7 @@ In both styles, mappings are represented by keys and values for these keys. They
 may have an "unlimited" number of keys, which should not be duplicated (some
 libraries may fail when parsing). It does not matter if keys with values are
 sorted or not, because mappings are unordered by default (some libraries may
-still keep the order of keys).
+still keep the order of keys as they are defined).
 
 There is no standard for naming keys. It depends on an underlying programming
 language, in which are YAML documents parsed. The language itself usually has
@@ -492,6 +492,8 @@ Sequences also may be written in two styles:
 
 * flow style
 * block style
+
+In both styles, sequences are represented by an ordered list of values.
 
 Flow Style Sequences
 ^^^^^^^^^^^^^^^^^^^^
