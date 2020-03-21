@@ -498,7 +498,28 @@ In both styles, sequences are represented by an ordered list of values.
 Flow Style Sequences
 ^^^^^^^^^^^^^^^^^^^^
 
-TODO
+Flow style sequences are usually inline sequences, although they may span
+multiple lines. They are using ``[]`` indicators as borders. Inside are values,
+which are separated by a ``,`` indicator followed by space:
+
+.. code:: yaml
+
+   [0, 1]
+
+.. note::
+
+   Like in flow style mapping, YAML is also benevolent with spacing in flow
+   style sequences, including the support for a comma after the last item:
+
+   .. code:: yaml
+
+      [ 0,   1, ]
+
+.. tip::
+
+   Flow style sequences are also ideally used with block style sequences. For
+   example, to create a two-dimensional list, where a block style list
+   represents rows and a flow style list columns.
 
 Block Style Sequences
 ^^^^^^^^^^^^^^^^^^^^^
