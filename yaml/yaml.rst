@@ -461,8 +461,8 @@ Block Style Mappings
 ^^^^^^^^^^^^^^^^^^^^
 
 Block style mappings have keys starting on a new line, which also may be
-indented. There are no curly braces, only the ``:`` indicator for separating
-keys from values:
+indented. There are no curly braces or commas, only the ``:`` indicator for
+separating keys from values:
 
 .. code:: yaml
 
@@ -524,7 +524,32 @@ which are separated by a ``,`` indicator followed by space:
 Block Style Sequences
 ^^^^^^^^^^^^^^^^^^^^^
 
-TODO
+Block style sequences have values starting on a new line, which also may be
+indented. There are no square brackets or commas. There is only a ``-``
+indicator followed by space at the beginning of a (un)indented line for starting
+a value:
+
+.. code:: yaml
+
+   - false
+   - -1.0
+   - "text"
+   - -1
+   - flowSequence: [0, 1]
+     NestedBlockMapping:
+       block string: >-
+         text
+       blockSequence:
+         - {x: 0, y: 1}
+         - {x: 1, y: 2}
+         - {x: 2, y: 3}
+     NestedBlockSequence:
+       -
+         - a
+         - b
+         - c
+   - null
+   - 2020-02-20
 
 
 
