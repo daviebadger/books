@@ -484,6 +484,17 @@ separating keys from values:
    supported in the targeted programming language. Therefore it is safe to use
    only a single word key ideally.
 
+.. tip::
+
+   Do not worry using empty lines if mappings or anything else is complex:
+
+   .. code:: yaml
+
+      key: value
+
+      another_key:
+         nested_key: value
+
 
 Sequences
 ---------
