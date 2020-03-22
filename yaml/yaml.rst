@@ -567,6 +567,16 @@ a value:
 Other Indicators
 ================
 
+Besides scalar and collection indicators, there exist other indicators (rather
+supporting), which may help with writing YAML documents.
+
+They are represented by:
+
+* comment indicator
+* alias indicators
+* merge indicator
+* document indicators
+
 Comment Indicator
 -----------------
 
