@@ -120,10 +120,10 @@ Strings in the flow style may be written in three possible styles:
 
 .. tip::
 
-   It is better to use only the quoted styles for flow style strings to be
-   consistent throughout a document and also to avoid pitfalls when using YAML
-   indicators in the plain style strings by mistake which could cause a syntax
-   error during parsing.
+   It is better to use only the quoted styles (double-quoted preferably) for
+   flow style strings to be consistent throughout a document and also to avoid
+   pitfalls when using YAML indicators in the plain style strings by mistake
+   which could cause a syntax error during parsing.
 
 Block Style Strings
 ^^^^^^^^^^^^^^^^^^^
@@ -579,6 +579,25 @@ They are represented by:
 
 Comment Indicator
 -----------------
+
+There are two styles, how to write comments, which should explain use values if
+it is not clear at first sight:
+
+#. flow style, where a comment starts at the end of a line after a value, with
+   at least one space before a ``#`` indicator (it may be two spaces like in
+   Python):
+
+  .. code:: yaml
+
+     key: value  # This is an inline comment.
+
+#. block style, where a comment starts at the beginning of a (un)indented line:
+
+  .. code:: yaml
+
+     # This is a comment
+     # over two lines.
+     key: value
 
 Alias Indicators
 ----------------
