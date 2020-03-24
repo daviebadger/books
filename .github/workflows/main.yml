@@ -1,14 +1,14 @@
-name: CI
-on: [push]
+name: "CI"
+on: ["push"]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-python@v1
-      - name: Install dependencies for linting documents
-        run: python3 -m pip install docutils pygments
-      - name: Lint documents
+      - uses: "actions/checkout@v1"
+      - uses: "actions/setup-python@v1"
+      - name: "Install dependencies for linting documents"
+        run: "python3 -m pip install docutils pygments"
+      - name: "Lint documents"
         run: |
           rst2pseudoxml.py --config=docutils.conf restructuredtext/restructuredtext.rst /dev/null
           rst2pseudoxml.py --config=docutils.conf yaml/yaml.rst /dev/null
