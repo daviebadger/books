@@ -623,7 +623,7 @@ single word (no whitespace) and used together before a value:
 
    Anchors are mostly used in mapping values:
 
-   .. code:: yml
+   .. code:: yaml
 
       flow_scalar: &integer 1
       block_scalar: &string |-
@@ -639,6 +639,38 @@ single word (no whitespace) and used together before a value:
       block_mapping: &block_dict
         x: 0
         y: 1
+
+Alias Indicator
+^^^^^^^^^^^^^^^
+
+Via a ``*`` indicator is possible to refer (alias) to an anchored value, which
+should be used instead of writing a new value:
+
+.. code:: yaml
+
+   *pi
+
+.. caution::
+
+   When using aliases in block style sequences and the anchored value is also a
+   sequence, then the value of the alias will be a nested sequence:
+
+   .. code:: yaml
+
+      anchor: &list [1, 2, 3]
+      sequence:
+         - 0
+         - *list
+         - 4
+
+      # {
+      #   "anchor": [1, 2, 3],
+      #   "sequence": [0, [1, 2, 3], 4]
+      # }
+
+   The same principle goes for mappings. Unlike sequences, mappings can be
+   merged via a merge indicator. The only way, how to flatten a sequence is to
+   perform a transformation after loading a document in code.
 
 
 Merge Indicator
