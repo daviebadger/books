@@ -608,6 +608,37 @@ indicators:
 * anchor indicator
 * alias indicator
 
+Anchor Indicator
+^^^^^^^^^^^^^^^^
+
+Via a ``&`` indicator is possible to create an anchor for a value, which may be
+lately referenced on other places in a document. The anchor must be named as a
+single word (no whitespace) and used together before a value:
+
+.. code:: yaml
+
+   &pi 3.14159265359
+
+Anchors are mostly used in mapping values:
+
+.. code:: yml
+
+   flow_scalar: &integer 1
+   block_scalar: &string |-
+     line
+
+   flow_list: &flow_list [1, 2, 3]
+   block_list: &block_list
+     1. 1
+     2. 2
+     3. 3
+
+   flow_mapping: &flow_dict {"x": 0, "y": 1}
+   block_mapping: &block_dict
+     x: 0
+     y: 1
+
+
 Merge Indicator
 ---------------
 
