@@ -644,7 +644,8 @@ Alias Indicator
 ^^^^^^^^^^^^^^^
 
 Via a ``*`` indicator is possible to refer (alias) to an anchored value, which
-should be used instead of writing a new value:
+should be used instead of writing a new value. The alias indicator is used
+together with the anchor name:
 
 .. code:: yaml
 
