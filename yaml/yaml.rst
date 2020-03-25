@@ -619,24 +619,26 @@ single word (no whitespace) and used together before a value:
 
    &pi 3.14159265359
 
-Anchors are mostly used in mapping values:
+.. note::
 
-.. code:: yml
+   Anchors are mostly used in mapping values:
 
-   flow_scalar: &integer 1
-   block_scalar: &string |-
-     line
+   .. code:: yml
 
-   flow_list: &flow_list [1, 2, 3]
-   block_list: &block_list
-     1. 1
-     2. 2
-     3. 3
+      flow_scalar: &integer 1
+      block_scalar: &string |-
+        line
 
-   flow_mapping: &flow_dict {"x": 0, "y": 1}
-   block_mapping: &block_dict
-     x: 0
-     y: 1
+      flow_list: &flow_list [1, 2, 3]
+      block_list: &block_list
+        A. 1
+        B. 2
+        C. 3
+
+      flow_mapping: &flow_dict {"x": 0, "y": 1}
+      block_mapping: &block_dict
+        x: 0
+        y: 1
 
 
 Merge Indicator
@@ -654,6 +656,7 @@ References
 * `Learn X in Y minutes - Learn yaml in Y Minutes`__
 * `Stack Overflow - Is it .yaml or .yml?`__
 * `Wikipedia - YAML`__
+* `YAML - Merge Key Language-Independent Type for YAML™ Version 1.1`__
 * `YAML - Reference card`__
 * `YAML - YAML Ain’t Markup Language (YAML™) Version 1.1`__
 * `YAML - YAML Ain’t Markup Language (YAML™) Version 1.2`__
@@ -662,6 +665,7 @@ __ https://www.google.com/search?q=yaml+reference
 __ https://learnxinyminutes.com/docs/yaml/
 __ https://stackoverflow.com/questions/21059124/is-it-yaml-or-yml
 __ https://en.wikipedia.org/wiki/YAML
+__ https://yaml.org/type/merge.html
 __ https://yaml.org/refcard.html
 __ https://yaml.org/spec/1.1/
 __ https://yaml.org/spec/1.2/spec.html
