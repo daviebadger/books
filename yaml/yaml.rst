@@ -602,6 +602,12 @@ it is not clear at first sight:
 Alias Indicators
 ----------------
 
+Alias indicators allow reusing a value in more places by two co-operating
+indicators:
+
+* anchor indicator
+* alias indicator
+
 Merge Indicator
 ---------------
 
