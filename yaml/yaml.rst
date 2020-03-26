@@ -587,17 +587,17 @@ it is not clear at first sight:
    at least one space before a ``#`` indicator (it may be two spaces like in
    Python):
 
-  .. code:: yaml
+   .. code:: yaml
 
-     key: value  # This is an inline comment.
+      key: value  # This is an inline comment.
 
 #. block style, where a comment starts at the beginning of a (un)indented line:
 
-  .. code:: yaml
+   .. code:: yaml
 
-     # This is a comment
-     # over two lines.
-     key: value
+      # This is a comment
+      # over two lines.
+      key: value
 
 Alias Indicators
 ----------------
@@ -664,10 +664,7 @@ together with the anchor name:
          - *list
          - 4
 
-      # {
-      #   "anchor": [1, 2, 3],
-      #   "sequence": [0, [1, 2, 3], 4]
-      # }
+      # Deserialized mapping: {"anchor": [1, 2, 3], "sequence": [0, [1, 2, 3], 4]}
 
    The same principle goes for mappings. Unlike sequences, mappings can be
    merged via a merge indicator. The only way, how to flatten a sequence is to
