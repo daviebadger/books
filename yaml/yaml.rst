@@ -674,8 +674,57 @@ together with the anchor name:
 Merge Indicator
 ---------------
 
+Via a special ``>>`` key with an aliased mapping is possible to merge its keys
+with values into a current mapping. If the aliased mapping contains the same
+keys, then their values are overridden in the current mapping:
+
+.. code:: yaml
+
+   a: &a
+     x: 0
+     y: 0
+   b:
+     <<: *a
+     y: 1
+
+   # Deserialized mapping: {"a": {"x": 0, "y": 0}, "b": {"x": 0, "y": 1}}
+
+The same principle is possible to use with a sequence of mapping aliases to
+merge several mappings. It is important to keep the right order of aliases,
+where an alias on the left overrides an alias on the right:
+
+.. code:: yaml
+
+   a: &a
+     x: 0
+     y: 0
+   b: &b
+     x: 0
+     y: 1
+   c:
+     <<: [*b, *a]
+
+   # Deserialized mapping for [*b, *a]: {"a": {"x": 0, "y": 0}, "b": {"x": 0, "y": 1}, "c": {"x": 0, "y": 1}}
+   # Deserialized mapping for [*a, *b]: {"a": {"x": 0, "y": 0}, "b": {"x": 0, "y": 1}, "c": {"x": 0, "y": 0}}
+
+.. note::
+
+   Merge indicator is not officially covered in the YAML specification. However,
+   libraries usually have support for this indicator in mappings. It is possible
+   that in the future version of YAML (current version 1.2 was released in 2009),
+   it will be dropped or replaced with a different indicator.
+
 Document Indicators
 -------------------
+
+Directive Indicator
+^^^^^^^^^^^^^^^^^^^
+
+Document Start Indicator
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Document End Indicator
+^^^^^^^^^^^^^^^^^^^^^^
 
 
 
