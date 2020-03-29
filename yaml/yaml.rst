@@ -728,6 +728,21 @@ They are represented by:
 Directive Indicator
 ^^^^^^^^^^^^^^^^^^^
 
+In general, the directive indicator is rarely used because YAML libraries target
+primarily one specification and not more at once. Therefore, it is suitable
+just for illustration.
+
+The directive indicator is like a shebang in the Unix world, where the first
+line of a file tells which YAML version is used:
+
+.. code:: yaml
+
+   %YAML 1.2
+
+   x: 0
+
+   # Deserialized data: {"x": 0}
+
 Document Start Indicator
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
