@@ -717,6 +717,14 @@ where an alias on the left overrides an alias on the right:
 Document Indicators
 -------------------
 
+Document indicators allow setting document borders and metadata.
+
+They are represented by:
+
+* directive indicator
+* document start indicator
+* document end indicator
+
 Directive Indicator
 ^^^^^^^^^^^^^^^^^^^
 
