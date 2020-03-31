@@ -733,7 +733,8 @@ primarily one specification and not more at once. Therefore, it is suitable
 just for illustration.
 
 The directive indicator is like a shebang in the Unix world, where the first
-line of a file tells which YAML version is used:
+line of a file tells which YAML version is used. The line must start with a
+``%`` indicator:
 
 .. code:: yaml
 
