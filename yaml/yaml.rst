@@ -747,11 +747,41 @@ line of a file tells which YAML version is used. The line must start with a
 Document Start Indicator
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+Via a ``---`` indicator is possible to explicitly start a document, though it is
+not required and it is for illustration like the document directive:
+
+.. code:: yaml
+
+   ---
+   x: 0
+
+   # Deserialized data: {"x": 0}
+
+What is more interesting with the document start indicator is an option to have
+multiple documents in one file. It is done by separating documents via the
+``---`` indicator:
+
+.. code:: yaml
+
+   x: 0
+
+   ---
+
+   x: 0
+
+   # Deserialized data: [{"x": 0}, {"x": 0}]
+
+.. note::
+
+   You may encounter with multiple documents in the Kubernetes world when
+   configuring multiple resources (objects) in a single YAML file.
+
 Document End Indicator
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Via a ``...`` indicator is possible to explicitly end a document, though it is
-not required and it is for illustrations like the document directive:
+not required and it is for illustration like the document directive or the
+document start indicator:
 
 #. for a single document:
 
@@ -777,7 +807,7 @@ not required and it is for illustrations like the document directive:
 
 .. note::
 
-   All document directives at once:
+   All document indicators at once:
 
    .. code:: yaml
 
