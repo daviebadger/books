@@ -750,6 +750,44 @@ Document Start Indicator
 Document End Indicator
 ^^^^^^^^^^^^^^^^^^^^^^
 
+Via a ``...`` indicator is possible to explicitly end a document, though it is
+not required and it is for illustrations like the document directive:
+
+#. for a single document:
+
+   .. code:: yaml
+
+      x: 0
+      ...
+
+      # Deserialized data: {"x": 0}
+
+#. for more documents:
+
+   .. code:: yaml
+
+      ---
+      x: 0
+      ...
+      ---
+      x: 0
+      ...
+
+      # Deserialized data: [{"x": 0}, {"x": 0}]
+
+.. note::
+
+   All document directives at once:
+
+   .. code:: yaml
+
+      %YAML 1.2
+      ---
+      X: 0
+      ...
+
+      # Deserialized data: {"x": 0}
+
 
 
 References
