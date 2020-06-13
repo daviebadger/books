@@ -21,3 +21,14 @@
 __ https://creativecommons.org/licenses/by-sa/4.0/
 
 .. _Davie Badger: https://github.com/daviebadger
+
+
+
+References
+==========
+
+* `GitHub - TOML`__
+* `Wikipedia - TOML`__
+
+__ https://github.com/toml-lang/toml
+__ https://en.wikipedia.org/wiki/TOML
