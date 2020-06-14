@@ -13,6 +13,9 @@
 :Abstract:
    TODO
 
+   :Filename extension: ``.toml``
+   :Documentation: https://github.com/toml-lang/toml
+
 .. contents::
 
 .. sectnum::
