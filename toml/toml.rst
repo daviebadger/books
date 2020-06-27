@@ -44,10 +44,10 @@ Other
 References
 ==========
 
-* `GitHub - TOML`__
 * `GitHub - TOML Wiki`__
+* `TOML`__
 * `Wikipedia - TOML`__
 
-__ https://github.com/toml-lang/toml
 __ https://github.com/toml-lang/toml/wiki
+__ https://toml.io/en/latest
 __ https://en.wikipedia.org/wiki/TOML
