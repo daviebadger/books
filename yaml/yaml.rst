@@ -580,7 +580,7 @@ They are represented by:
 Comment Indicator
 -----------------
 
-There are two styles, how to write comments, which should explain use values if
+There are two styles, how to write comments, which should explain used values if
 it is not clear at first sight:
 
 #. flow style, where a comment starts at the end of a line after a value, with
