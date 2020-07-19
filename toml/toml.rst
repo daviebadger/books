@@ -39,7 +39,28 @@ Values
 Other
 =====
 
+Syntax, which is neither related to the keys nor the values.
 
+Commnets
+--------
+
+There are two ways, how to write comments for explaining used values if it is
+not clear at first sight:
+
+* inline, where a comment starts at the end of a line after a value, with at
+  least one space before a ``#``  (it may be two spaces like in Python):
+
+  .. code:: toml
+
+     key = "value"  # This is an inline comment.
+
+* full-line, where a comment starts at the beginning of a (un)indented line:
+
+  .. code:: toml
+
+     # This is a full-line comment
+     # over two lines.
+     key = "value"
 
 References
 ==========
