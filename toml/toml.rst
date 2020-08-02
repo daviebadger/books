@@ -30,6 +30,23 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 Keys
 ====
 
+TODO
+
+Key/Value Pairs
+---------------
+
+TODO
+
+Tables
+------
+
+TODO
+
+Array of Tables
+---------------
+
+TODO
+
 
 
 Values
