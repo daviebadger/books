@@ -72,7 +72,19 @@ TODO
 Booleans
 --------
 
-TODO
+Booleans are represented by true or false:
+
+* true:
+
+  .. code:: toml
+
+     key = true
+
+* false:
+
+  .. code:: toml
+
+     key = false
 
 Date-Times
 ----------
