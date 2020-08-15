@@ -94,7 +94,11 @@ TODO
 Dates
 -----
 
-TODO
+Local dates use a ``YYYY-mm-dd`` format:
+
+.. code:: toml
+
+   key = 2020-01-31
 
 Times
 -----
