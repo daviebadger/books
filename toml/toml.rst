@@ -103,7 +103,11 @@ Local dates use a ``YYYY-mm-dd`` format:
 Times
 -----
 
-TODO
+Local times use a ``HH:MM:SS`` format:
+
+.. code:: toml
+
+   key = 12:30:00
 
 Inline Tables
 -------------
