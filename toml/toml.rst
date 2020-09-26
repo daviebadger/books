@@ -133,7 +133,7 @@ keys with values are separated from others by commas:
 
    According to the latest reference guide (not library implementation yet), it
    is not allowed to add new keys to an already existing inline table like
-   `key.gender = "male"`. Only standard tables may be extended.
+   ``key.gender = "male"``. Only standard tables may be extended.
 
 Arrays
 ------
