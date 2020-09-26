@@ -119,21 +119,21 @@ In the sense of syntax, inline tables are similar to object notation in JSON
 except for stringified keys, so at the start and the end are curly braces, and
 keys with values are separated from others by commas:
 
-   .. code:: toml
+.. code:: toml
 
-      key = { name = "David", age = 25 }
+   key = { name = "David", age = 25 }
 
-      # is same as
-      #
-      # [table]
-      # name = "David"
-      # age = 25
+   # is same as
+   #
+   # [table]
+   # name = "David"
+   # age = 25
 
 .. note::
 
    According to the latest reference guide (not library implementation yet), it
    is not allowed to add new keys to an already existing inline table like
-   `key.sex = "male"`. Only standard tables may be extended.
+   `key.gender = "male"`. Only standard tables may be extended.
 
 Arrays
 ------
