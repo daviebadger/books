@@ -138,7 +138,39 @@ keys with values are separated from others by commas:
 Arrays
 ------
 
-TODO
+Arrays are containers, which contain multiple values. The values may be either
+homogeneous (single data type) or heterogeneous (mixed data types).
+
+In the sense of syntax, arrays are the same as arrays in JSON, so square
+brackets are at the start and the end, and values are separated from others by
+commas:
+
+.. code:: toml
+
+   integers = [ 1, 2, 3 ]
+   floats = [ 0.0, 0.1 ]
+   mixed = [ 1, 1.0 ]
+
+Arrays also may be nested and may span multi-line if it helps readability (for
+example, an array of inline tables):
+
+.. code:: toml
+
+   nested = [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
+   inline_tables = [
+     { x = 1, y = 2, z = 3 },
+     { x = 4, y = 5, z = 6 },
+   ]
+
+.. note::
+
+   About standardization:
+
+   1. Spaces after the opening and ending square brackets are optional, but they
+      are relatively very used in the TOML reference guide.
+   2. Indentation is two spaces for the same reason as the first point.
+   3. It is quite common to use a trailing comma at the end of the last value
+      in a multi-line array, and TOML has the support for it.
 
 
 
