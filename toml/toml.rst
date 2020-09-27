@@ -62,7 +62,33 @@ TODO
 Integers
 --------
 
-TODO
+Integers are either positive or negative without infinity:
+
+* positive integer:
+
+  .. code:: toml
+
+     key = 1
+
+* negative integer:
+
+  .. code:: toml
+
+     key = -1
+
+Underscores may be used after thousands for better readability:
+
+* positive integer with underscores:
+
+  .. code:: toml
+
+     key = 1_000_000
+
+* negative integer with underscores:
+
+  .. code:: toml
+
+     key = -1_000_000
 
 Floats
 ------
