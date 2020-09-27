@@ -93,7 +93,57 @@ Underscores may be used after thousands for better readability:
 Floats
 ------
 
-TODO
+Floats are numbers with a decimal point, including infinity. They also may be
+written via scientific notation, if needed. Lastly, underscores are allowed too
+like for integers:
+
+* positive float:
+
+  .. code:: toml
+
+     key = 1.0
+
+* positive infinity:
+
+  .. code:: toml
+
+     key = inf
+
+* positive float with scientific notation:
+
+  .. code:: toml
+
+     key = 1e+0
+
+* positive float with underscores:
+
+  .. code:: toml
+
+     key = 1.123_456_789
+
+* negative float:
+
+  .. code:: toml
+
+     key = -1.0
+
+* negative infinity:
+
+  .. code:: toml
+
+     key = -inf
+
+* negative float with scientific notation:
+
+  .. code:: toml
+
+     key = -1e+0
+
+* negative float with underscores:
+
+  .. code:: toml
+
+     key = -1.123_456_789
 
 Booleans
 --------
