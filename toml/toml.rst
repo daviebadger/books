@@ -165,7 +165,42 @@ Booleans are represented by true or false:
 Date-Times
 ----------
 
-TODO
+TOML has two variants of date-times.
+
+The first one is recognized as a local date-time without information about a
+time zone. The date-time notation is according to RFC 3339, where are allowed
+both ``T`` and space delimiters (between date and time), and it is up to users
+which delimiter choose:
+
+* local date-time with ``T`` delimiter:
+
+  .. code:: toml
+
+     key = 2020-01-31T12:30:00
+
+* local date-time with space delimiter:
+
+  .. code:: toml
+
+     key = 2020-01-31 12:30:00
+
+The second variant is an offset date-time where a time zone play a role. The
+notation is the same as for local date-times except appended ``Z`` delimiter for
+a time zone. The default time zone is UTC if not specified.
+
+  * offset date-time in UTC:
+
+    .. code:: toml
+
+       t = 2020-01-31T12:30:00Z
+       space = 2020-01-31 12:30:00Z
+
+  * offset date-time in a specific time zone:
+
+    .. code:: toml
+
+       t = 2020-01-31T12:30:00+01:30
+       space = 2020-01-31 12:30:00+01:30
 
 Dates
 -----
