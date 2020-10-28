@@ -52,7 +52,19 @@ TODO
 Values
 ======
 
-TODO
+Concrete data types which may be used as values in keys, namely:
+
+* strings
+* integers
+* floats
+* booleans
+* date-times
+* dates
+* times
+* inline tables
+* arrays
+
+The last two types hold other types from this list, even themselves.
 
 Strings
 -------
