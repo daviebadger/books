@@ -57,7 +57,56 @@ TODO
 Strings
 -------
 
-TODO
+Strings may be divided into two groups, whether they support the escaping
+mechanism or not. Each group may further exist in an inline or a multi-line
+version:
+
+* basic (escaping is allowed):
+
+  * inline:
+
+    .. code:: toml
+
+       key = "I'm David"
+       escaped = "\""
+
+  * multi-line (the first newline is removed while other ones are untouched):
+
+    .. code:: toml
+
+       key = """
+       This is a
+       multi-line
+       basic string"""
+
+* literal (escaping is disallowed):
+
+  * inline:
+
+    .. code:: toml
+
+       key = 'Cannot use single quotes inside'
+
+  * multi-line (the first newline is removed while other ones are untouched):
+
+    .. code:: toml
+
+       key = '''
+       This is a
+       multi-line
+       literal string'''
+
+.. note::
+
+   When using a literal string, it is not possible to use a single quote inside.
+   The solution is to use a multi-line literal string, which also can be written
+   like an inline string (the same goes for basic ones):
+
+   .. code:: toml
+
+      basic = """ " """    # <space>"<space>
+      literal = ''' ' '''  # <scape>'<space>
+
 
 Integers
 --------
