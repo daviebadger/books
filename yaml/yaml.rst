@@ -23,9 +23,9 @@
    of JSON.
 
    Downsides are a lot of features, either from YAML itself (such as explicit
-   tags) or libraries for reading and writing, you probably never use them all.
-   Because YAML implicitly inherits data types, there may be surprises you would
-   not expect if you do not know these catches.
+   tags) or from YAML libraries adding their custom ones, you probably never use
+   them all. Because YAML implicitly inherits data types, there may be surprises
+   you would not expect if you do not know these catches.
 
    :Filename extension:
       ``.yaml``, but ``.yml`` is more common due to archaic maximal 3-letter
