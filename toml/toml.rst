@@ -30,7 +30,9 @@ __ https://creativecommons.org/licenses/by-sa/4.0/
 Keys
 ====
 
-TODO
+Keys, respectively key/value pairs are the main building blocks in TOML, and so
+there are many ways, how to write these keys. Also, there are special keys which
+wraps other ones into so-called tables (collections of pairs).
 
 Key/Value Pairs
 ---------------
