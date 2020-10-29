@@ -37,7 +37,72 @@ wraps other ones into so-called tables (collections of pairs).
 Key/Value Pairs
 ---------------
 
-TODO
+A key/value pair according to its name consists of a key followed by a space,
+an equal sign, another space, and a concrete value:
+
+.. code:: toml
+
+   key = "value"
+
+Keys may be written in these formats:
+
+* a bare format where ASCII letters, digits, underscores, and dashes are only
+  allowed (even if it contains only digits, it is always interpreted as a
+  string):
+
+  .. code:: toml
+
+     key-with-dashes = "value"
+     key_with_underscores = "value"
+     123 = "value"
+
+* a quoted format using single or double quotes around and spaces inside or any
+  other special characters, but should be used only when necessary (quotes are
+  later explained in a standalone section covering string values):
+
+  .. code:: toml
+
+     "double quotes" = "value"
+     'single quotes' = "value"
+
+* a dotted format where dots create a nested structure of keys, but when used
+  inside quotes, then this behavior is disabled:
+
+  .. code:: toml
+
+     properties.a = "value"
+     properties.b = "value"
+     properties."a.b" = "value"
+
+     # in JSON:
+     #
+     # {
+     #   "properties": {
+     #     "a": "value",
+     #     "b": "value",
+     #     "a.b": "value",
+     #   }
+     # }
+
+.. note::
+
+   TOML has no standardization about key names. Basically, these rules are taken
+   from a programming language in which is used. So for Python users, it is a
+   ``snake_case``style. For Javascript users, it is a ``camelCase`` style, and
+   so on.
+
+.. warning::
+
+   When using the dotted format, the user should be aware that is not possible
+   to write a dotted key if a parent key already exists (trying to have a key
+   with a specific value and then a dotted key with a different value):
+
+   .. code:: toml
+
+      # INVALID
+
+      parent = 1
+      parent.child = 2
 
 Tables
 ------
