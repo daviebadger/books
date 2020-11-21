@@ -13,6 +13,9 @@ screen
    command line.
 screen line
    Window lines plus a tab line, a status line, a and command line.
+tab
+   A tab (page) contains a collection of windows. Each tab may have a different
+   number of windows and their arrangements.
 window
    A view on a buffer. One buffer may be opened in multiple windows.
 window line
