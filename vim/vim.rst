@@ -2,12 +2,11 @@ Glossary
 ========
 
 buffer
-   Loaded file content in memory. Empty buffers may be created. It has three
-   states:
+   Loaded file content in memory. Empty buffers may be created. It has two
+   most common states:
 
    #. active - buffer is loaded and displayed in a window
    #. hidden - buffer is loaded but not displayed in any window
-   #. inactive - buffer is not loaded and not displayed
 buffer line
    A real line stored in a buffer.
 logical line
