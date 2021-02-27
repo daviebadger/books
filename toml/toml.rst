@@ -108,11 +108,9 @@ Tables
 ------
 
 Tables are collections of key/value pairs, where several keys are wrapped under
-a parent key.
-
-Parent keys are surrounded by square brackets, usually start unindented, and
-must comply with common key formats. After parent keys start key/value pairs on
-new lines:
+a parent key. Parent keys are surrounded by square brackets, usually start
+unindented, and must comply with common key formats. After parent keys start
+key/value pairs on new lines:
 
 .. code:: toml
 
@@ -145,11 +143,23 @@ design:
 
    [empty]
 
-     [empty.sub1]
+   [table]
+
+     [table.sub1]
      key = "value"
 
-     [empty.sub2]
+     [table.sub2]
      key = "value"
+
+   # in JSON
+   #
+   # {
+   #   "empty": {},
+   #   "table": {
+   #     "sub1": {"key": "value"},
+   #     "sub2": {"key": "value"}
+   #   }
+   # }
 
 .. note::
 
@@ -166,7 +176,51 @@ design:
 Array of Tables
 ---------------
 
-TODO
+Arrays of tables are collections of tables, where several tables are wrapped
+under a parent key. Parent keys in a table array use double square brackets for
+each table, unlike the ordinary one:
+
+.. code:: toml
+
+   [[dns]]
+   ip = "1.1.1.1"
+
+   [[dns]]
+   ip = "8.8.8.8"
+
+   # in JSON
+   #
+   # {
+   #   "dns": [
+   #     {"ip": "1.1.1.1"},
+   #     {"ip": "8.8.8.8"},
+   #   ]
+   # }
+
+Like ordinary tables, table arrays may be empty or be defined as a sub-table:
+
+.. code:: toml
+
+   [table]
+
+   [[table.empty]]
+
+   [[table.sub]]
+   key = "value"
+
+   [[table.sub]]
+   key = "value"
+
+   # in JSON
+   # {
+   #   "table": {
+   #     "empty": [{}],
+   #     "sub": [
+   #       {"key": "value"},
+   #       {"key": "value"}
+   #     ]
+   #   }
+   # }
 
 
 
