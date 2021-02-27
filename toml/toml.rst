@@ -11,10 +11,25 @@
    `Creative Commons Attribution-ShareAlike 4.0 International Public License`__
 
 :Abstract:
-   TODO
+   TOML is mostly used for system configuration where applications are about to
+   start and read the system configuration before further processing. However,
+   due to its simple nature, it is also used for user configuration, which is
+   nowadays popular in modern package managers.
+
+   Some notable projects using it are mentioned package managers (Cargo_,
+   Poetry_), static site generator (Hugo_), various tools (Black_, isort_) or
+   applications (`Gitlab Runer for CI/CD`_).
+
+   Unlike JSON_, TOML is even a more human-readable data serialization format
+   and with support for comments. Unlike YAML_, TOML is minimalistic and
+   strictly defined. Unlike both JSON and YAML, TOML is always a dictionary,
+   whereas competitors allow a single scalar value to be a valid document.
+
+   TOML is defacto a modern replacement for the old widespread INI_
+   configuration format.
 
    :Filename extension: ``.toml``
-   :Documentation: https://github.com/toml-lang/toml
+   :Documentation: https://toml.io/en/latest
 
 .. contents::
 
@@ -23,7 +38,16 @@
 
 __ https://creativecommons.org/licenses/by-sa/4.0/
 
+.. _Black: https://black.readthedocs.io/en/stable/index.html
+.. _Cargo: https://doc.rust-lang.org/cargo/
 .. _Davie Badger: https://github.com/daviebadger
+.. _Gitlab Runer for CI/CD: https://gitlab.com/gitlab-org/gitlab-runner
+.. _Hugo: https://gohugo.io
+.. _INI: https://en.wikipedia.org/wiki/INI_file
+.. _isort: https://pycqa.github.io/isort/
+.. _JSON: https://www.json.org/json-en.html
+.. _Poetry: https://python-poetry.org
+.. _YAML: https://yaml.org
 
 
 
