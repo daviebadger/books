@@ -13,9 +13,11 @@
 :Abstract:
    YAML is mostly used for user configuration where applications themself are
    already running and are about to read user settings before further
-   processing. Some notable projects using it are various CI/CD services
-   (`GitHub Actions`_, `GitLab CI/CD`_), tools for infrastructure automation
-   (Ansible_, Salt_, Kubernetes_) or proxies (Envoy_).
+   processing.
+
+   Some notable projects using it are various CI/CD services (`GitHub Actions`_,
+   `GitLab CI/CD`_), tools for infrastructure automation (Ansible_, Salt_,
+   Kubernetes_) or proxies (Envoy_).
 
    Unlike JSON_, YAML is even a more human-readable data serialization format.
    It has comments, multi-line strings, documents metadata, and supports reusing
