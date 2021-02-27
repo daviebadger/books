@@ -37,8 +37,8 @@ wraps other ones into so-called tables (collections of pairs).
 Key/Value Pairs
 ---------------
 
-A key/value pair according to its name consists of a key followed by a space,
-an equal sign, another space, and a concrete value:
+A key/value pair according to its name consists of a unique key followed by a
+space, an equal sign, another space, and a concrete value:
 
 .. code:: toml
 
@@ -107,7 +107,61 @@ Keys may be written in these formats:
 Tables
 ------
 
-TODO
+Tables are collections of key/value pairs, where several keys are wrapped under
+a parent key.
+
+Parent keys are surrounded by square brackets, usually start unindented, and
+must comply with common key formats. After parent keys start key/value pairs on
+new lines:
+
+.. code:: toml
+
+   [dev]
+   host = "localhost"
+   port = 5000
+
+   [test]
+   host = "domain"
+   port = 5001
+
+   # in JSON:
+   #
+   # {
+   #   "dev": {
+   #     "host": "localhost",
+   #     "port": 5000
+   #   },
+   #   "test": {
+   #     "host": "domain",
+   #     "port": 5001
+   #   }
+   # }
+
+Tables may be empty with no key/value pairs, which is commonly used with
+sub-tables and which may be even indented though tables are ordinarily flat in
+design:
+
+.. code:: toml
+
+   [empty]
+
+     [empty.sub1]
+     key = "value"
+
+     [empty.sub2]
+     key = "value"
+
+.. note::
+
+   The top-level table, also known as the root table, starts implicitly (without
+   a name) at the beginning of a file and ends with the first present table:
+
+   .. code:: toml
+
+      key = "value"
+
+      [table]
+      key = "value"
 
 Array of Tables
 ---------------
