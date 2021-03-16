@@ -10,6 +10,4 @@ jobs:
         run: "python3 -m pip install docutils pygments"
       - name: "Lint documents"
         run: |
-          rst2pseudoxml.py --config=docutils.conf restructuredtext/restructuredtext.rst /dev/null
-          rst2pseudoxml.py --config=docutils.conf toml/toml.rst /dev/null
-          rst2pseudoxml.py --config=docutils.conf yaml/yaml.rst /dev/null
+          find . -type f -name "*.rst" -print0 | xargs --max-lines=1 --null rst2pseudoxml.py --config=docutils.conf > /dev/null
